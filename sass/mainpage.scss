@@ -55,12 +55,36 @@ a:hover {
 		align-items: center;
 	}
 	.header__textContainer {
-		width: 90%;
+		width: 80%;
 		&-text {
 			margin-top: 10rem;
-			word-wrap: normal;
+			word-wrap: break-word;
 			text-align: center;
-			font-size: 3.3rem;
+			font-size: 4.5rem;
+		}
+	}
+}
+
+@media ((min-width: 568px) and (max-width: 992px)) {
+	.header {
+		.header__textContainer {
+			width: 70%;
+			&-text {
+				margin-top: 10rem;
+				font-size: 6rem;
+			}
+		}
+	}
+}
+
+@media ((min-width: 992px) and (max-width: 1200px)) {
+	.header {
+		.header__textContainer {
+			width: 70%;
+			&-text {
+				margin-top: 10rem;
+				font-size: 8rem;
+			}
 		}
 	}
 }
