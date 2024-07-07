@@ -1,25 +1,13 @@
-@use './colors' as colors;
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-html {
-	font-size: 62.5%;
-}
-body {
-	width: 100vw;
-	min-height: 100vh;
-	overflow: hidden;
-}
+@use "./colors" as colors;
+
 .footer {
-	position: fixed;
+	position: absolute;
 	bottom: 0;
 	width: 100%;
 	min-height: 200px;
 	border-top: 1px solid black;
 	font-size: 1.6rem;
-	font-family: 'Lato', sans-serif;
+	font-family: "Lato", sans-serif;
 	font-weight: 400;
 	font-style: normal;
 	&__box {
@@ -46,7 +34,6 @@ body {
 		color: colors.$main-black;
 		text-align: center;
 		font-weight: bold;
-        
 	}
 	&__socialmedia {
 		width: 100%;

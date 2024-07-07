@@ -1,2 +1,59 @@
-@use './footer';
+@use "./nav";
+@use "./colors" as colors;
+@use "./footer";
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
 
+@font-face {
+	font-family: gothic;
+	src: url(../css/font.ttf);
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	position: relative;
+	background-color: colors.$main-bg-color;
+	width: 100vw;
+	min-height: 150vh;
+}
+
+.wrapper {
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.font {
+	font-family: "gothic", sans-serif;
+	font-weight: 900;
+	font-style: normal;
+}
+
+.bebas-neue-regular {
+	font-family: "Bebas Neue", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.header {
+	.wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.header__textContainer {
+		width: 90%;
+		&-text {
+			margin-top: 3rem;
+			word-wrap: normal;
+			text-align: center;
+			font-size: 3.3rem;
+		}
+	}
+}
