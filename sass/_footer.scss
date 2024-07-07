@@ -1,0 +1,76 @@
+@use './colors' as colors;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	width: 100vw;
+	min-height: 100vh;
+    overflow: hidden;
+}
+.footer {
+	position: fixed;
+	width: 100%;
+	min-height: 60px;
+	bottom: 0;
+	border: 1px solid black;
+	padding: 1rem;
+	font-size: 1.8rem;
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	&__box {
+		display: flex;
+		flex-direction: row;
+		max-width: 1200px;
+		width: 100%;
+		min-height: 60px;
+		margin: 0 auto;
+	}
+	&__left {
+		width: 25%;
+		display: flex;
+		align-items: center;
+	}
+	&__privacypolicy {
+		display: block;
+		text-decoration: none;
+		color: colors.$main-black;
+	}
+	&__socialmedia {
+		width: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.dot {
+			width: 40px;
+			height: 40px;
+			border: none;
+			border-radius: 50%;
+			background-color: colors.$main-black;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 0 1rem;
+			img {
+				display: block;
+			}
+		}
+	}
+	&__phone {
+		width: 25%;
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		.phone {
+			text-decoration: none;
+			color: colors.$main-black;
+		}
+	}
+}
