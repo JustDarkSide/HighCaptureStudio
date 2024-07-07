@@ -1,0 +1,109 @@
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.nav {
+  width: 100%;
+  height: 180px;
+}
+.nav__mainBox-PC {
+  display: none;
+}
+.nav__animation {
+  display: block;
+  text-decoration-style: underline;
+  text-decoration-color: #dbdbdb;
+  color: #000;
+  text-underline-offset: 5px;
+  transition: text-decoration-color 0.4s, scale 0.4s;
+}
+.nav__animation:hover {
+  scale: 1.1;
+  text-decoration-color: #000;
+}
+.nav__animation:focus {
+  scale: 1.1;
+  text-decoration-color: #000;
+}
+
+@media (max-width: 568px) {
+  .nav__mainBox-mobile {
+    width: 100%;
+  }
+  .nav__mainBox-mobile--logo img {
+    width: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .nav__mainBox-mobile--listBox ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-decoration: none;
+    list-style: none;
+  }
+  .nav__mainBox-mobile--listBox ul li {
+    text-align: center;
+  }
+  .nav__mainBox-mobile--listBox ul li a {
+    color: #000;
+    text-decoration: none;
+    font-size: 1.4rem;
+  }
+}
+@media ((min-width: 568px) and (max-width: 992px)) {
+  .nav__mainBox-mobile--listBox ul li a {
+    font-size: 2rem;
+    padding: 1rem 2rem;
+  }
+}
+@media ((min-width: 992px) and (max-width: 1200px)) {
+  .nav__mainBox-mobile--listBox ul li a {
+    font-size: 2.4rem;
+    padding: 1rem 2rem;
+  }
+}
+@media (min-width: 1200px) {
+  .nav__mainBox-PC {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+  }
+  .nav__mainBox-PC--logo {
+    max-width: 600px;
+  }
+  .nav__mainBox-PC--logo img {
+    width: 100%;
+  }
+  .nav__mainBox-PC--listContainer {
+    min-width: 50%;
+  }
+  .nav__mainBox-PC--list {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    align-items: center;
+  }
+  .nav__mainBox-PC--list li a {
+    padding: 1.2rem;
+    font-size: 1.7rem;
+  }
+  .nav__mainBox-mobile {
+    display: none;
+  }
+  .nav__mainBox-mobile--logo {
+    display: none;
+  }
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #dbdbdb;
+}/*# sourceMappingURL=mainpage.css.map */
