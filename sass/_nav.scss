@@ -1,4 +1,4 @@
-@use "./colors" as colors;
+@use './colors' as colors;
 
 // .bebas-neue-regular {
 // 	font-family: "Bebas Neue", sans-serif;
@@ -18,7 +18,7 @@
 			width: 100%;
 			&--logo {
 				img {
-					width: 100%;
+					max-width: 100%;
 					object-fit: contain;
 				}
 			}
