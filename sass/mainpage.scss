@@ -22,6 +22,13 @@ body {
 	width: 100vw;
 	min-height: 150vh;
 }
+a,
+a:link,
+a:visited,
+a:active,
+a:hover {
+	-webkit-tap-highlight-color: transparent;
+}
 
 .wrapper {
 	max-width: 1200px;
