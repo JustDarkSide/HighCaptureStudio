@@ -30,6 +30,7 @@
   padding: 1rem;
 }
 .nav__animation {
+  touch-action: manipulation;
   display: block;
   text-decoration-style: underline;
   text-decoration-color: #dbdbdb;
@@ -235,7 +236,7 @@ body {
   width: 90%;
 }
 .header .header__textContainer-text {
-  margin-top: 3rem;
+  margin-top: 10rem;
   word-wrap: normal;
   text-align: center;
   font-size: 3.3rem;
