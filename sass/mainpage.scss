@@ -1,7 +1,7 @@
-@use "./colors" as colors;
-@use "./nav";
-@use "./footer";
-@use "./animations";
+@use './colors' as colors;
+@use './nav';
+@use './footer';
+@use './animations';
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -9,12 +9,13 @@
 }
 
 @font-face {
-	font-family: "gothic";
+	font-family: 'gothic';
 	src: url(../css/font.ttf);
 }
 
 html {
 	font-size: 62.5%;
+	scroll-behavior: smooth;
 }
 
 body {
@@ -31,7 +32,24 @@ a:active,
 a:hover {
 	-webkit-tap-highlight-color: transparent;
 }
-
+.dot_entrance {
+	display: none;
+	width: 50px;
+	height: 50px;
+	border: none;
+	border-radius: 50%;
+	background-color: colors.$main-black;
+	display: flex;
+	position: absolute;
+	left: calc(50% - 25px);
+	top: calc(40% - 25px);
+	justify-content: center;
+	align-items: center;
+	animation: heartbeat 1.5s ease-in-out infinite both;
+	img {
+		display: block;
+	}
+}
 .wrapper {
 	max-width: 1200px;
 	width: 100%;
@@ -39,18 +57,23 @@ a:hover {
 }
 
 .font {
-	font-family: "gothic", sans-serif;
+	font-family: 'gothic', sans-serif;
 	font-weight: 900;
 	font-style: normal;
 }
 
 .bebas-neue-regular {
-	font-family: "Bebas Neue", sans-serif;
+	font-family: 'Bebas Neue', sans-serif;
 	font-weight: 400;
 	font-style: normal;
 }
-
+.lato-regular {
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
 .header {
+	height: calc(100vh - 180px);
 	.wrapper {
 		display: flex;
 		justify-content: center;
@@ -70,6 +93,7 @@ a:hover {
 .section {
 	margin-top: 20vh;
 	&__marquee {
+		position: relative;
 		overflow: hidden;
 		height: 50px;
 		display: flex;
@@ -85,6 +109,72 @@ a:hover {
 			width: auto;
 			font-size: 4rem;
 			margin: 0 30px;
+		}
+	}
+}
+.music-content {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	min-height: 400px;
+	margin: 4rem auto;
+	max-width: 1200px;
+
+	&__description {
+		display: none;
+	}
+	&__video {
+		width: 95%;
+		min-height: 250px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: center;
+		.youtube_video {
+			width: 100%;
+		}
+	}
+}
+
+.slider {
+	width: 100%;
+	min-height: 400px;
+	.wrapper {
+		max-width: 1900px;
+	}
+	&__box {
+		width: 100%;
+		min-height: 400px;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		align-items: center;
+		border: 1px solid black;
+		.arrow {
+			width: 70px;
+			height: 70px;
+			border: none;
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: rgba(0, 0, 0, 0.5);
+			margin: 2rem 0;
+		}
+		.photos {
+			width: 80%;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			.photo {
+				position: relative;
+				min-height: 200px;
+				min-width: 200px;
+
+				border: 1px solid black;
+			}
 		}
 	}
 }
@@ -111,7 +201,36 @@ a:hover {
 		}
 	}
 }
-
+@media (min-width: 768px) {
+	.music-content {
+		height: 60vh;
+		&__video {
+			position: absolute;
+			z-index: 1;
+			top: 0;
+			left: 5%;
+			width: 60%;
+			min-height: 300px;
+		}
+		&__description {
+			display: block;
+			position: absolute;
+			z-index: 0;
+			width: 60%;
+			padding: 8rem 0 0 8rem;
+			min-height: 300px;
+			top: 40%;
+			right: 5%;
+			box-shadow: 3px 3px 8px colors.$main-black;
+			h2 {
+				font-size: 5rem;
+			}
+			p {
+				font-size: 2.5rem;
+			}
+		}
+	}
+}
 @media ((min-width: 992px) and (max-width: 1200px)) {
 	.header {
 		.header__textContainer {
@@ -122,6 +241,22 @@ a:hover {
 			}
 		}
 	}
+	.music-content {
+		height: 60vh;
+		&__video {
+			min-height: 400px;
+		}
+		&__description {
+			min-height: 400px;
+			h2 {
+				font-size: 7rem;
+			}
+			p {
+				font-size: 4rem;
+			}
+		}
+	}
+
 	.section {
 		&__marquee {
 			height: 100px;
@@ -144,6 +279,32 @@ a:hover {
 			}
 		}
 	}
+	.music-content {
+		height: 80vh;
+		max-width: 1400px;
+		&__video {
+			min-height: 460px;
+			left: 0;
+		}
+		&__description {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			min-height: 460px;
+			top: 40%;
+			right: 0%;
+			padding: 0;
+			text-align: center;
+			h2 {
+				font-size: 7rem;
+			}
+			p {
+				font-size: 4rem;
+			}
+		}
+	}
+
 	.section {
 		&__marquee {
 			height: 100px;
@@ -152,6 +313,15 @@ a:hover {
 			}
 			&-marqueeElement {
 				font-size: 10rem;
+			}
+		}
+	}
+	.slider {
+		height: 40vh;
+		&__box {
+			flex-direction: row;
+			.photos {
+				flex-direction: row;
 			}
 		}
 	}
