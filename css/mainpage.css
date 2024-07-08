@@ -366,6 +366,7 @@ a:hover {
 .section__marquee {
   position: relative;
   overflow: hidden;
+  -webkit-overflow-scrolling: touch;
   height: 50px;
   display: flex;
   justify-content: space-around;
