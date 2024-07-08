@@ -9,7 +9,7 @@
   width: 100%;
 }
 .nav__mainBox-mobile--logo img {
-  width: 100%;
+  max-width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -203,7 +203,7 @@
 }
 
 @font-face {
-  font-family: gothic;
+  font-family: "gothic";
   src: url(../css/font.ttf);
 }
 html {
@@ -215,6 +215,7 @@ body {
   background-color: #dbdbdb;
   width: 100vw;
   min-height: 150vh;
+  overflow-x: hidden;
 }
 
 a,
@@ -261,18 +262,27 @@ a:hover {
 @media ((min-width: 568px) and (max-width: 992px)) {
   .header .header__textContainer {
     width: 70%;
+    margin-top: 8rem;
   }
   .header .header__textContainer-text {
-    margin-top: 10rem;
     font-size: 6rem;
   }
 }
 @media ((min-width: 992px) and (max-width: 1200px)) {
   .header .header__textContainer {
     width: 70%;
+    margin-top: 10rem;
   }
   .header .header__textContainer-text {
-    margin-top: 10rem;
     font-size: 8rem;
+  }
+}
+@media (min-width: 1200px) {
+  .header .header__textContainer {
+    width: 72%;
+    margin-top: 14rem;
+  }
+  .header .header__textContainer-text {
+    font-size: 10rem;
   }
 }/*# sourceMappingURL=mainpage.css.map */

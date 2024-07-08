@@ -1,5 +1,5 @@
-@use './nav';
 @use './colors' as colors;
+@use './nav';
 @use './footer';
 * {
 	box-sizing: border-box;
@@ -14,7 +14,6 @@
 
 html {
 	font-size: 62.5%;
-	overflow-x: hidden;
 }
 
 body {
@@ -22,6 +21,7 @@ body {
 	background-color: colors.$main-bg-color;
 	width: 100vw;
 	min-height: 150vh;
+	overflow-x: hidden;
 }
 a,
 a:link,
@@ -70,8 +70,8 @@ a:hover {
 	.header {
 		.header__textContainer {
 			width: 70%;
+			margin-top: 8rem;
 			&-text {
-				margin-top: 10rem;
 				font-size: 6rem;
 			}
 		}
@@ -82,9 +82,20 @@ a:hover {
 	.header {
 		.header__textContainer {
 			width: 70%;
+			margin-top: 10rem;
 			&-text {
-				margin-top: 10rem;
 				font-size: 8rem;
+			}
+		}
+	}
+}
+@media (min-width: 1200px) {
+	.header {
+		.header__textContainer {
+			width: 72%;
+			margin-top: 14rem;
+			&-text {
+				font-size: 10rem;
 			}
 		}
 	}
