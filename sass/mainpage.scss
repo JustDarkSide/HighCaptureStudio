@@ -2,6 +2,7 @@
 @use "./nav";
 @use "./footer";
 @use "./animations";
+@use "./slider";
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -115,6 +116,12 @@ a:hover {
 			font-size: 4rem;
 			margin: 0 30px;
 		}
+	}
+	&__slider {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 50vh;
 	}
 }
 .music-content {
