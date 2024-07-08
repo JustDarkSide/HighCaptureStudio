@@ -1,6 +1,7 @@
-@use './colors' as colors;
-@use './nav';
-@use './footer';
+@use "./colors" as colors;
+@use "./nav";
+@use "./footer";
+@use "./animations";
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -8,7 +9,7 @@
 }
 
 @font-face {
-	font-family: 'gothic';
+	font-family: "gothic";
 	src: url(../css/font.ttf);
 }
 
@@ -38,13 +39,13 @@ a:hover {
 }
 
 .font {
-	font-family: 'gothic', sans-serif;
+	font-family: "gothic", sans-serif;
 	font-weight: 900;
 	font-style: normal;
 }
 
 .bebas-neue-regular {
-	font-family: 'Bebas Neue', sans-serif;
+	font-family: "Bebas Neue", sans-serif;
 	font-weight: 400;
 	font-style: normal;
 }
@@ -66,12 +67,45 @@ a:hover {
 	}
 }
 
+.section {
+	margin-top: 20vh;
+	&__marquee {
+		overflow: hidden;
+		height: 50px;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		&-marqueeContainer {
+			width: auto;
+			white-space: nowrap;
+			animation: 12s marquee infinite linear;
+		}
+		&-marqueeElement {
+			display: inline-block;
+			width: auto;
+			font-size: 4rem;
+			margin: 0 30px;
+		}
+	}
+}
+
 @media ((min-width: 568px) and (max-width: 992px)) {
 	.header {
 		.header__textContainer {
 			width: 70%;
 			margin-top: 8rem;
 			&-text {
+				font-size: 6rem;
+			}
+		}
+	}
+	.section {
+		&__marquee {
+			height: 100px;
+			&-marqueeContainer {
+				animation: 15s marquee infinite linear;
+			}
+			&-marqueeElement {
 				font-size: 6rem;
 			}
 		}
@@ -88,13 +122,35 @@ a:hover {
 			}
 		}
 	}
+	.section {
+		&__marquee {
+			height: 100px;
+			&-marqueeContainer {
+				animation: 15s marquee infinite linear;
+			}
+			&-marqueeElement {
+				font-size: 8rem;
+			}
+		}
+	}
 }
 @media (min-width: 1200px) {
 	.header {
+		margin-top: 6rem;
 		.header__textContainer {
 			width: 72%;
-			margin-top: 14rem;
 			&-text {
+				font-size: 8rem;
+			}
+		}
+	}
+	.section {
+		&__marquee {
+			height: 100px;
+			&-marqueeContainer {
+				animation: 20s marquee infinite linear;
+			}
+			&-marqueeElement {
 				font-size: 10rem;
 			}
 		}

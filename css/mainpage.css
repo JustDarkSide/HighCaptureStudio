@@ -13,6 +13,10 @@
   -o-object-fit: contain;
      object-fit: contain;
 }
+.nav__mainBox-mobile--logo a {
+  display: block;
+  width: 100%;
+}
 .nav__mainBox-mobile--listBox ul {
   display: flex;
   flex-direction: row;
@@ -101,8 +105,6 @@
   }
 }
 .footer {
-  position: absolute;
-  bottom: 0;
   width: 100%;
   min-height: 200px;
   border-top: 1px solid black;
@@ -196,6 +198,14 @@
     height: auto;
   }
 }
+@keyframes marquee {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -259,12 +269,43 @@ a:hover {
   font-size: 4.5rem;
 }
 
+.section {
+  margin-top: 20vh;
+}
+.section__marquee {
+  overflow: hidden;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.section__marquee-marqueeContainer {
+  width: auto;
+  white-space: nowrap;
+  animation: 12s marquee infinite linear;
+}
+.section__marquee-marqueeElement {
+  display: inline-block;
+  width: auto;
+  font-size: 4rem;
+  margin: 0 30px;
+}
+
 @media ((min-width: 568px) and (max-width: 992px)) {
   .header .header__textContainer {
     width: 70%;
     margin-top: 8rem;
   }
   .header .header__textContainer-text {
+    font-size: 6rem;
+  }
+  .section__marquee {
+    height: 100px;
+  }
+  .section__marquee-marqueeContainer {
+    animation: 15s marquee infinite linear;
+  }
+  .section__marquee-marqueeElement {
     font-size: 6rem;
   }
 }
@@ -276,13 +317,33 @@ a:hover {
   .header .header__textContainer-text {
     font-size: 8rem;
   }
+  .section__marquee {
+    height: 100px;
+  }
+  .section__marquee-marqueeContainer {
+    animation: 15s marquee infinite linear;
+  }
+  .section__marquee-marqueeElement {
+    font-size: 8rem;
+  }
 }
 @media (min-width: 1200px) {
+  .header {
+    margin-top: 6rem;
+  }
   .header .header__textContainer {
     width: 72%;
-    margin-top: 14rem;
   }
   .header .header__textContainer-text {
+    font-size: 8rem;
+  }
+  .section__marquee {
+    height: 100px;
+  }
+  .section__marquee-marqueeContainer {
+    animation: 20s marquee infinite linear;
+  }
+  .section__marquee-marqueeElement {
     font-size: 10rem;
   }
 }/*# sourceMappingURL=mainpage.css.map */

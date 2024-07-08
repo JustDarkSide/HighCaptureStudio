@@ -21,6 +21,10 @@
 					max-width: 100%;
 					object-fit: contain;
 				}
+				a{
+					display: block;
+					width: 100%;
+				}
 			}
 			&--listBox {
 				ul {
