@@ -1,4 +1,4 @@
-@use './colors' as colors;
+@use "./colors" as colors;
 
 // .bebas-neue-regular {
 // 	font-family: "Bebas Neue", sans-serif;
@@ -9,7 +9,7 @@
 
 .nav {
 	width: 100%;
-	min-height: 180px;
+	min-height: 150px;
 	&__mainBox {
 		&-PC {
 			display: none;
@@ -21,7 +21,7 @@
 					max-width: 100%;
 					object-fit: contain;
 				}
-				a{
+				a {
 					display: block;
 					width: 100%;
 				}
@@ -89,10 +89,16 @@
 }
 @media ((min-width: 992px) and (max-width: 1200px)) {
 	.nav {
+		width: 100%;
 		min-height: 320px;
 		margin-bottom: 4rem;
 		&__mainBox {
 			&-mobile {
+				&--logo {
+					img {
+						width: 100%;
+					}
+				}
 				&--listBox {
 					ul {
 						li {
@@ -109,12 +115,15 @@
 }
 @media (min-width: 1200px) {
 	.nav {
+		margin-bottom: 4rem;
 		&__mainBox {
 			&-PC {
+				box-shadow: 0 3px 2px -2px colors.$main-black;
 				display: flex;
 				align-items: center;
+				align-content: center;
 				justify-content: space-between;
-				padding-top: 20px;
+				// padding-top: 20px;
 				&--logo {
 					max-width: 600px;
 					img {

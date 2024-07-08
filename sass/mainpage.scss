@@ -1,7 +1,7 @@
-@use './colors' as colors;
-@use './nav';
-@use './footer';
-@use './animations';
+@use "./colors" as colors;
+@use "./nav";
+@use "./footer";
+@use "./animations";
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -9,7 +9,7 @@
 }
 
 @font-face {
-	font-family: 'gothic';
+	font-family: "gothic";
 	src: url(../css/font.ttf);
 }
 
@@ -33,7 +33,7 @@ a:hover {
 	-webkit-tap-highlight-color: transparent;
 }
 .dot_entrance {
-	display: none;
+	// display: none;
 	width: 50px;
 	height: 50px;
 	border: none;
@@ -42,10 +42,13 @@ a:hover {
 	display: flex;
 	position: absolute;
 	left: calc(50% - 25px);
-	top: calc(40% - 25px);
+	top: 85%;
 	justify-content: center;
 	align-items: center;
 	animation: heartbeat 1.5s ease-in-out infinite both;
+	a {
+		padding: 15px;
+	}
 	img {
 		display: block;
 	}
@@ -55,43 +58,44 @@ a:hover {
 	width: 100%;
 	margin: 0 auto;
 }
-
 .font {
-	font-family: 'gothic', sans-serif;
+	font-family: "gothic", sans-serif;
 	font-weight: 900;
 	font-style: normal;
 }
-
 .bebas-neue-regular {
-	font-family: 'Bebas Neue', sans-serif;
+	font-family: "Bebas Neue", sans-serif;
 	font-weight: 400;
 	font-style: normal;
 }
 .lato-regular {
-	font-family: 'Lato', sans-serif;
+	font-family: "Lato", sans-serif;
 	font-weight: 400;
 	font-style: normal;
 }
 .header {
+	position: relative;
 	height: calc(100vh - 180px);
 	.wrapper {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 	}
+	&__imgs {
+		display: none;
+	}
 	.header__textContainer {
-		width: 80%;
+		width: 90%;
 		&-text {
-			margin-top: 10rem;
+			margin-top: 3rem;
 			word-wrap: break-word;
 			text-align: center;
-			font-size: 4.5rem;
+			font-size: 4rem;
 		}
 	}
 }
-
 .section {
-	margin-top: 20vh;
+	margin-top: 2vh;
 	&__marquee {
 		position: relative;
 		overflow: hidden;
@@ -180,12 +184,37 @@ a:hover {
 	}
 }
 
-@media ((min-width: 568px) and (max-width: 992px)) {
+@media only screen and ((min-width: 385px) and (min-height: 800px) and (max-width: 768px)) {
 	.header {
 		.header__textContainer {
-			width: 70%;
 			margin-top: 8rem;
+			width: 90%;
 			&-text {
+				margin-top: 6rem;
+				font-size: 4rem;
+			}
+		}
+	}
+	.section {
+		&__marquee {
+			height: 100px;
+			&-marqueeContainer {
+				animation: 15s marquee infinite linear;
+			}
+			&-marqueeElement {
+				font-size: 6rem;
+			}
+		}
+	}
+}
+@media ((min-width: 568px) and (max-width: 992px)) {
+	.header {
+		height: calc(100vh - 240px);
+		.header__textContainer {
+			width: 70%;
+			margin-top: 3rem;
+			&-text {
+				margin-top: 2rem;
 				font-size: 6rem;
 			}
 		}
@@ -234,6 +263,7 @@ a:hover {
 }
 @media ((min-width: 992px) and (max-width: 1200px)) {
 	.header {
+		height: calc(100vh - 320px);
 		.header__textContainer {
 			width: 70%;
 			margin-top: 10rem;
@@ -272,19 +302,82 @@ a:hover {
 }
 @media (min-width: 1200px) {
 	.header {
-		margin-top: 6rem;
+		justify-content: space-evenly;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: calc(90vh - 180px);
+		margin-bottom: 40px;
+
+		.wrapper {
+			max-width: 1700px;
+			position: relative;
+		}
+
+		.dot_entrance {
+			width: 140px;
+			height: 40px;
+			border-radius: 6%;
+			left: calc(50% - 70px);
+			top: 102%;
+			a {
+				padding: 20px 60px;
+			}
+		}
+
 		.header__textContainer {
-			width: 72%;
+			margin-left: 20rem;
+			margin-bottom: 16rem;
+			width: 70%;
 			&-text {
+				margin-top: 0;
 				font-size: 8rem;
+			}
+		}
+
+		&__imgs {
+			// border: 1px solid black;
+			margin-bottom: 10rem;
+			margin-left: 9rem;
+			position: relative;
+			display: flex;
+			height: 54vh;
+			width: 34vw;
+			&-img {
+				// border: 8px solid colors.$pure-white;
+				height: 280px;
+				width: 280px;
+				position: absolute;
+				&--first {
+					top: -6%;
+					left: -8%;
+					z-index: 3;
+				}
+				&--second {
+					top: 24%;
+					left: 20%;
+					z-index: 2;
+				}
+				&--third {
+					bottom: -6%;
+					right: -8%;
+					z-index: 1;
+				}
+				img {
+					object-fit: cover;
+					height: 100%;
+					width: 100%;
+				}
 			}
 		}
 	}
 	.music-content {
 		height: 80vh;
-		max-width: 1400px;
+		max-width: 1200px;
 		&__video {
-			min-height: 460px;
+			min-height: 410px;
 			left: 0;
 		}
 		&__description {
@@ -292,7 +385,7 @@ a:hover {
 			justify-content: center;
 			align-items: center;
 			flex-direction: column;
-			min-height: 460px;
+			min-height: 410px;
 			top: 40%;
 			right: 0%;
 			padding: 0;
@@ -305,15 +398,18 @@ a:hover {
 			}
 		}
 	}
-
 	.section {
+		margin-top: 0;
+		&__first {
+			padding-top: 50px;
+		}
 		&__marquee {
 			height: 100px;
 			&-marqueeContainer {
 				animation: 20s marquee infinite linear;
 			}
 			&-marqueeElement {
-				font-size: 10rem;
+				font-size: 8.5rem;
 			}
 		}
 	}
@@ -325,5 +421,8 @@ a:hover {
 				flex-direction: row;
 			}
 		}
+	}
+	main {
+		height: auto;
 	}
 }
