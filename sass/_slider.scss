@@ -1,4 +1,4 @@
-@use "./colors" as colors;
+@use './colors' as colors;
 
 // * {
 // 	margin: 0;
@@ -72,6 +72,26 @@
 					}
 				}
 			}
+			.arrow-leftpc {
+				display: none;
+			}
+			.arrow-rightpc {
+				display: none;
+			}
+		}
+		.arrow {
+			display: flex;
+			touch-action: manipulation;
+			justify-content: center;
+			align-items: center;
+			width: 50px;
+			height: 50px;
+			background-color: colors.$main-black;
+			border-radius: 50%;
+			transition: opacity 0.5s;
+			z-index: 1;
+			cursor: pointer;
+			user-select: none;
 		}
 		&__mainPhoto-box {
 			position: relative;
@@ -94,20 +114,7 @@
 					user-select: none;
 				}
 			}
-			.arrow {
-				display: flex;
-				touch-action: manipulation;
-				justify-content: center;
-				align-items: center;
-				width: 50px;
-				height: 50px;
-				background-color: colors.$main-black;
-				border-radius: 50%;
-				transition: opacity 0.5s;
-				z-index: 1;
-				cursor: pointer;
-				user-select: none;
-			}
+
 			.arrows {
 				width: 60%;
 				position: relative;
@@ -117,6 +124,12 @@
 				display: flex;
 				justify-content: space-evenly;
 				align-items: center;
+			}
+			.arrow-left-m {
+				display: none;
+			}
+			.arrow-right-m {
+				display: none;
 			}
 		}
 	}
@@ -129,17 +142,19 @@
 					display: none;
 				}
 
-				.arrow-left {
+				.arrow-left-m {
+					display: flex;
 					position: absolute;
 					transform: translate(-50%, -50%);
-					background-color: rgba(0, 0, 0, 0.445);
+					background-color: rgba(0, 0, 0, 0.7);
 					top: 50%;
 					left: 5%;
 				}
-				.arrow-right {
+				.arrow-right-m {
+					display: flex;
 					position: absolute;
 					transform: translate(50%, -50%);
-					background-color: rgba(0, 0, 0, 0.445);
+					background-color: rgba(0, 0, 0, 0.7);
 					top: 50%;
 					right: 5%;
 				}
@@ -175,11 +190,15 @@
 				display: block;
 
 				.arrow-leftpc {
-					top: 70%;
+					position: absolute;
+					background-color: rgba(0, 0, 0, 0.7);
+					top: 35%;
 					left: -7%;
 				}
 				.arrow-rightpc {
-					top: 70%;
+					position: absolute;
+					background-color: rgba(0, 0, 0, 0.7);
+					top: 35%;
 					right: -7%;
 				}
 			}
@@ -201,7 +220,10 @@
 						object-fit: contain;
 					}
 				}
-				.arrow {
+				.arrow-left-m {
+					display: none;
+				}
+				.arrow-right-m {
 					display: none;
 				}
 			}
