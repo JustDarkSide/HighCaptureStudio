@@ -712,45 +712,55 @@ a:hover {
 }
 @media (min-width: 1200px) {
   .header {
-    justify-content: space-evenly;
     position: relative;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 15rem;
+    margin-top: 8rem;
+  }
+  .header .wrapper {
+    display: flex;
+    max-width: 1700px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .header .dot_entrance {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    left: calc(50% - 30px);
+    top: 90%;
+    margin-top: 10rem;
+  }
+  .header .dot_entrance a {
+    padding: 20px;
+  }
+  .header .header__textContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: calc(90vh - 180px);
-    margin-bottom: 40px;
-  }
-  .header .wrapper {
-    max-width: 1700px;
-    position: relative;
-  }
-  .header .dot_entrance {
-    width: 140px;
-    height: 40px;
-    border-radius: 6%;
-    left: calc(50% - 70px);
-    top: 102%;
-  }
-  .header .dot_entrance a {
-    padding: 20px 60px;
-  }
-  .header .header__textContainer {
-    margin-left: 20rem;
-    margin-bottom: 16rem;
-    width: 70%;
+    height: 100%;
+    width: 60%;
   }
   .header .header__textContainer-text {
     margin-top: 0;
     font-size: 8rem;
   }
   .header__imgs {
-    margin-bottom: 10rem;
-    margin-left: 9rem;
-    position: relative;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 9rem;
+    margin-right: 8rem;
+    position: relative;
     height: 54vh;
-    width: 34vw;
+    width: 37vw;
   }
   .header__imgs-img {
     height: 280px;
@@ -758,18 +768,17 @@ a:hover {
     position: absolute;
   }
   .header__imgs-img--first {
-    top: -6%;
-    left: -8%;
+    top: -3%;
+    left: 4%;
     z-index: 3;
   }
   .header__imgs-img--second {
-    top: 24%;
-    left: 20%;
+    position: unset;
     z-index: 2;
   }
   .header__imgs-img--third {
-    bottom: -6%;
-    right: -8%;
+    bottom: -3%;
+    right: 4%;
     z-index: 1;
   }
   .header__imgs-img img {
@@ -804,10 +813,10 @@ a:hover {
     font-size: 4rem;
   }
   .section {
-    margin-top: 0;
+    margin-top: 5rem;
   }
   .section__first {
-    padding-top: 50px;
+    padding-top: 30px;
   }
   .section__marquee {
     height: 100px;
@@ -829,5 +838,85 @@ a:hover {
   }
   main {
     height: auto;
+  }
+}
+@media (min-width: 2000px) {
+  .header {
+    height: calc(100vh - 180px);
+    margin-top: 4rem;
+    padding-top: 6rem;
+    margin-bottom: 20rem;
+  }
+  .header .wrapper {
+    max-width: 2000px;
+  }
+  .header .dot_entrance {
+    width: 80px;
+    height: 80px;
+    left: calc(50% - 40px);
+    top: 90%;
+    margin-top: 30rem;
+  }
+  .header .dot_entrance a {
+    padding: 25px;
+  }
+  .header .header__textContainer-text {
+    font-size: 9rem;
+  }
+  .header__imgs {
+    margin-left: 2rem;
+    margin-right: 8rem;
+    position: relative;
+    height: 54vh;
+    width: 37vw;
+  }
+  .header__imgs-img {
+    height: 280px;
+    width: 280px;
+    position: absolute;
+  }
+  .header__imgs-img--first {
+    top: -3%;
+    left: 4%;
+    z-index: 3;
+  }
+  .header__imgs-img--second {
+    position: unset;
+    z-index: 2;
+  }
+  .header__imgs-img--third {
+    bottom: -3%;
+    right: 4%;
+    z-index: 1;
+  }
+  .header__imgs-img img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+  .music-content__video {
+    min-height: 410px;
+    left: 0;
+  }
+  .music-content__description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 410px;
+    top: 40%;
+    right: 0%;
+    padding: 0;
+    text-align: center;
+  }
+  .music-content__description h2 {
+    font-size: 7rem;
+  }
+  .music-content__description p {
+    font-size: 4rem;
+  }
+  .section__first {
+    margin-top: 12rem;
   }
 }/*# sourceMappingURL=mainpage.css.map */
