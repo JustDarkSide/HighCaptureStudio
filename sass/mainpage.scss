@@ -1,8 +1,8 @@
-@use "./colors" as colors;
-@use "./nav";
-@use "./footer";
-@use "./animations";
-@use "./slider";
+@use './colors' as colors;
+@use './nav';
+@use './footer';
+@use './animations';
+@use './slider';
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -10,7 +10,7 @@
 }
 
 @font-face {
-	font-family: "gothic";
+	font-family: 'gothic';
 	src: url(../css/font.ttf);
 }
 
@@ -60,17 +60,17 @@ a:hover {
 	margin: 0 auto;
 }
 .font {
-	font-family: "gothic", sans-serif;
+	font-family: 'gothic', sans-serif;
 	font-weight: 900;
 	font-style: normal;
 }
 .bebas-neue-regular {
-	font-family: "Bebas Neue", sans-serif;
+	font-family: 'Bebas Neue', sans-serif;
 	font-weight: 400;
 	font-style: normal;
 }
 .lato-regular {
-	font-family: "Lato", sans-serif;
+	font-family: 'Lato', sans-serif;
 	font-weight: 400;
 	font-style: normal;
 }
@@ -127,8 +127,8 @@ a:hover {
 }
 .music-content {
 	position: relative;
-	display: flex;
-	flex-direction: column;
+	// display: flex;
+	// flex-direction: column;
 	width: 100%;
 	min-height: 400px;
 	margin: 4rem auto;
@@ -145,49 +145,6 @@ a:hover {
 		justify-content: center;
 		.youtube_video {
 			width: 100%;
-		}
-	}
-}
-
-.slider {
-	width: 100%;
-	min-height: 400px;
-	.wrapper {
-		max-width: 1900px;
-	}
-	&__box {
-		width: 100%;
-		min-height: 400px;
-		display: flex;
-		justify-content: space-between;
-		flex-direction: column;
-		align-items: center;
-		border: 1px solid black;
-		.arrow {
-			width: 70px;
-			height: 70px;
-			border: none;
-			border-radius: 50%;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			background-color: rgba(0, 0, 0, 0.5);
-			margin: 2rem 0;
-		}
-		.photos {
-			width: 80%;
-			height: 100%;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			flex-direction: column;
-			.photo {
-				position: relative;
-				min-height: 200px;
-				min-width: 200px;
-
-				border: 1px solid black;
-			}
 		}
 	}
 }
@@ -240,6 +197,11 @@ a:hover {
 	}
 }
 @media (min-width: 768px) {
+	.section {
+		&__first {
+			height: 75vh;
+		}
+	}
 	.music-content {
 		height: 60vh;
 		&__video {
