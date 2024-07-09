@@ -1,4 +1,4 @@
-@use './colors' as colors;
+@use "./colors" as colors;
 
 // * {
 // 	margin: 0;
@@ -129,17 +129,17 @@
 					display: none;
 				}
 
-				.arrow-left-m {
+				.arrow-left {
 					position: absolute;
 					transform: translate(-50%, -50%);
-					background-color: red;
+					background-color: rgba(0, 0, 0, 0.445);
 					top: 50%;
 					left: 5%;
 				}
-				.arrow-right-m {
+				.arrow-right {
 					position: absolute;
-					transform: translate(-50%, -50%);
-					background-color: red;
+					transform: translate(50%, -50%);
+					background-color: rgba(0, 0, 0, 0.445);
 					top: 50%;
 					right: 5%;
 				}
@@ -173,6 +173,7 @@
 			position: relative;
 			&__otherPhotos-box {
 				display: block;
+
 				.arrow-leftpc {
 					top: 70%;
 					left: -7%;

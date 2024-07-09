@@ -393,17 +393,17 @@
   .section__slider .slider__mainPhoto-box .arrows {
     display: none;
   }
-  .section__slider .slider__mainPhoto-box .arrow-left-m {
+  .section__slider .slider__mainPhoto-box .arrow-left {
     position: absolute;
     transform: translate(-50%, -50%);
-    background-color: red;
+    background-color: rgba(0, 0, 0, 0.445);
     top: 50%;
     left: 5%;
   }
-  .section__slider .slider__mainPhoto-box .arrow-right-m {
+  .section__slider .slider__mainPhoto-box .arrow-right {
     position: absolute;
-    transform: translate(-50%, -50%);
-    background-color: red;
+    transform: translate(50%, -50%);
+    background-color: rgba(0, 0, 0, 0.445);
     top: 50%;
     right: 5%;
   }
@@ -831,6 +831,7 @@ a:hover {
     margin-top: 5rem;
   }
   .section__first {
+    height: 100%;
     margin-top: 50px;
     padding-top: 30px;
   }
