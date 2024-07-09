@@ -9,7 +9,8 @@ const bigLeftArrow = document.querySelector('.arrow-left'); //LEFT ARROW
 const bigRightArrow = document.querySelector('.arrow-right'); //RIGHT ARROW
 const smallTopArrow = document.querySelector('.small-arrow-left'); //SMALL TOP ARROW (NEED TO CHANGE THE CLASSNAME)
 const smallBottomArrow = document.querySelector('.small-arrow-right'); //SMALL BOTTOM ARROW (NEED TO CHANGE THE CLASSNAME)
-
+const bigLeftArrowPc = document.querySelector('.arrow-leftpc');
+const bigRightArrowPc = document.querySelector('.arrow-rightpc');
 let mainOnlyPhoto = document.querySelector('.photo img');
 const fullImgContainer = document.querySelector('.full_size_img');
 const fullImg = document.querySelector('.bigbigImg');
@@ -258,8 +259,10 @@ document.addEventListener('DOMContentLoaded', collectAllPathsInfo);
 document.addEventListener('DOMContentLoaded', setRightElementProperties);
 document.addEventListener('resize', setRightElementProperties);
 bigRightArrow.addEventListener('click', showNextPhoto);
+bigRightArrowPc.addEventListener('click', showNextPhoto);
 mainPhoto.addEventListener('swipe', showNextPhoto);
 bigLeftArrow.addEventListener('click', showPreviousPhoto);
+bigLeftArrowPc.addEventListener('click', showPreviousPhoto);
 
 photoBox.addEventListener('touchstart', (e) => {
 	touchstart = e.changedTouches[0].screenX;
