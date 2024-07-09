@@ -76,9 +76,6 @@
   }
 }
 @media (min-width: 1200px) {
-  .nav {
-    margin-bottom: 4rem;
-  }
   .nav__mainBox-PC {
     box-shadow: 0 3px 2px -2px #000;
     display: flex;
@@ -279,6 +276,7 @@
   display: none;
   width: 100%;
   height: 20vh;
+  margin-top: 8rem;
 }
 .section__slider .slider__otherPhotos-box .thumbnails-box {
   width: 100%;
@@ -286,7 +284,6 @@
   overflow: hidden;
   scroll-behavior: smooth;
   display: flex;
-  margin-top: 8rem;
 }
 .section__slider .slider__otherPhotos-box .thumbnails-box .img-box {
   flex: 0 0 15%;
@@ -385,10 +382,21 @@
 }
 
 @media (min-width: 1200px) {
+  .section__title {
+    display: block;
+    font-size: 7rem;
+    margin: 20px;
+  }
   .section__slider {
-    height: 80vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    display: flex;
   }
   .section__slider .slider {
+    margin-top: 4rem;
     width: 80%;
     touch-action: manipulation;
     display: flex;
@@ -399,18 +407,18 @@
   .section__slider .slider__otherPhotos-box {
     display: block;
   }
-  .section__slider .slider__otherPhotos-box .arrow-left {
+  .section__slider .slider__otherPhotos-box .arrow-leftpc {
     top: 70%;
     left: -7%;
   }
-  .section__slider .slider__otherPhotos-box .arrow-right {
+  .section__slider .slider__otherPhotos-box .arrow-rightpc {
     top: 70%;
     right: -7%;
   }
   .section__slider .slider__mainPhoto-box {
     position: relative;
     width: 50vw;
-    height: 40vh;
+    height: 44vh;
   }
   .section__slider .slider__mainPhoto-box .photo {
     width: 100%;
@@ -419,6 +427,10 @@
     -o-object-fit: contain;
        object-fit: contain;
     cursor: pointer;
+  }
+  .section__slider .slider__mainPhoto-box .photo img {
+    -o-object-fit: contain;
+       object-fit: contain;
   }
   .section__slider .slider__mainPhoto-box .arrow {
     display: none;
@@ -502,7 +514,7 @@ a:hover {
 
 .header {
   position: relative;
-  height: calc(100vh - 180px);
+  height: calc(100vh - 150px);
 }
 .header .wrapper {
   display: flex;
@@ -523,7 +535,14 @@ a:hover {
 }
 
 .section {
-  margin-top: 2vh;
+  margin-top: 5vh;
+}
+.section__first {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 60vh;
 }
 .section__marquee {
   position: relative;
@@ -537,18 +556,13 @@ a:hover {
 .section__marquee-marqueeContainer {
   width: auto;
   white-space: nowrap;
-  animation: 12s marquee infinite linear;
+  animation: 20s marquee infinite linear;
 }
 .section__marquee-marqueeElement {
   display: inline-block;
   width: auto;
   font-size: 4rem;
   margin: 0 30px;
-}
-.section__slider {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .music-content {
@@ -725,14 +739,13 @@ a:hover {
 }
 @media (min-width: 1200px) {
   .header {
+    padding-top: 10rem;
     position: relative;
-    height: auto;
+    height: calc(100vh - 150px);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    margin-bottom: 15rem;
-    margin-top: 8rem;
   }
   .header .wrapper {
     display: flex;
@@ -747,7 +760,7 @@ a:hover {
     height: 60px;
     border-radius: 50%;
     left: calc(50% - 30px);
-    top: 90%;
+    top: 100%;
     margin-top: 10rem;
   }
   .header .dot_entrance a {
@@ -805,6 +818,8 @@ a:hover {
     max-width: 1200px;
   }
   .music-content__video {
+    min-width: 65%;
+    width: auto;
     min-height: 410px;
     left: 0;
   }
@@ -816,8 +831,9 @@ a:hover {
     min-height: 410px;
     top: 40%;
     right: 0%;
-    padding: 0;
+    padding: 0 5rem;
     text-align: center;
+    width: 65%;
   }
   .music-content__description h2 {
     font-size: 7rem;
@@ -829,13 +845,14 @@ a:hover {
     margin-top: 5rem;
   }
   .section__first {
+    margin-top: 50px;
     padding-top: 30px;
   }
   .section__marquee {
     height: 100px;
   }
   .section__marquee-marqueeContainer {
-    animation: 20s marquee infinite linear;
+    animation: 28s marquee infinite linear;
   }
   .section__marquee-marqueeElement {
     font-size: 8.5rem;
