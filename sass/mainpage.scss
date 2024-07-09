@@ -1,8 +1,8 @@
-@use './colors' as colors;
-@use './nav';
-@use './footer';
-@use './animations';
-@use './slider';
+@use "./colors" as colors;
+@use "./nav";
+@use "./footer";
+@use "./animations";
+@use "./slider";
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -10,7 +10,7 @@
 }
 
 @font-face {
-	font-family: 'gothic';
+	font-family: "gothic";
 	src: url(../css/font.ttf);
 }
 
@@ -60,23 +60,23 @@ a:hover {
 	margin: 0 auto;
 }
 .font {
-	font-family: 'gothic', sans-serif;
+	font-family: "gothic", sans-serif;
 	font-weight: 900;
 	font-style: normal;
 }
 .bebas-neue-regular {
-	font-family: 'Bebas Neue', sans-serif;
+	font-family: "Bebas Neue", sans-serif;
 	font-weight: 400;
 	font-style: normal;
 }
 .lato-regular {
-	font-family: 'Lato', sans-serif;
+	font-family: "Lato", sans-serif;
 	font-weight: 400;
 	font-style: normal;
 }
 .header {
 	position: relative;
-	height: calc(100vh - 180px);
+	height: calc(100vh - 150px);
 	.wrapper {
 		display: flex;
 		justify-content: center;
@@ -96,7 +96,14 @@ a:hover {
 	}
 }
 .section {
-	margin-top: 2vh;
+	margin-top: 5vh;
+	&__first {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		flex-wrap: wrap;
+		height: 60vh;
+	}
 	&__marquee {
 		position: relative;
 		overflow: hidden;
@@ -108,7 +115,7 @@ a:hover {
 		&-marqueeContainer {
 			width: auto;
 			white-space: nowrap;
-			animation: 12s marquee infinite linear;
+			animation: 20s marquee infinite linear;
 		}
 		&-marqueeElement {
 			display: inline-block;
@@ -116,11 +123,6 @@ a:hover {
 			font-size: 4rem;
 			margin: 0 30px;
 		}
-	}
-	&__slider {
-		display: flex;
-		justify-content: center;
-		align-items: center;
 	}
 }
 .music-content {
@@ -308,14 +310,15 @@ a:hover {
 }
 @media (min-width: 1200px) {
 	.header {
+		padding-top: 10rem;
 		position: relative;
-		height: auto;
+		height: calc(100vh - 150px);
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-start;
 		align-items: center;
-		margin-bottom: 15rem;
-		margin-top: 8rem;
+		// margin-bottom: 15rem;
+		// margin-top: 8rem;
 
 		.wrapper {
 			display: flex;
@@ -331,7 +334,7 @@ a:hover {
 			height: 60px;
 			border-radius: 50%;
 			left: calc(50% - 30px);
-			top: 90%;
+			top: 100%;
 			margin-top: 10rem;
 			a {
 				padding: 20px;
@@ -389,7 +392,10 @@ a:hover {
 	.music-content {
 		height: 80vh;
 		max-width: 1200px;
+		// width: 60%;
 		&__video {
+			min-width: 65%;
+			width: auto;
 			min-height: 410px;
 			left: 0;
 		}
@@ -401,8 +407,9 @@ a:hover {
 			min-height: 410px;
 			top: 40%;
 			right: 0%;
-			padding: 0;
+			padding: 0 5rem;
 			text-align: center;
+			width: 65%;
 			h2 {
 				font-size: 7rem;
 			}
@@ -414,12 +421,13 @@ a:hover {
 	.section {
 		margin-top: 5rem;
 		&__first {
+			margin-top: 50px;
 			padding-top: 30px;
 		}
 		&__marquee {
 			height: 100px;
 			&-marqueeContainer {
-				animation: 20s marquee infinite linear;
+				animation: 28s marquee infinite linear;
 			}
 			&-marqueeElement {
 				font-size: 8.5rem;

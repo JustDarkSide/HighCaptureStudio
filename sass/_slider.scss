@@ -1,4 +1,4 @@
-@use './colors' as colors;
+@use "./colors" as colors;
 
 // * {
 // 	margin: 0;
@@ -20,6 +20,7 @@
 			display: none;
 			width: 100%;
 			height: 20vh;
+			margin-top: 8rem;
 
 			.thumbnails-box {
 				width: 100%;
@@ -27,7 +28,6 @@
 				overflow: hidden;
 				scroll-behavior: smooth;
 				display: flex;
-				margin-top: 8rem;
 
 				.img-box {
 					flex: 0 0 15%;
@@ -116,10 +116,20 @@
 @media (min-width: 1200px) {
 	// body {
 	// 	position: relative;
-	// }
+	.section__title {
+		display: block;
+		font-size: 7rem;
+		margin: 20px;
+	}
 	.section__slider {
-		height: 80vh;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		flex-direction: column;
+		height: 100vh;
+		display: flex;
 		.slider {
+			margin-top: 4rem;
 			width: 80%;
 			touch-action: manipulation;
 			display: flex;
@@ -129,11 +139,11 @@
 			position: relative;
 			&__otherPhotos-box {
 				display: block;
-				.arrow-left {
+				.arrow-leftpc {
 					top: 70%;
 					left: -7%;
 				}
-				.arrow-right {
+				.arrow-rightpc {
 					top: 70%;
 					right: -7%;
 				}
@@ -142,7 +152,7 @@
 				// display: none;
 				position: relative;
 				width: 50vw;
-				height: 40vh;
+				height: 44vh;
 				.photo {
 					width: 100%;
 					height: 100%;
@@ -152,6 +162,9 @@
 					// background-repeat: no-repeat;
 					object-fit: contain;
 					cursor: pointer;
+					img {
+						object-fit: contain;
+					}
 				}
 				.arrow {
 					display: none;
