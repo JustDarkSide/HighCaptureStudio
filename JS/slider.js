@@ -53,8 +53,7 @@ const setRightElementProperties = () => {
 	thumbnailMarginRight = parseInt(thumbnailMarginRight);
 
 	fullThumbnailSize =
-		thumbnailWidth + thumbnailMarginLeft + thumbnailMarginRight; // border 2x3px
-	// print(thumbnailWidth);
+		thumbnailWidth + thumbnailMarginLeft + thumbnailMarginRight;
 	console.log(fullThumbnailSize);
 };
 const collectAllPathsInfo = () => {
