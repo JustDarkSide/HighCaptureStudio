@@ -175,7 +175,7 @@
 		justify-content: flex-start;
 		align-items: center;
 		flex-direction: column;
-		height: 100vh;
+		height: calc(var(--vh));
 		display: flex;
 		.slider {
 			margin-top: 4rem;

@@ -35,19 +35,23 @@ a:hover {
 }
 .dot_entrance {
 	// display: none;
+	position: absolute;
 	width: 50px;
 	height: 50px;
 	border: none;
 	border-radius: 50%;
 	background-color: colors.$main-black;
-	display: flex;
-	position: absolute;
+
 	left: calc(50% - 25px);
-	top: 85%;
-	justify-content: center;
-	align-items: center;
+	top: calc(100% - 60px);
+
 	animation: heartbeat 1.5s ease-in-out infinite both;
 	a {
+		position: absolute;
+		display: block;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 		padding: 15px;
 	}
 	img {
@@ -76,11 +80,11 @@ a:hover {
 }
 .header {
 	position: relative;
-	height: calc(100vh - 150px);
+	height: calc(var(--vh, 100vh) - var(--navHeight));
 	.wrapper {
 		display: flex;
 		justify-content: center;
-		align-items: center;
+		height: 100%;
 	}
 	&__imgs {
 		display: none;
@@ -88,7 +92,6 @@ a:hover {
 	.header__textContainer {
 		width: 90%;
 		&-text {
-			margin-top: 3rem;
 			word-wrap: break-word;
 			text-align: center;
 			font-size: 4rem;
@@ -96,11 +99,9 @@ a:hover {
 	}
 }
 .section {
-	margin-top: 5vh;
 	&__first {
 		display: flex;
 		justify-content: flex-start;
-		align-items: center;
 		flex-wrap: wrap;
 		height: 60vh;
 	}
@@ -149,13 +150,19 @@ a:hover {
 	}
 }
 
-@media only screen and ((min-width: 385px) and (min-height: 800px) and (max-width: 768px)) {
+@media (min-width: 375px) {
 	.header {
 		.header__textContainer {
 			margin-top: 8rem;
+		}
+	}
+}
+@media ((min-width: 385px) and (min-height: 800px) and (max-width: 768px)) {
+	.header {
+		.header__textContainer {
+			margin-top: 13rem;
 			width: 90%;
 			&-text {
-				margin-top: 6rem;
 				font-size: 4rem;
 			}
 		}
@@ -174,12 +181,10 @@ a:hover {
 }
 @media ((min-width: 568px) and (max-width: 992px)) {
 	.header {
-		height: calc(100vh - 240px);
+		height: calc(var(--vh, 100vh) - var(--navHeight));
 		.header__textContainer {
 			width: 70%;
-			margin-top: 3rem;
 			&-text {
-				margin-top: 2rem;
 				font-size: 6rem;
 			}
 		}
@@ -233,7 +238,7 @@ a:hover {
 }
 @media ((min-width: 992px) and (max-width: 1200px)) {
 	.header {
-		height: calc(100vh - 320px);
+		height: calc(var(--vh, 100vh) - var(--navHeight));
 		.header__textContainer {
 			width: 70%;
 			margin-top: 10rem;
@@ -272,23 +277,19 @@ a:hover {
 }
 @media (min-width: 1200px) {
 	.header {
-		padding-top: 10rem;
 		position: relative;
-		height: calc(100vh - 150px);
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-start;
-		align-items: center;
+		height: calc(var(--vh, 100vh) - var(--navHeight));
+
 		// margin-bottom: 15rem;
 		// margin-top: 8rem;
 
 		.wrapper {
 			display: flex;
+			position: relative;
 			max-width: 1700px;
 			flex-direction: row;
 			align-items: center;
-			justify-content: center;
-			position: relative;
+			justify-content: space-between;
 		}
 
 		.dot_entrance {
@@ -296,20 +297,15 @@ a:hover {
 			height: 60px;
 			border-radius: 50%;
 			left: calc(50% - 30px);
-			top: 100%;
-			margin-top: 10rem;
+			top: calc(100% - 70px);
 			a {
 				padding: 20px;
 			}
 		}
 
 		.header__textContainer {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			height: 100%;
-			width: 60%;
+			height: 60%;
+			width: 50%;
 			&-text {
 				margin-top: 0;
 				font-size: 8rem;
@@ -317,30 +313,27 @@ a:hover {
 		}
 
 		&__imgs {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			margin-left: 9rem;
-			margin-right: 8rem;
+			display: block;
 			position: relative;
-			height: 54vh;
-			width: 37vw;
+			height: 80%;
+			width: 45%;
 			&-img {
-				height: 280px;
-				width: 280px;
 				position: absolute;
+				width: 240px;
+				height: 240px;
 				&--first {
-					top: -3%;
-					left: 4%;
+					top: 0;
+					left: 0;
 					z-index: 3;
 				}
 				&--second {
-					position: unset;
+					top: 22%;
+					left: 25%;
 					z-index: 2;
 				}
 				&--third {
-					bottom: -3%;
-					right: 4%;
+					top: 43%;
+					left: 50%;
 					z-index: 1;
 				}
 				img {
@@ -359,6 +352,7 @@ a:hover {
 			min-width: 65%;
 			width: auto;
 			min-height: 410px;
+			top: 15%;
 			left: 0;
 		}
 		&__description {
@@ -367,7 +361,7 @@ a:hover {
 			align-items: center;
 			flex-direction: column;
 			min-height: 410px;
-			top: 40%;
+			top: 45%;
 			right: 0%;
 			padding: 0 5rem;
 			text-align: center;
@@ -381,11 +375,8 @@ a:hover {
 		}
 	}
 	.section {
-		margin-top: 5rem;
 		&__first {
-			height: 100%;
-			margin-top: 50px;
-			padding-top: 30px;
+			height: calc(var(--vh));
 		}
 		&__marquee {
 			height: 100px;
@@ -403,11 +394,6 @@ a:hover {
 }
 @media (min-width: 2000px) {
 	.header {
-		height: calc(100vh - 180px);
-		margin-top: 4rem;
-		padding-top: 6rem;
-		margin-bottom: 20rem;
-
 		.wrapper {
 			max-width: 2000px;
 		}
@@ -416,8 +402,7 @@ a:hover {
 			width: 80px;
 			height: 80px;
 			left: calc(50% - 40px);
-			top: 90%;
-			margin-top: 30rem;
+			top: calc(100% - 90px);
 			a {
 				padding: 25px;
 			}
@@ -430,38 +415,35 @@ a:hover {
 		}
 
 		&__imgs {
-			margin-left: 2rem;
-			margin-right: 8rem;
 			position: relative;
 			// display: flex;
-			height: 54vh;
-			width: 37vw;
+
 			&-img {
 				// border: 8px solid colors.$pure-white;
 				height: 280px;
 				width: 280px;
 				position: absolute;
 				&--first {
-					top: -3%;
-					left: 4%;
+					top: 0;
+					left: 0;
 					z-index: 3;
 				}
 				&--second {
-					position: unset;
-					// top: 24%;
-					// left: 20%;
+					top: 25%;
+					left: 25%;
 					z-index: 2;
 				}
 				&--third {
-					bottom: -3%;
-					right: 4%;
+					top: 50%;
+					left: 50%;
 					z-index: 1;
 				}
-				img {
-					object-fit: cover;
-					height: 100%;
-					width: 100%;
-				}
+			}
+
+			img {
+				object-fit: cover;
+				height: 100%;
+				width: 100%;
 			}
 		}
 	}
@@ -476,7 +458,7 @@ a:hover {
 			align-items: center;
 			flex-direction: column;
 			min-height: 410px;
-			top: 30%;
+			top: 45%;
 			right: 0%;
 			padding: 0;
 			text-align: center;
@@ -486,11 +468,6 @@ a:hover {
 			p {
 				font-size: 4rem;
 			}
-		}
-	}
-	.section {
-		&__first {
-			margin-top: 12rem;
 		}
 	}
 }
