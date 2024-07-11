@@ -78,6 +78,7 @@ a:hover {
 	font-weight: 400;
 	font-style: normal;
 }
+
 .header {
 	position: relative;
 	height: calc(var(--vh, 100vh) - var(--navHeight));
@@ -98,6 +99,7 @@ a:hover {
 		}
 	}
 }
+
 .section {
 	&__first {
 		display: flex;
@@ -276,6 +278,11 @@ a:hover {
 	}
 }
 @media (min-width: 1200px) {
+	@supports (-webkit-touch-callout: none) {
+		.header {
+			height: 100vh; /* Example alternative calculation for Safari */
+		}
+	}
 	.header {
 		position: relative;
 		height: calc(var(--vh, 100vh) - var(--navHeight));

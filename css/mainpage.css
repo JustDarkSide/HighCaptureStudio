@@ -742,6 +742,11 @@ a:hover {
   }
 }
 @media (min-width: 1200px) {
+  @supports (-webkit-touch-callout: none) {
+    .header {
+      height: 100vh; /* Example alternative calculation for Safari */
+    }
+  }
   .header {
     position: relative;
     height: calc(var(--vh, 100vh) - var(--navHeight));
