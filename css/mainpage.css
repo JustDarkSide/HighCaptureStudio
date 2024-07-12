@@ -501,7 +501,6 @@ body {
   position: relative;
   background-color: #dbdbdb;
   width: 100vw;
-  min-height: 150vh;
   overflow-x: hidden;
 }
 
@@ -744,12 +743,13 @@ a:hover {
 @media (min-width: 1200px) {
   @supports (-webkit-touch-callout: none) {
     .header {
-      height: 100vh; /* Example alternative calculation for Safari */
+      height: var(--vh, 100vh); /* Example alternative calculation for Safari */
     }
   }
   .header {
     position: relative;
     height: calc(var(--vh, 100vh) - var(--navHeight));
+    margin-bottom: 10rem;
   }
   .header .wrapper {
     display: flex;
@@ -770,8 +770,12 @@ a:hover {
     padding: 20px;
   }
   .header .header__textContainer {
-    height: 60%;
+    height: 80%;
     width: 50%;
+    margin-top: 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .header .header__textContainer-text {
     margin-top: 0;
@@ -782,25 +786,27 @@ a:hover {
     position: relative;
     height: 80%;
     width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .header__imgs-img {
-    position: absolute;
     width: 240px;
     height: 240px;
   }
   .header__imgs-img--first {
-    top: 0;
-    left: 0;
+    position: absolute;
+    top: 8%;
+    left: 15%;
     z-index: 3;
   }
   .header__imgs-img--second {
-    top: 22%;
-    left: 25%;
     z-index: 2;
   }
   .header__imgs-img--third {
-    top: 43%;
-    left: 50%;
+    position: absolute;
+    bottom: 8%;
+    right: 15%;
     z-index: 1;
   }
   .header__imgs-img img {
@@ -810,14 +816,14 @@ a:hover {
     width: 100%;
   }
   .music-content {
-    height: 80vh;
+    height: calc(100vh - 100px);
     max-width: 1200px;
+    margin: 0 auto;
   }
   .music-content__video {
-    min-width: 65%;
-    width: auto;
-    min-height: 410px;
-    top: 15%;
+    width: 55%;
+    height: 40%;
+    top: 10%;
     left: 0;
   }
   .music-content__description {
@@ -825,12 +831,12 @@ a:hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    min-height: 410px;
+    height: 40%;
     top: 45%;
     right: 0%;
     padding: 0 5rem;
     text-align: center;
-    width: 65%;
+    width: 55%;
   }
   .music-content__description h2 {
     font-size: 7rem;
@@ -838,8 +844,17 @@ a:hover {
   .music-content__description p {
     font-size: 4rem;
   }
+  .section {
+    margin-bottom: 10rem;
+  }
+  @supports (-webkit-touch-callout: none) {
+    .section .section__first {
+      height: 100vh;
+    }
+  }
   .section__first {
-    height: calc(var(--vh));
+    height: var(--vh, 100vh);
+    display: block;
   }
   .section__marquee {
     height: 100px;
@@ -855,6 +870,14 @@ a:hover {
   }
 }
 @media (min-width: 2000px) {
+  .header {
+    height: 100vh;
+  }
+  @supports (-webkit-touch-callout: none) {
+    .header .header {
+      height: var(--vh, 100vh); /* Example alternative calculation for Safari */
+    }
+  }
   .header .wrapper {
     max-width: 2000px;
   }
