@@ -743,7 +743,7 @@ a:hover {
 @media (min-width: 1200px) {
   @supports (-webkit-touch-callout: none) {
     .header {
-      height: var(--vh, 100vh); /* Example alternative calculation for Safari */
+      height: var(--vh);
     }
   }
   .header {
@@ -844,13 +844,13 @@ a:hover {
   .music-content__description p {
     font-size: 4rem;
   }
+  @supports (-webkit-touch-callout: none) {
+    .section__first {
+      height: var(--vh);
+    }
+  }
   .section {
     margin-bottom: 10rem;
-  }
-  @supports (-webkit-touch-callout: none) {
-    .section .section__first {
-      height: 100vh;
-    }
   }
   .section__first {
     height: var(--vh, 100vh);
@@ -875,7 +875,7 @@ a:hover {
   }
   @supports (-webkit-touch-callout: none) {
     .header .header {
-      height: var(--vh, 100vh); /* Example alternative calculation for Safari */
+      height: 100vh; /* Example alternative calculation for Safari */
     }
   }
   .header .wrapper {
@@ -942,5 +942,10 @@ a:hover {
   }
   .music-content__description p {
     font-size: 4rem;
+  }
+  @supports (-webkit-touch-callout: none) {
+    .section__first {
+      height: 100vh;
+    }
   }
 }/*# sourceMappingURL=mainpage.css.map */
