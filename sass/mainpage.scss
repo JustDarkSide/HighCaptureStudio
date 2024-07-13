@@ -1,9 +1,9 @@
-@use "./colors" as colors;
-@use "./nav";
-@use "./footer";
-@use "./animations";
-@use "./slider";
-@use "./videos";
+@use './colors' as colors;
+@use './nav';
+@use './footer';
+@use './animations';
+@use './slider';
+@use './videos';
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -427,7 +427,6 @@ a:hover {
 				height: 100vh; /* Example alternative calculation for Safari */
 			}
 		}
-		height: 100vh;
 		.wrapper {
 			max-width: 2000px;
 		}

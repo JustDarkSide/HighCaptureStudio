@@ -875,9 +875,6 @@ a:hover {
   }
 }
 @media (min-width: 2000px) {
-  .header {
-    height: 100vh;
-  }
   @supports (-webkit-touch-callout: none) {
     .header .header {
       height: 100vh; /* Example alternative calculation for Safari */
