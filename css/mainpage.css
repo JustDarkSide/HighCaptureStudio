@@ -483,10 +483,69 @@
   }
 }
 .section__video {
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
 }
+.section__video .wrapper .video__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.section__video .wrapper .video__element {
+  width: 90%;
+  position: relative;
+  margin: 4rem auto;
+}
+.section__video .wrapper .video__element iframe {
+  width: 100%;
+  position: relative;
+  border: 3px solid #000;
+  z-index: 1;
+}
+.section__video .wrapper .video__description-first {
+  height: 120%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #000;
+  border-bottom-right-radius: 5%;
+  border-bottom-left-radius: 5%;
+  background-color: #dbdbdb;
+}
+.section__video .wrapper .video__description-first p {
+  width: 100%;
+  padding: 0rem 1rem;
+  height: 80%;
+  overflow-y: scroll;
+  font-size: 1.8rem;
+  text-align: center;
+  opacity: 1;
+}
+.section__video .wrapper .video__description-first span {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
 
+@media ((min-width: 385px) and (min-height: 730px) and (max-width: 768px)) {
+  .section__video .wrapper .video__element {
+    min-height: 230px;
+  }
+  .section__video .wrapper .video__element iframe {
+    min-height: 230px;
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -560,7 +619,7 @@ a:hover {
 
 .lato-regular {
   font-family: "Lato", sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -590,6 +649,7 @@ a:hover {
   justify-content: flex-start;
   flex-wrap: wrap;
   height: 60vh;
+  margin-bottom: 6rem;
 }
 .section__marquee {
   position: relative;
@@ -615,8 +675,7 @@ a:hover {
 .music-content {
   position: relative;
   width: 100%;
-  min-height: 400px;
-  margin: 4rem auto;
+  margin: 4rem auto 0;
   max-width: 1200px;
 }
 .music-content__description {

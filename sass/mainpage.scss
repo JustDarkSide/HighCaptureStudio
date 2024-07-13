@@ -76,7 +76,7 @@ a:hover {
 }
 .lato-regular {
 	font-family: "Lato", sans-serif;
-	font-weight: 400;
+	font-weight: 700;
 	font-style: normal;
 }
 
@@ -107,6 +107,7 @@ a:hover {
 		justify-content: flex-start;
 		flex-wrap: wrap;
 		height: 60vh;
+		margin-bottom: 6rem;
 	}
 	&__marquee {
 		position: relative;
@@ -134,8 +135,8 @@ a:hover {
 	// display: flex;
 	// flex-direction: column;
 	width: 100%;
-	min-height: 400px;
-	margin: 4rem auto;
+	// min-height: 400px;
+	margin: 4rem auto 0;
 	max-width: 1200px;
 
 	&__description {
