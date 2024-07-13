@@ -1,8 +1,9 @@
-@use './colors' as colors;
-@use './nav';
-@use './footer';
-@use './animations';
-@use './slider';
+@use "./colors" as colors;
+@use "./nav";
+@use "./footer";
+@use "./animations";
+@use "./slider";
+@use "./videos";
 * {
 	box-sizing: border-box;
 	margin: 0;
