@@ -1,30 +1,30 @@
-let videoDiv = document.querySelectorAll('.video__element');
-let videoDescription = document.querySelectorAll('.video__additional__content');
-let seeMore = document.querySelectorAll('.click__to__see');
+let videoDiv = document.querySelectorAll(".video__element");
+let videoDescription = document.querySelectorAll(".video__additional__content");
+let seeMore = document.querySelectorAll(".click__to__see");
 
 seeMore.forEach((item) => {
-	item.addEventListener('click', () => {
+	item.addEventListener("click", () => {
 		if (
 			item.previousElementSibling.firstElementChild.classList.contains(
-				'showDescription'
+				"showDescription"
 			)
 		) {
 			item.previousElementSibling.firstElementChild.classList.remove(
-				'showDescription'
+				"showDescription"
 			);
 			item.previousElementSibling.firstElementChild.classList.add(
-				'hideDescription'
+				"hideDescription"
 			);
 
-			item.firstElementChild.setAttribute('src', '../img/mainpage/info.svg');
+			item.firstElementChild.setAttribute("src", "../img/mainpage/info.svg");
 		} else {
 			item.previousElementSibling.firstElementChild.classList.remove(
-				'hideDescription'
+				"hideDescription"
 			);
 			item.previousElementSibling.firstElementChild.classList.add(
-				'showDescription'
+				"showDescription"
 			);
-			item.firstElementChild.setAttribute('src', '../img/mainpage/video.svg');
+			item.firstElementChild.setAttribute("src", "../img/mainpage/video.svg");
 		}
 	});
 });
@@ -36,4 +36,4 @@ const setOrder = () => {
 		}
 	}
 };
-document.addEventListener('DOMContentLoaded', setOrder);
+document.addEventListener("DOMContentLoaded", setOrder);

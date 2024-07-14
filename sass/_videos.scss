@@ -1,11 +1,11 @@
-@use './colors' as colors;
+@use "./colors" as colors;
 .section__video {
 	width: 95%;
 	margin: 0 auto;
 	margin-bottom: 10rem;
 	overflow: hidden;
 	.wrapper {
-		max-width: 1700px;
+		max-width: 1800px;
 		.video {
 			&__container__main {
 				width: 100%;
@@ -15,11 +15,15 @@
 				align-items: center;
 			}
 			&__box {
+				position: static;
 				width: 100%;
 				position: relative;
 				margin: 0 auto;
 				margin-bottom: 4rem;
 				margin-top: 4rem;
+				h4 {
+					display: none;
+				}
 
 				.video__element {
 					position: relative;
@@ -131,19 +135,72 @@
 }
 @media (min-width: 1200px) {
 	.section__video {
+		overflow: visible;
 		.wrapper {
 			.video {
+				&__container__main {
+					display: flex;
+					flex-direction: row;
+					flex-wrap: wrap;
+					justify-content: space-evenly;
+					align-items: center;
+				}
 				&__box {
+					width: 42%;
+					position: relative;
 					display: flex;
 					align-items: center;
 					justify-content: space-evenly;
+					margin-top: 2rem;
+					margin-bottom: 2rem;
+					cursor: pointer;
+					transition: scale 0.3s;
+					user-select: none;
+					&:hover{
+						scale: 0.95;
+					}
+					h4 {
+						display: inline-block;
+						position: absolute;
+						rotate: 45deg;
+						top: 5%;
+						right: -5%;
+						font-size: 2rem;
+						z-index: 40;
+						animation: scale 0.9s linear infinite;
+					}
+					.img__container{
+						top: 0;
+						left: 0;
+						position: absolute;
+						height: 100%;
+						width: 100%;
+						background-color: rgba(0, 0, 0, 0.4);
+						z-index: 11;
+					}
+					img {
+						display: block;
+						width: 100%;
+						object-fit: contain;
+					}
+					.icon{
+						height: 60px;
+						width: 60px;
+						transform: translate(-50%,-50%);
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						z-index: 50
+					}
 					.video__element {
-						width: 45%;
-						// &--second {
-						// 	order: 2;
-						// }
+						width: 100%;
+						iframe {
+							height: 100%;
+							min-height: 300px;
+						}
 					}
 					.video__additional__content {
+						display: none;
 						position: static;
 						width: 45%;
 						box-shadow: 3px 3px 8px colors.$main-black;
@@ -155,7 +212,7 @@
 							justify-content: center;
 							align-items: center;
 							box-shadow: none;
-							overflow: hidden;
+							overflow: auto;
 							// &--second {
 							// 	order: 1;
 							// }

@@ -94,3 +94,20 @@
 		opacity: 1;
 	}
 }
+@keyframes scale {
+	0% {
+		scale: 1;
+	}
+	25% {
+		scale: 1.40;
+	}
+	50% {
+		scale: 1.5;
+	}
+	75% {
+		scale: 1.40;
+	}
+	100% {
+		scale: 1;
+	}
+}
