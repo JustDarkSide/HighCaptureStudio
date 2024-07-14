@@ -1,4 +1,4 @@
-@use './colors' as colors;
+@use "./colors" as colors;
 .section__video {
 	width: 95%;
 	margin: 0 auto;
@@ -80,16 +80,39 @@
 }
 
 @media ((min-width: 385px) and (min-height: 730px) and (max-width: 768px)) {
-	// .section__video {
-	// 	.wrapper {
-	// 		.video {
-	// 			&__element {
-	// 				min-height: 245px;
-	// 				iframe {
-	// 					min-height: 245px;
-	// 				}
-	// 			}
-	// 		}
-	// 	}
-	// }
+	.section__video {
+		width: 88%;
+		.wrapper {
+			.video {
+				&__element {
+					min-height: 245px;
+					iframe {
+						min-height: 245px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.section__video {
+		.wrapper {
+			.video {
+				&__box {
+					.video__element {
+						iframe {
+							width: 100%;
+							height: 400px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media (min-width: 992px) {
+	.section__video {
+		width: 80%;
+	}
 }
