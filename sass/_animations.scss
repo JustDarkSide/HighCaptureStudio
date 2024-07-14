@@ -99,15 +99,27 @@
 		scale: 1;
 	}
 	25% {
-		scale: 1.40;
+		scale: 1.4;
 	}
 	50% {
 		scale: 1.5;
 	}
 	75% {
-		scale: 1.40;
+		scale: 1.4;
 	}
 	100% {
 		scale: 1;
+	}
+}
+
+@keyframes boxshadow {
+	0% {
+		box-shadow: none;
+	}
+	50% {
+		box-shadow: 0px 0px 5px 1px black;
+	}
+	100% {
+		box-shadow: none;
 	}
 }

@@ -1,0 +1,58 @@
+@use "./colors" as colors;
+body {
+	.section {
+		&__specificVideo {
+			height: calc(100vh - 230px);
+			margin-bottom: 0;
+			.wrapper {
+				height: 100%;
+				max-width: 1300px;
+				.specificVideo {
+					&__mainContainer {
+						padding-top: 3rem;
+						height: 100%;
+						width: 100%;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						// border: 1px solid red;
+					}
+					&__videoBox {
+						height: 100%;
+						width: 60%;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						// border: 1px solid black;
+						iframe {
+							margin-top: 5rem;
+							min-height: 40vh;
+							align-self: flex-start;
+							width: 100%;
+						}
+					}
+					&__description {
+						text-align: center;
+						padding: 4rem;
+						padding-top: 0;
+						width: 45%;
+						height: 100%;
+						&-title {
+							font-size: 6rem;
+							display: block;
+							width: 100%;
+							justify-self: flex-start;
+							margin-bottom: 5rem;
+						}
+						&-text {
+							width: 100%;
+							text-align: center;
+							margin: 0 2rem;
+							font-size: 2rem;
+						}
+					}
+				}
+			}
+		}
+	}
+}
