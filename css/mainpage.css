@@ -74,12 +74,15 @@
   }
 }
 @media (min-width: 1200px) {
+  .nav {
+    min-height: auto;
+    height: 120px;
+  }
   .nav__mainBox {
     height: 100%;
   }
   .nav__mainBox-PC {
     height: 100%;
-    box-shadow: 0 3px 2px -2px #000;
     display: flex;
     align-items: center;
     align-content: center;
@@ -521,7 +524,6 @@
     overflow: hidden;
     -o-object-fit: contain;
        object-fit: contain;
-    cursor: pointer;
   }
   .section__slider .slider__mainPhoto-box .photo img {
     -o-object-fit: contain;
@@ -755,7 +757,6 @@
   }
 }
 body .section__specificVideo {
-  height: calc(100vh - 230px);
   margin-bottom: 0;
 }
 body .section__specificVideo .wrapper {
@@ -763,47 +764,117 @@ body .section__specificVideo .wrapper {
   max-width: 1300px;
 }
 body .section__specificVideo .wrapper .specificVideo__mainContainer {
-  padding-top: 3rem;
   height: 100%;
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 4rem;
 }
 body .section__specificVideo .wrapper .specificVideo__videoBox {
-  height: 100%;
-  width: 60%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 90%;
 }
 body .section__specificVideo .wrapper .specificVideo__videoBox iframe {
-  margin-top: 5rem;
   min-height: 40vh;
-  align-self: flex-start;
   width: 100%;
 }
 body .section__specificVideo .wrapper .specificVideo__description {
   text-align: center;
-  padding: 4rem;
-  padding-top: 0;
-  width: 45%;
-  height: 100%;
+  padding: 0 2rem 4rem 2rem;
+  width: 90%;
+  height: 40%;
 }
 body .section__specificVideo .wrapper .specificVideo__description-title {
-  font-size: 6rem;
+  font-size: 3.5rem;
   display: block;
   width: 100%;
   justify-self: flex-start;
-  margin-bottom: 5rem;
+  margin: 4rem 0 3rem 0;
 }
 body .section__specificVideo .wrapper .specificVideo__description-text {
   width: 100%;
   text-align: center;
-  margin: 0 2rem;
   font-size: 2rem;
 }
 
+@media (min-width: 768px) {
+  body .section .wrapper .specificVideo__mainContainer {
+    padding-top: 7rem;
+  }
+  body .section .wrapper .specificVideo__description-text {
+    font-size: 2.4rem;
+  }
+}
+@media (min-width: 1200px) {
+  body .section__specificVideo {
+    height: calc(100vh - 230px);
+    margin-bottom: 0;
+  }
+  body .section__specificVideo .wrapper {
+    height: 100%;
+    max-width: 1300px;
+  }
+  body .section__specificVideo .wrapper .specificVideo__mainContainer {
+    padding-top: 3rem;
+    height: 100%;
+    width: 100%;
+    flex-direction: row;
+  }
+  body .section__specificVideo .wrapper .specificVideo__videoBox {
+    height: 100%;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body .section__specificVideo .wrapper .specificVideo__videoBox iframe {
+    margin-top: 5rem;
+    min-height: 40vh;
+    align-self: flex-start;
+    width: 100%;
+  }
+  body .section__specificVideo .wrapper .specificVideo__description {
+    text-align: center;
+    padding: 4rem;
+    padding-top: 0;
+    width: 45%;
+    height: 100%;
+  }
+  body .section__specificVideo .wrapper .specificVideo__description-title {
+    font-size: 6rem;
+    display: block;
+    width: 100%;
+    justify-self: flex-start;
+    margin: 20px;
+    margin-bottom: 5rem;
+  }
+  body .section__specificVideo .wrapper .specificVideo__description-text {
+    width: 100%;
+    text-align: center;
+    margin: 0 2rem;
+    font-size: 2rem;
+    font-weight: 500;
+  }
+}
+@media (min-width: 2000px) {
+  body .section__specificVideo .wrapper {
+    max-width: 1700px;
+  }
+  body .section__specificVideo .wrapper .specificVideo__mainContainer {
+    align-items: flex-start;
+    padding-top: 15rem;
+  }
+  body .section__specificVideo .wrapper .specificVideo__videoBox iframe {
+    margin-top: 0;
+  }
+  body .section__specificVideo .wrapper .specificVideo__description-title {
+    font-size: 7rem;
+  }
+  body .section__specificVideo .wrapper .specificVideo__description-text {
+    font-size: 2.4rem;
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -912,6 +983,9 @@ a:hover {
   word-wrap: break-word;
   text-align: center;
   font-size: 4rem;
+}
+.header .header__video {
+  display: none;
 }
 
 .section__first {
@@ -1125,7 +1199,9 @@ a:hover {
   .header .wrapper {
     display: flex;
     position: relative;
-    max-width: 1700px;
+    max-width: none;
+    margin: 0;
+    width: 100%;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -1144,6 +1220,7 @@ a:hover {
     height: 80%;
     width: 50%;
     margin-top: 0rem;
+    padding: 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1152,39 +1229,12 @@ a:hover {
     margin-top: 0;
     font-size: 8rem;
   }
-  .header__imgs {
+  .header .header__video {
     display: block;
-    position: relative;
-    height: 80%;
-    width: 45%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .header__imgs-img {
-    width: 300px;
-    height: 300px;
-  }
-  .header__imgs-img--first {
-    position: absolute;
-    top: 8%;
-    left: 15%;
-    z-index: 3;
-  }
-  .header__imgs-img--second {
-    z-index: 2;
-  }
-  .header__imgs-img--third {
-    position: absolute;
-    bottom: 8%;
-    right: 15%;
-    z-index: 1;
-  }
-  .header__imgs-img img {
     -o-object-fit: cover;
        object-fit: cover;
+    width: 50%;
     height: 100%;
-    width: 100%;
   }
   .music-content {
     height: calc(100vh - 100px);
@@ -1208,6 +1258,8 @@ a:hover {
     cursor: pointer;
   }
   .music-content__video .miniature_to_hide .miniature {
+    -o-object-fit: cover;
+       object-fit: cover;
     z-index: 1;
     display: block;
     height: 100%;
@@ -1305,9 +1357,6 @@ a:hover {
       height: 100vh; /* Example alternative calculation for Safari */
     }
   }
-  .header .wrapper {
-    max-width: 2000px;
-  }
   .header .dot_entrance {
     width: 80px;
     height: 80px;
@@ -1316,6 +1365,9 @@ a:hover {
   }
   .header .dot_entrance a {
     padding: 25px;
+  }
+  .header .header__textContainer {
+    padding: 8rem;
   }
   .header .header__textContainer-text {
     font-size: 9rem;
