@@ -122,6 +122,12 @@ const showNextPhoto = () => {
 		previousThumbnailIndex = thumbnailIndex;
 		clearAllActiveThumbnails();
 		photoIndex++;
+	} else {
+		photoIndex = 0;
+		otherPhotosBox.scrollTo(0, 0);
+		mainPhoto.setAttribute('title', 'main photo');
+		thumbnailPhotoBox[photoIndex].classList.add('active');
+		return;
 	}
 	let nextPhotoPath = pathCollection[photoIndex];
 	setRightElementProperties();
@@ -163,6 +169,12 @@ const showPreviousPhoto = () => {
 		previousThumbnailIndex = thumbnailIndex;
 		clearAllActiveThumbnails();
 		photoIndex--;
+	} else {
+		photoIndex = pathCollection.length - 1;
+		otherPhotosBox.scrollTo(otherPhotosBox.scrollWidth, 0);
+		mainPhoto.setAttribute('title', 'main photo');
+		thumbnailPhotoBox[photoIndex].classList.add('active');
+		return;
 	}
 	setRightElementProperties();
 	thumbnailIndex = photoIndex;
