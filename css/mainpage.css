@@ -508,6 +508,9 @@
   margin-bottom: 10rem;
   overflow: hidden;
 }
+.section__video .wrapper {
+  max-width: 1700px;
+}
 .section__video .wrapper .video__container__main {
   width: 100%;
   display: flex;
@@ -552,10 +555,12 @@
   height: 100%;
   padding: 2rem 1.5rem;
   overflow-y: scroll;
+  box-shadow: inset 0px 3px 10px black;
 }
 .section__video .wrapper .video__box .video__additional__content .video__description__paragraph {
   width: 100%;
   font-size: 1.8rem;
+  font-weight: 400;
   text-align: center;
 }
 .section__video .wrapper .click__to__see {
@@ -570,8 +575,6 @@
 }
 .section__video .wrapper .click__to__see .click__to__see__more {
   display: block;
-  rotate: -180deg;
-  transition: rotate 0.4s;
 }
 
 @media ((min-width: 385px) and (min-height: 730px) and (max-width: 768px)) {
@@ -590,10 +593,50 @@
     width: 100%;
     height: 400px;
   }
+  .section__video .wrapper .video__box .video__additional__content {
+    height: 400px;
+  }
+  .section__video .wrapper .video__box .video__additional__content .video__description {
+    padding: 2.5rem 5rem;
+  }
+  .section__video .wrapper .video__box .video__additional__content .video__description__paragraph {
+    font-size: 2.2rem;
+  }
+  .section__video .wrapper .click__to__see {
+    width: 50%;
+  }
 }
 @media (min-width: 992px) {
   .section__video {
     width: 80%;
+  }
+}
+@media (min-width: 1200px) {
+  .section__video .wrapper .video__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .section__video .wrapper .video__box .video__element {
+    width: 45%;
+  }
+  .section__video .wrapper .video__box .video__additional__content {
+    position: static;
+    width: 45%;
+    box-shadow: 3px 3px 8px #000;
+  }
+  .section__video .wrapper .video__box .video__additional__content .blur {
+    display: none;
+  }
+  .section__video .wrapper .video__box .video__additional__content .video__description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: none;
+    overflow: hidden;
+  }
+  .section__video .wrapper .click__to__see {
+    display: none;
   }
 }
 * {
