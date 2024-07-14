@@ -116,7 +116,9 @@
 	.nav {
 		// margin-bottom: 4rem;
 		&__mainBox {
+			height: 100%;
 			&-PC {
+				height: 100%;
 				box-shadow: 0 3px 2px -2px colors.$main-black;
 				display: flex;
 				align-items: center;

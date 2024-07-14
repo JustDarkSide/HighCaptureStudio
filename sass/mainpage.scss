@@ -4,6 +4,7 @@
 @use "./animations";
 @use "./slider";
 @use "./videos";
+@use "./specificvideo";
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -181,6 +182,9 @@ a:hover {
 		justify-content: center;
 		.youtube_video {
 			width: 100%;
+		}
+		.miniature_to_hide {
+			display: none;
 		}
 	}
 }
@@ -385,8 +389,8 @@ a:hover {
 			justify-content: center;
 			align-items: center;
 			&-img {
-				width: 240px;
-				height: 240px;
+				width: 300px;
+				height: 300px;
 				&--first {
 					position: absolute;
 					top: 8%;
@@ -423,6 +427,35 @@ a:hover {
 			height: 40%;
 			top: 10%;
 			left: 0;
+			.miniature_to_hide {
+				position: absolute;
+				top: 0;
+				left: 0;
+				display: block;
+				height: 100%;
+				width: 100%;
+				transition: scale 0.3s;
+				cursor: pointer;
+				.miniature {
+					z-index: 1;
+					display: block;
+					height: 100%;
+					width: 100%;
+				}
+				.icon {
+					height: 60px;
+					width: 60px;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					z-index: 10;
+				}
+				&:hover{
+					scale: 1.01;
+					animation: boxshadow 0.5s linear forwards;
+				}
+			}
 		}
 		&__description {
 			display: flex;
@@ -471,7 +504,7 @@ a:hover {
 			}
 		}
 		&__slider {
-			height: 90vh;
+			height: 100vh;
 			margin-top: 0;
 			margin-bottom: 2rem;
 		}
@@ -485,7 +518,7 @@ a:hover {
 					justify-content: center;
 					align-items: center;
 					align-content: center;
-					animation: 20s marquee infinite linear;
+					animation: 45s marquee infinite linear;
 					a {
 						margin: 0 5rem;
 						display: block;
@@ -534,8 +567,8 @@ a:hover {
 
 			&-img {
 				// border: 8px solid colors.$pure-white;
-				height: 280px;
-				width: 280px;
+				height: 360px;
+				width: 360px;
 				position: absolute;
 				&--first {
 					top: 0;
