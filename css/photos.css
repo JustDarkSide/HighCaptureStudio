@@ -1,8 +1,7 @@
 .grid {
+  width: 100%;
   margin: 0 auto;
   background: #dbdbdb;
-  width: 100%;
-  max-width: 1800px;
 }
 
 .grid:after {
@@ -12,11 +11,11 @@
 }
 
 .grid-item {
-  width: 200px;
-  border: 5px solid white;
+  width: var(--itemWidth);
   float: left;
   max-height: 800px;
   overflow: hidden;
+  margin-bottom: 2px;
 }
 
 .grid-item--height2 {
@@ -36,6 +35,7 @@
 }
 
 img {
+  display: block;
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
@@ -43,12 +43,9 @@ img {
 }
 
 /* ---- grid ---- */
-@media (min-width: 1920px) {
+@media (min-width: 1200px) {
   .grid {
-    margin: 0 auto;
     background: #dbdbdb;
-    width: 100%;
-    max-width: 1800px;
   }
   /* clearfix */
   .grid:after {
@@ -58,8 +55,6 @@ img {
   }
   /* ---- grid-item ---- */
   .grid-item {
-    width: 600px;
-    border: 5px solid white;
     float: left;
     max-height: 800px;
     overflow: hidden;
