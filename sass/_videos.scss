@@ -15,7 +15,8 @@
 				align-items: center;
 			}
 			&__box {
-				position: static;
+				height: 30%;
+				position: relative;
 				width: 100%;
 				position: relative;
 				margin: 0 auto;
@@ -30,12 +31,36 @@
 					width: 100%;
 					z-index: 1;
 					transition: all 0.7s;
-
-					.img__container {
-						display: none;
-					}
-					img {
-						display: none;
+					a {
+						position: absolute;
+						top: 0;
+						left: 0;
+						.img__container {
+							display: block;
+							top: 0;
+							left: 0;
+							position: absolute;
+							height: 100%;
+							width: 100%;
+							background-color: rgba(0, 0, 0, 0.4);
+							z-index: 11;
+						}
+						img {
+							display: block;
+							height: 100%;
+							display: block;
+							width: 100%;
+							object-fit: cover;
+						}
+						.icon {
+							height: 60px;
+							width: 60px;
+							transform: translate(-50%, -50%);
+							position: absolute;
+							top: 50%;
+							left: 50%;
+							z-index: 50;
+						}
 					}
 					iframe {
 						width: 100%;
