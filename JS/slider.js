@@ -127,6 +127,8 @@ const showNextPhoto = () => {
 		otherPhotosBox.scrollTo(0, 0);
 		mainPhoto.setAttribute('title', 'main photo');
 		thumbnailPhotoBox[photoIndex].classList.add('active');
+		temporaryImagePath = pathCollection[photoIndex];
+		mainPhoto.setAttribute('src', `${temporaryImagePath}`);
 		return;
 	}
 	let nextPhotoPath = pathCollection[photoIndex];
@@ -174,6 +176,8 @@ const showPreviousPhoto = () => {
 		otherPhotosBox.scrollTo(otherPhotosBox.scrollWidth, 0);
 		mainPhoto.setAttribute('title', 'main photo');
 		thumbnailPhotoBox[photoIndex].classList.add('active');
+		temporaryImagePath = pathCollection[photoIndex];
+		mainPhoto.setAttribute('src', `${temporaryImagePath}`);
 		return;
 	}
 	setRightElementProperties();
