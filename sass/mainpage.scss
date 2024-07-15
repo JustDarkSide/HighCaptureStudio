@@ -1,10 +1,10 @@
-@use "./colors" as colors;
-@use "./nav";
-@use "./footer";
-@use "./animations";
-@use "./slider";
-@use "./videos";
-@use "./specificvideo";
+@use './colors' as colors;
+@use './nav';
+@use './footer';
+@use './animations';
+@use './slider';
+@use './videos';
+@use './specificvideo';
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -12,7 +12,7 @@
 }
 
 @font-face {
-	font-family: "gothic";
+	font-family: 'gothic';
 	src: url(../css/font.ttf);
 }
 
@@ -76,17 +76,17 @@ a:hover {
 	margin: 0 auto;
 }
 .font {
-	font-family: "gothic", sans-serif;
+	font-family: 'gothic', sans-serif;
 	font-weight: 900;
 	font-style: normal;
 }
 .bebas-neue-regular {
-	font-family: "Bebas Neue", sans-serif;
+	font-family: 'Bebas Neue', sans-serif;
 	font-weight: 400;
 	font-style: normal;
 }
 .lato-regular {
-	font-family: "Lato", sans-serif;
+	font-family: 'Lato', sans-serif;
 	font-weight: 700;
 	font-style: normal;
 }
@@ -110,6 +110,9 @@ a:hover {
 			font-size: 4rem;
 		}
 	}
+	.header__video {
+		display: none;
+	}
 }
 
 .section {
@@ -119,6 +122,7 @@ a:hover {
 		flex-wrap: wrap;
 		height: 60vh;
 		margin-bottom: 6rem;
+		overflow: hidden;
 	}
 	&__marquee {
 		position: relative;
@@ -350,7 +354,9 @@ a:hover {
 		.wrapper {
 			display: flex;
 			position: relative;
-			max-width: 1700px;
+			max-width: none;
+			margin: 0;
+			width: 100%;
 			flex-direction: row;
 			align-items: center;
 			justify-content: space-between;
@@ -371,6 +377,7 @@ a:hover {
 			height: 80%;
 			width: 50%;
 			margin-top: 0rem;
+			padding: 4rem;
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -379,41 +386,11 @@ a:hover {
 				font-size: 8rem;
 			}
 		}
-
-		&__imgs {
+		.header__video {
 			display: block;
-			position: relative;
-			height: 80%;
-			width: 45%;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			&-img {
-				width: 300px;
-				height: 300px;
-				&--first {
-					position: absolute;
-					top: 8%;
-					left: 15%;
-					z-index: 3;
-				}
-				&--second {
-					// top: 22%;
-					// left: 25%;
-					z-index: 2;
-				}
-				&--third {
-					position: absolute;
-					bottom: 8%;
-					right: 15%;
-					z-index: 1;
-				}
-				img {
-					object-fit: cover;
-					height: 100%;
-					width: 100%;
-				}
-			}
+			object-fit: cover;
+			width: 50%;
+			height: 100%;
 		}
 	}
 	.music-content {
@@ -437,6 +414,7 @@ a:hover {
 				transition: scale 0.3s;
 				cursor: pointer;
 				.miniature {
+					object-fit: cover;
 					z-index: 1;
 					display: block;
 					height: 100%;
@@ -451,7 +429,7 @@ a:hover {
 					transform: translate(-50%, -50%);
 					z-index: 10;
 				}
-				&:hover{
+				&:hover {
 					scale: 1.01;
 					animation: boxshadow 0.5s linear forwards;
 				}
@@ -541,9 +519,6 @@ a:hover {
 				height: 100vh; /* Example alternative calculation for Safari */
 			}
 		}
-		.wrapper {
-			max-width: 2000px;
-		}
 
 		.dot_entrance {
 			width: 80px;
@@ -556,6 +531,7 @@ a:hover {
 		}
 
 		.header__textContainer {
+			padding: 8rem;
 			&-text {
 				font-size: 9rem;
 			}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+
+			body {
+				font-family: sans-serif;
+			}
+
+			/* ---- grid ---- */
+
+			.grid {
+				background: #eee;
+				max-width: 1600px;
+				margin: 0 auto;
+			}
+
+			/* clearfix */
+			.grid:after {
+				content: '';
+				display: block;
+				clear: both;
+			}
+
+			/* ---- grid-item ---- */
+
+			.grid-item {
+				width: 250px;
+				height: 250px;
+				float: left;
+				background: #d26;
+				border: 2px solid #333;
+				border-color: hsla(0, 0%, 0%, 0.5);
+				border-radius: 5px;
+			}
+
+			.grid-item--height2 {
+				height: 400px;
+			}
+			.grid-item--height3 {
+				height: 300px;
+			}
+			.grid-item--height4 {
+				height: 350px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="grid">
+			<div class="grid-item"></div>
+			<div class="grid-item grid-item--height2"></div>
+			<div class="grid-item"></div>
+			<div class="grid-item"></div>
+			<div class="grid-item grid-item--height4"></div>
+			<div class="grid-item"></div>
+			<div class="grid-item grid-item--height3"></div>
+			<div class="grid-item"></div>
+			<div class="grid-item grid-item--width2"></div>
+			<div class="grid-item grid-item--height2"></div>
+			<div class="grid-item"></div>
+			<div class="grid-item"></div>
+			<div class="grid-item grid-item--width2"></div>
+			<div class="grid-item grid-item--width2"></div>
+			<div class="grid-item"></div>
+			<div class="grid-item"></div>
+			<div class="grid-item"></div>
+			<div class="grid-item"></div>
+			<div class="grid-item"></div>
+			<div class="grid-item"></div>
+			<div class="grid-item"></div>
+			<div class="grid-item"></div>
+			<div class="grid-item"></div>
+		</div>
+		<script src="../js/masonry.pkgd.min.js"></script>
+		<script src="../js/imagesloaded.pkgd.min.js"></script>
+		<script>
+			var grid = document.querySelector('.grid');
+			var msnry;
+
+			imagesLoaded(grid, function () {
+				// init Isotope after all images have loaded
+				msnry = new Masonry(grid, {
+					itemSelector: '.grid-item',
+					columnWidth: 250,
+					percentPosition: true,
+				});
+			});
+		</script>
+	</body>
+</html>

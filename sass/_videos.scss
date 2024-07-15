@@ -1,4 +1,4 @@
-@use "./colors" as colors;
+@use './colors' as colors;
 .section__video {
 	width: 95%;
 	margin: 0 auto;
@@ -15,8 +15,7 @@
 				align-items: center;
 			}
 			&__box {
-				height: 30%;
-				position: relative;
+				position: static;
 				width: 100%;
 				position: relative;
 				margin: 0 auto;
@@ -31,40 +30,39 @@
 					width: 100%;
 					z-index: 1;
 					transition: all 0.7s;
+
 					a {
-						position: absolute;
-						top: 0;
-						left: 0;
+						position: relative;
+						display: block;
+						width: 90%;
+						margin: 0 auto;
+						height: 200px;
 						.img__container {
 							display: block;
+							position: absolute;
 							top: 0;
 							left: 0;
-							position: absolute;
-							height: 100%;
+							z-index: 1;
 							width: 100%;
+							height: 100%;
 							background-color: rgba(0, 0, 0, 0.4);
-							z-index: 11;
 						}
 						img {
 							display: block;
-							height: 100%;
-							display: block;
 							width: 100%;
+							height: 100%;
 							object-fit: cover;
 						}
 						.icon {
-							height: 60px;
-							width: 60px;
-							transform: translate(-50%, -50%);
 							position: absolute;
+							display: block;
+							height: 40px;
+							width: 40px;
 							top: 50%;
 							left: 50%;
-							z-index: 50;
+							transform: translate(-50%, -50%);
+							z-index: 2;
 						}
-					}
-					iframe {
-						width: 100%;
-						height: 200px;
 					}
 				}
 				.video__additional__content {
@@ -137,9 +135,14 @@
 			.video {
 				&__box {
 					.video__element {
-						iframe {
-							width: 100%;
-							height: 400px;
+						a {
+							width: 80%;
+							height: 350px;
+							margin: 0 auto;
+							.icon {
+								width: 50px;
+								height: 50px;
+							}
 						}
 					}
 					.video__additional__content {
@@ -208,38 +211,38 @@
 					.video__element {
 						height: 100%;
 						width: 100%;
-						iframe {
-							display: none;
-							height: 100%;
-							min-height: 300px;
-						}
-						.img__container {
-							display: block;
-							top: 0;
-							left: 0;
-							position: absolute;
-							height: 100%;
-							width: 100%;
-							background-color: rgba(0, 0, 0, 0.4);
-							z-index: 11;
-						}
-						img {
-							display: block;
-							height: 100%;
+						a {
 							display: block;
 							width: 100%;
-							object-fit: cover;
-						}
-						.icon {
-							height: 60px;
-							width: 60px;
-							transform: translate(-50%, -50%);
-							position: absolute;
-							top: 50%;
-							left: 50%;
-							z-index: 50;
+							height: 100%;
+							.img__container {
+								display: block;
+								top: 0;
+								left: 0;
+								position: absolute;
+								height: 100%;
+								width: 100%;
+								background-color: rgba(0, 0, 0, 0.4);
+								z-index: 1;
+							}
+							img {
+								display: block;
+								height: 100%;
+								width: 100%;
+								object-fit: cover;
+							}
+							.icon {
+								position: absolute;
+								height: 60px;
+								width: 60px;
+								transform: translate(-50%, -50%);
+								top: 50%;
+								left: 50%;
+								z-index: 2;
+							}
 						}
 					}
+
 					.video__additional__content {
 						display: none;
 						position: static;
