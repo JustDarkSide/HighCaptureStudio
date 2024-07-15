@@ -1,96 +1,145 @@
 <!DOCTYPE html>
 <html lang="pl">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
-		<style>
-			* {
-				box-sizing: border-box;
-			}
 
-			body {
-				font-family: sans-serif;
-			}
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>High Capture Studio | Photos</title>
+	<link rel="stylesheet" href="../css/photos.css">
+	<link rel="stylesheet" href="../css/mainpage.css">
+</head>
 
-			/* ---- grid ---- */
-
-			.grid {
-				background: #eee;
-				max-width: 1600px;
-				margin: 0 auto;
-			}
-
-			/* clearfix */
-			.grid:after {
-				content: '';
-				display: block;
-				clear: both;
-			}
-
-			/* ---- grid-item ---- */
-
-			.grid-item {
-				width: 250px;
-				height: 250px;
-				float: left;
-				background: #d26;
-				border: 2px solid #333;
-				border-color: hsla(0, 0%, 0%, 0.5);
-				border-radius: 5px;
-			}
-
-			.grid-item--height2 {
-				height: 400px;
-			}
-			.grid-item--height3 {
-				height: 300px;
-			}
-			.grid-item--height4 {
-				height: 350px;
-			}
-		</style>
-	</head>
-	<body>
-		<div class="grid">
-			<div class="grid-item"></div>
-			<div class="grid-item grid-item--height2"></div>
-			<div class="grid-item"></div>
-			<div class="grid-item"></div>
-			<div class="grid-item grid-item--height4"></div>
-			<div class="grid-item"></div>
-			<div class="grid-item grid-item--height3"></div>
-			<div class="grid-item"></div>
-			<div class="grid-item grid-item--width2"></div>
-			<div class="grid-item grid-item--height2"></div>
-			<div class="grid-item"></div>
-			<div class="grid-item"></div>
-			<div class="grid-item grid-item--width2"></div>
-			<div class="grid-item grid-item--width2"></div>
-			<div class="grid-item"></div>
-			<div class="grid-item"></div>
-			<div class="grid-item"></div>
-			<div class="grid-item"></div>
-			<div class="grid-item"></div>
-			<div class="grid-item"></div>
-			<div class="grid-item"></div>
-			<div class="grid-item"></div>
-			<div class="grid-item"></div>
+<body>
+	<nav class="nav">
+		<div class="nav__mainBox-PC">
+			<div class="nav__mainBox-PC--logo">
+				<a href="../../">
+					<img src="../../img/mutual/nav/logo/TEST_LOGO.png" alt="High Capture Studio logo" />
+				</a>
+			</div>
+			<div class="nav__mainBox-PC--listContainer">
+				<ul class="nav__mainBox-PC--list">
+					<li>
+						<a class="bebas-neue-regular nav__animation" href="#">
+							PROJECTS/MOREWORK
+						</a>
+					</li>
+					<li>
+						<a class="bebas-neue-regular nav__animation" href="#">
+							PHOTOS/VIDEOS
+						</a>
+					</li>
+					<li>
+						<a class="bebas-neue-regular nav__animation" href="#">
+							CONTACT/INFO
+						</a>
+					</li>
+				</ul>
+			</div>
 		</div>
-		<script src="../js/masonry.pkgd.min.js"></script>
-		<script src="../js/imagesloaded.pkgd.min.js"></script>
-		<script>
-			var grid = document.querySelector('.grid');
-			var msnry;
 
-			imagesLoaded(grid, function () {
-				// init Isotope after all images have loaded
-				msnry = new Masonry(grid, {
-					itemSelector: '.grid-item',
-					columnWidth: 250,
-					percentPosition: true,
-				});
+		<div class="nav__mainBox-mobile--logo">
+			<a href="../../">
+				<img src="../img/mutual/nav/logo/TEST_LOGO.png" alt="High Capture Studio logo" />
+			</a>
+		</div>
+
+		<div class="nav__mainBox-mobile">
+			<div class="nav__mainBox-mobile--listBox">
+				<ul>
+					<li>
+						<a class="bebas-neue-regular nav__animation" href="#">
+							PROJEKTY & <br />
+							WIĘCEJ
+						</a>
+					</li>
+					<li>
+						<a class="bebas-neue-regular nav__animation" href="#">
+							ZDJĘCIA & <br />
+							FILMY
+						</a>
+					</li>
+					<li>
+						<a class="bebas-neue-regular nav__animation" href="#">
+							INFO & <br />
+							KONTAKT
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="grid">
+		<div class="grid-item"><img src="../img/mainpage/sliderimg/boy.jpg" alt=""></div>
+		<div class="grid-item"><img src="../img/mainpage/sliderimg/citysea.jpg" alt=""></div>
+		<div class="grid-item"><img src="../img/mainpage/sliderimg/rabit.jpg" alt=""></div>
+		<div class="grid-item"><img src="../img/mainpage/sliderimg/harbour.jpg" alt=""></div>
+		<div class="grid-item"><img src="../img/mainpage/sliderimg/ship.jpg" alt=""></div>
+		<div class="grid-item grid-item--height4"><img src="../img/mainpage/sliderimg/stadium.jpg" alt=""></div>
+		<div class="grid-item"><img src="../img/mainpage/sliderimg/rabit.jpg" alt=""></div>
+		<div class="grid-item"><img src="../img/mainpage/sliderimg/containership.jpg" alt=""></div>
+		<div class="grid-item grid-item--height3"><img src="../img/mainpage/sliderimg/citysea.jpg" alt=""></div>
+		<div class="grid-item"><img src="../img/mainpage/sliderimg/rabit.jpg" alt=""></div>
+		<div class="grid-item"><img src="../img/mainpage/sliderimg/saintjuku_one.jpg" alt=""></div>
+		<div class="grid-item"><img src="../img/mainpage/sliderimg/forklift.jpg" alt=""></div>
+		<div class="grid-item grid-item--height2"><img src="../img/mainpage/sliderimg/halfisland.jpg" alt=""></div>
+		<!-- <div class="grid-item"></div>
+		<div class="grid-item"></div>
+		<div class="grid-item"></div>
+		<div class="grid-item"></div>
+		<div class="grid-item"></div>
+		<div class="grid-item"></div>
+		<div class="grid-item"></div>
+		<div class="grid-item"></div>
+		<div class="grid-item"></div>
+		<div class="grid-item"></div> -->
+	</div>
+	<footer class="footer">
+		<div class="footer__box">
+			<div class="footer__top">
+				<a href="" class="footer__privacypolicy">Privacy Policy</a>
+			</div>
+			<div class="footer__socialmedia">
+				<div class="dot">
+					<a href="">
+						<img src="../../img/mutual/footer/facebook.svg" alt="" />
+					</a>
+				</div>
+				<div class="dot">
+					<a href="https://www.instagram.com/highcapturestudio?igsh=Y2xlZjAxa3plcXgw&utm_source=qr">
+						<img src="../../img/mutual/footer/instagram.svg" alt="" />
+					</a>
+				</div>
+				<div class="dot">
+					<a href="">
+						<img src="../../img/mutual/footer/twitter.svg" alt="" />
+					</a>
+				</div>
+				<div class="dot">
+					<a href="https://youtube.com/@highcapturestudio4320?si=_QyPXgPNLEK_Ksgh">
+						<img src="../../img/mutual/footer/youtube.svg" alt="" />
+					</a>
+				</div>
+			</div>
+			<div class="footer__phone">
+				<a href="" class="phone">Phone: +48123456789</a>
+			</div>
+		</div>
+	</footer>
+	<script src="../js/masonry.pkgd.min.js"></script>
+	<script src="../js/imagesloaded.pkgd.min.js"></script>
+	<script>
+		var grid = document.querySelector('.grid');
+		var msnry;
+
+		imagesLoaded(grid, function () {
+			// init Isotope after all images have loaded
+			msnry = new Masonry(grid, {
+				itemSelector: '.grid-item',
 			});
-		</script>
-	</body>
+		});
+	</script>
+</body>
+
 </html>
