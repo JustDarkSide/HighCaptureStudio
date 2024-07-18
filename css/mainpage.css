@@ -87,6 +87,7 @@
     align-items: center;
     align-content: center;
     justify-content: space-between;
+    background-color: #000;
   }
   .nav__mainBox-PC--logo {
     max-width: 600px;
@@ -106,6 +107,7 @@
   .nav__mainBox-PC--list li a {
     padding: 1.2rem;
     font-size: 2.72rem;
+    color: #dbdbdb;
   }
   .nav__mainBox-mobile {
     display: none;
@@ -313,6 +315,46 @@
   }
   100% {
     box-shadow: none;
+  }
+}
+@keyframes showYTVideo {
+  from {
+    transform: translateX(var(--reversedWidth));
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes showYTVideoDescription {
+  from {
+    transform: translateX(var(--width));
+    opacity: 0.5;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes hideYTVideo {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(var(--reversedWidth));
+    opacity: 0.5;
+  }
+}
+@keyframes hideYTVideoDescription {
+  from {
+    transform: translateX(0);
+    opacity: 0.1;
+  }
+  to {
+    transform: translateX(var(--width));
+    opacity: 0.5;
   }
 }
 .section__title {
@@ -941,6 +983,22 @@ a:hover {
   animation: hideDescription 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
 }
 
+.showYTVideo {
+  animation: showYTVideo 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.showYTVideoDescription {
+  animation: showYTVideoDescription 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.hideYTVideo {
+  animation: hideYTVideo 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.hideYTVideoDescription {
+  animation: hideYTVideoDescription 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
 .rotate {
   rotate: 0deg !important;
 }
@@ -1017,12 +1075,26 @@ a:hover {
 }
 
 .section__first {
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
+  position: relative;
   height: 60vh;
   margin-bottom: 6rem;
+  z-index: 1;
   overflow: hidden;
+}
+.section__first__background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  overflow: hidden;
+}
+.section__first__background video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .section__marquee {
   position: relative;
@@ -1031,6 +1103,8 @@ a:hover {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  z-index: 3;
+  color: #dbdbdb;
 }
 .section__marquee-marqueeContainer {
   width: auto;
@@ -1065,22 +1139,28 @@ a:hover {
   height: 80px;
   width: auto;
 }
-
-.music-content {
-  position: relative;
-  width: 100%;
-  margin: 4rem auto 0;
-  max-width: 1200px;
+.section .watch__it__button {
+  display: none;
+  transition: color 0.3s;
 }
+.section .watch__it__button:hover {
+  color: rgb(211, 90, 171);
+}
+
 .music-content__description {
   display: none;
 }
 .music-content__video {
-  width: 95%;
+  width: 90%;
   min-height: 250px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  z-index: 3;
+  transform: translate(-50%);
 }
 .music-content__video .youtube_video {
   width: 100%;
@@ -1118,6 +1198,9 @@ a:hover {
     max-width: 200px;
     height: 90px;
   }
+  .music-content__video {
+    top: 30%;
+  }
 }
 @media ((min-width: 568px) and (max-width: 992px)) {
   .header {
@@ -1142,31 +1225,57 @@ a:hover {
 @media (min-width: 768px) {
   .section__first {
     height: 75vh;
+    display: block;
   }
   .section__slider {
     height: 60vh;
+  }
+  .section .watch__it__button {
+    position: absolute;
+    display: block;
+    z-index: 3;
+    width: 200px;
+    height: 60px;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #dbdbdb;
+    color: #000;
+    font-size: 1.8rem;
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
   }
   .music-content {
     height: 60vh;
   }
   .music-content__video {
     position: absolute;
-    z-index: 1;
-    top: 0;
+    z-index: 4;
+    top: 12%;
     left: 5%;
-    width: 60%;
+    width: 55%;
     min-height: 300px;
+    opacity: 0.5;
+    transform: translateX(var(--reversedWidth));
+  }
+  .music-content__video .youtube_video {
+    transition: opacity 0.5s, transform 0.5s;
   }
   .music-content__description {
     display: block;
     position: absolute;
-    z-index: 0;
-    width: 60%;
+    z-index: 3;
+    width: 55%;
     padding: 8rem 0 0 8rem;
     min-height: 300px;
-    top: 40%;
+    top: 44%;
     right: 5%;
+    opacity: 0.5;
+    transform: translateX(var(--width));
     box-shadow: 3px 3px 8px #000;
+    background-color: #dbdbdb;
   }
   .music-content__description h2 {
     font-size: 5rem;
@@ -1223,7 +1332,6 @@ a:hover {
   .header {
     position: relative;
     height: calc(var(--vh, 100vh) - var(--navHeight));
-    margin-bottom: 10rem;
   }
   .header .wrapper {
     display: flex;
@@ -1265,16 +1373,24 @@ a:hover {
     width: 50%;
     height: 100%;
   }
+  .section .watch__it__button {
+    width: 250px;
+    height: 80px;
+    font-size: 2.2rem;
+  }
   .music-content {
     height: calc(100vh - 100px);
     max-width: 1200px;
     margin: 0 auto;
   }
   .music-content__video {
-    width: 55%;
-    height: 40%;
-    top: 10%;
-    left: 0;
+    width: 40%;
+    height: 35%;
+    top: 15%;
+    left: 15%;
+  }
+  .music-content__video .youtube_video {
+    opacity: 0;
   }
   .music-content__video .miniature_to_hide {
     position: absolute;
@@ -1312,12 +1428,12 @@ a:hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 40%;
+    width: 40%;
+    height: 35%;
     top: 45%;
-    right: 0%;
+    right: 15%;
     padding: 0 5rem;
     text-align: center;
-    width: 55%;
   }
   .music-content__description h2 {
     font-size: 7rem;
@@ -1431,17 +1547,20 @@ a:hover {
     width: 100%;
   }
   .music-content__video {
+    width: 30%;
     min-height: 410px;
-    left: 0;
+    top: 15%;
+    left: 23%;
   }
   .music-content__description {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 30%;
     min-height: 410px;
     top: 45%;
-    right: 0%;
+    right: 23%;
     padding: 0;
     text-align: center;
   }

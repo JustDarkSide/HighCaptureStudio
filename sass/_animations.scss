@@ -123,3 +123,44 @@
 		box-shadow: none;
 	}
 }
+@keyframes showYTVideo {
+	from {
+		transform: translateX(var(--reversedWidth));
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+@keyframes showYTVideoDescription {
+	from {
+		transform: translateX(var(--width));
+		opacity: 0.5;
+	}
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@keyframes hideYTVideo {
+	from {
+		transform: translateX(0);
+		opacity: 1;
+	}
+	to {
+		transform: translateX(var(--reversedWidth));
+		opacity: 0.5;
+	}
+}
+@keyframes hideYTVideoDescription {
+	from {
+		transform: translateX(0);
+		opacity: 0.1;
+	}
+	to {
+		transform: translateX(var(--width));
+		opacity: 0.5;
+	}
+}

@@ -126,6 +126,7 @@
 				align-items: center;
 				align-content: center;
 				justify-content: space-between;
+				background-color: colors.$main-black;
 				// padding-top: 20px;
 				&--logo {
 					max-width: 600px;
@@ -145,6 +146,7 @@
 						a {
 							padding: 1.2rem;
 							font-size: 2.72rem;
+							color: #dbdbdb;
 						}
 					}
 				}
