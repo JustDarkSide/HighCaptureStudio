@@ -4,7 +4,7 @@
 	background: #dbdbdb;
 }
 .grid:after {
-	content: '';
+	content: "";
 	display: block;
 	clear: both;
 }
@@ -13,7 +13,7 @@
 	float: left;
 	max-height: 800px;
 	overflow: hidden;
-    margin-bottom: 2px;
+	margin-bottom: 2px;
 }
 .grid-item--height2 {
 	height: 400px;
@@ -42,7 +42,7 @@ img {
 
 	/* clearfix */
 	.grid:after {
-		content: '';
+		content: "";
 		display: block;
 		clear: both;
 	}

@@ -945,6 +945,324 @@ body .section__specificVideo .wrapper .specificVideo__description-text {
     font-size: 2.4rem;
   }
 }
+header .contact_heading {
+  width: 100%;
+  text-align: center;
+  font-size: 3.5rem;
+  margin: 3rem 0;
+}
+
+.section__contact {
+  width: 100%;
+}
+.section__contact .wrapper .mainContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.section__contact .wrapper .mainContainer .description__block {
+  width: 100%;
+  order: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section__contact .wrapper .mainContainer .description__container {
+  height: 100%;
+  width: 90%;
+}
+.section__contact .wrapper .mainContainer .description__text {
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  font-size: 1.7rem;
+}
+.section__contact .wrapper .mainContainer .imgs__block {
+  margin-top: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 100%;
+  order: 2;
+}
+.section__contact .wrapper .mainContainer .imgs__container {
+  width: 33%;
+}
+.section__contact .wrapper .mainContainer .imgs__container img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.section__contact .wrapper .mainContainer .imgs__container-additional {
+  width: 100%;
+}
+.section__contact .wrapper .mainContainer .form__block {
+  padding: 4rem;
+  order: 3;
+  background-color: #333;
+  width: 100%;
+}
+.section__contact .wrapper .mainContainer .form__block .input-box {
+  margin: 1.4rem auto;
+  width: 80%;
+  position: relative;
+}
+.section__contact .wrapper .mainContainer .form__block .input-box input,
+.section__contact .wrapper .mainContainer .form__block .input-box textarea {
+  padding: 1em;
+  width: 100%;
+  border-radius: 8px;
+  border: 2px solid #aaa;
+  background: none;
+  color: #aaa;
+  touch-action: manipulation;
+}
+.section__contact .wrapper .mainContainer .form__block .input-box label {
+  color: #dbdbdb;
+  position: absolute;
+  top: 32%;
+  left: 2%;
+  font-size: 1.6rem;
+  padding: 0 0.5em;
+  transition: transform 0.3s;
+  pointer-events: none;
+}
+.section__contact .wrapper .mainContainer .form__block .input-box input:focus,
+.section__contact .wrapper .mainContainer .form__block .input-box textarea:focus {
+  outline: none;
+  border: 2px solid rgb(223, 174, 14);
+}
+.section__contact .wrapper .mainContainer .form__container h2 {
+  color: #dbdbdb;
+  width: 100%;
+  text-align: center;
+  font-size: 3.5rem;
+  margin: 3rem 0;
+}
+.section__contact .wrapper .mainContainer .form__container .checkbox-box {
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+.section__contact .wrapper .mainContainer .form__container .checkbox-box input {
+  height: 25px;
+  width: 25px;
+  accent-color: rgb(223, 174, 14);
+}
+.section__contact .wrapper .mainContainer .form__container .checkbox-box p {
+  margin-left: 1rem;
+  color: #dbdbdb;
+  font-size: 1.4rem;
+}
+.section__contact .wrapper .mainContainer .form__container .checkbox-box a {
+  color: rgb(223, 174, 14);
+}
+.section__contact .wrapper .mainContainer .form__container input[type=submit] {
+  height: 50px;
+  width: 200px;
+  display: block;
+  margin: 0 auto 3rem;
+  border-radius: 15px;
+  background-color: #333;
+  color: rgb(223, 174, 14);
+  border: 2px solid rgb(223, 174, 14);
+  box-shadow: 3px 3px 3px rgb(223, 174, 14);
+  transition: box-shadow 0.3s;
+}
+.section__contact .wrapper .mainContainer .form__container input[type=submit]:focus {
+  box-shadow: none;
+}
+
+@media (min-width: 768px) {
+  header h1 {
+    font-size: 6rem;
+    margin: 4rem auto;
+  }
+  .section__contact .wrapper .mainContainer .description__container {
+    width: 85%;
+  }
+  .section__contact .wrapper .mainContainer .description__text {
+    padding: 1.2rem;
+    font-size: 2.6rem;
+  }
+}
+@media (min-width: 992px) {
+  header h1 {
+    font-size: 8rem;
+  }
+  .section__contact .wrapper .mainContainer .description__container {
+    width: 85%;
+  }
+  .section__contact .wrapper .mainContainer .description__text {
+    padding: 1.2rem;
+    font-size: 3rem;
+  }
+  .section__contact .wrapper .mainContainer .imgs__block {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+    width: 70%;
+  }
+  .section__contact .wrapper .mainContainer .imgs__container-additional {
+    margin: 1rem;
+    width: 100%;
+  }
+  .section__contact .wrapper .mainContainer .form__block .input-box {
+    margin: 2.8rem auto;
+    width: 60%;
+  }
+  .section__contact .wrapper .mainContainer .form__block .input-box input,
+  .section__contact .wrapper .mainContainer .form__block .input-box textarea {
+    padding: 1.4em;
+  }
+  .section__contact .wrapper .mainContainer .form__block .input-box label {
+    top: 22%;
+    font-size: 2rem;
+  }
+  .section__contact .wrapper .mainContainer__container h2 {
+    font-size: 5rem;
+    margin: 3rem 0;
+  }
+  .section__contact .wrapper .mainContainer__container .checkbox-box {
+    padding: 2rem;
+  }
+  .section__contact .wrapper .mainContainer__container .checkbox-box input {
+    height: 35px;
+    width: 35px;
+  }
+  .section__contact .wrapper .mainContainer__container .checkbox-box p {
+    margin-left: 1.2rem;
+    font-size: 2rem;
+  }
+  .section__contact .wrapper .mainContainer__container input[type=submit] {
+    height: 80px;
+    width: 250px;
+    margin: 2rem auto 3rem;
+    font-size: 2rem;
+  }
+}
+@media (min-width: 1200px) {
+  .contact_header {
+    display: none;
+  }
+  .section__contact {
+    width: 100%;
+  }
+  .section__contact .wrapper {
+    max-width: none;
+  }
+  .section__contact .wrapper .mainContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+  }
+  .section__contact .wrapper .mainContainer .description__block {
+    border: 1px solid black;
+    width: 50%;
+    order: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .section__contact .wrapper .mainContainer .description__container {
+    height: 100%;
+    width: 90%;
+  }
+  .section__contact .wrapper .mainContainer .description__text {
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    font-size: 1.7rem;
+  }
+  .section__contact .wrapper .mainContainer .imgs__block {
+    margin-top: 6rem;
+    display: flex;
+    display: none;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+    order: 2;
+  }
+  .section__contact .wrapper .mainContainer .imgs__container {
+    width: 33%;
+  }
+  .section__contact .wrapper .mainContainer .imgs__container img {
+    width: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .section__contact .wrapper .mainContainer .imgs__container-additional {
+    width: 100%;
+  }
+  .section__contact .wrapper .mainContainer .form__block {
+    order: 1;
+    background-color: #333;
+    width: 50%;
+    height: calc(100vh - 120px);
+  }
+  .section__contact .wrapper .mainContainer .form__block .input-box input,
+  .section__contact .wrapper .mainContainer .form__block .input-box textarea {
+    border: 2px solid #8a8a8a;
+    background-color: #b8b8b8;
+    color: #000;
+  }
+  .section__contact .wrapper .mainContainer .form__block .input-box label {
+    color: #000;
+    font-size: 1.6rem;
+  }
+  .section__contact .wrapper .mainContainer .form__container h2 {
+    color: #000;
+    width: 100%;
+    text-align: center;
+    font-size: 3.5rem;
+    margin: 3rem 0;
+  }
+  .section__contact .wrapper .mainContainer .form__container .checkbox-box {
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+  .section__contact .wrapper .mainContainer .form__container .checkbox-box input {
+    height: 25px;
+    width: 25px;
+    accent-color: #000;
+  }
+  .section__contact .wrapper .mainContainer .form__container .checkbox-box p {
+    margin-left: 1rem;
+    color: #000;
+    font-size: 1.4rem;
+  }
+  .section__contact .wrapper .mainContainer .form__container .checkbox-box a {
+    color: #000;
+    font-weight: bold;
+  }
+  .section__contact .wrapper .mainContainer .form__container input[type=submit] {
+    height: 50px;
+    width: 200px;
+    display: block;
+    margin: 0 auto 3rem;
+    border-radius: 15px;
+    border: 2px solid #8a8a8a;
+    background-color: #b8b8b8;
+    color: #000;
+    box-shadow: 3px 3px 3px #000;
+    transition: box-shadow 0.3s;
+  }
+  .section__contact .wrapper .mainContainer .form__container input[type=submit]:focus {
+    box-shadow: none;
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -1096,6 +1414,15 @@ a:hover {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.section__first__background .shadow {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.6);
+  top: 0;
+  left: 0;
+}
 .section__marquee {
   position: relative;
   overflow: hidden;
@@ -1103,7 +1430,7 @@ a:hover {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  z-index: 3;
+  z-index: 4;
   color: #dbdbdb;
 }
 .section__marquee-marqueeContainer {
@@ -1159,7 +1486,7 @@ a:hover {
   position: absolute;
   top: 20%;
   left: 50%;
-  z-index: 3;
+  z-index: 4;
   transform: translate(-50%);
 }
 .music-content__video .youtube_video {
@@ -1252,7 +1579,7 @@ a:hover {
   }
   .music-content__video {
     position: absolute;
-    z-index: 4;
+    z-index: 5;
     top: 12%;
     left: 5%;
     width: 55%;
@@ -1266,7 +1593,7 @@ a:hover {
   .music-content__description {
     display: block;
     position: absolute;
-    z-index: 3;
+    z-index: 4;
     width: 55%;
     padding: 8rem 0 0 8rem;
     min-height: 300px;
