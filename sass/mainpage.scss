@@ -37,6 +37,12 @@ a:active,
 a:hover {
 	-webkit-tap-highlight-color: transparent;
 }
+.hideFirstVideoBox {
+	transform: translateX(-100%);
+}
+.showSecondVideoBox {
+	transform: translateX(0) !important;
+}
 
 .showDescription {
 	animation: showDescription 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
@@ -138,6 +144,15 @@ a:hover {
 		margin-bottom: 6rem;
 		z-index: 1;
 		overflow: hidden;
+		.firstvideo {
+			transition: transform 0.5s;
+			height: 100%;
+			width: 100%;
+		}
+		.secondvideo {
+			transition: transform 0.5s;
+			display: none;
+		}
 		&__background {
 			position: absolute;
 			width: 100%;
@@ -324,7 +339,7 @@ a:hover {
 		&__slider {
 			height: 60vh;
 		}
-		.watch__it__button {
+		.next_video_button {
 			position: absolute;
 			display: block;
 			z-index: 3;
@@ -481,7 +496,22 @@ a:hover {
 			width: 250px;
 			height: 80px;
 			font-size: 2.2rem;
+			z-index: 4;
 		}
+
+		// .next_video_button {
+		// 	width: 70px;
+		// 	height: 70px;
+		// 	border-radius: 50%;
+		// 	position: absolute;
+		// 	top: 50%;
+		// 	right: 0;
+		// 	transform: translate(-50%, -50%);
+		// 	z-index: 4;
+		// 	-webkit-animation: blink-2 3s infinite both;
+		// 	animation: blink-2 3s infinite both;
+		// 	cursor: pointer;
+		// }
 	}
 	.music-content {
 		height: calc(100vh - 100px);
@@ -560,7 +590,17 @@ a:hover {
 		&__first {
 			height: var(--vh, 100vh);
 			display: block;
-			// padding-top: 10rem;
+			.secondvideo {
+				height: 100%;
+				width: 100%;
+				transform: translateX(100%);
+				display: block;
+			}
+			.firstvideo {
+				height: 100%;
+				width: 100%;
+				position: absolute;
+			}
 		}
 		&__marquee {
 			height: 100px;
