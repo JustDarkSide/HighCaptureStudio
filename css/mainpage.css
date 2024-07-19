@@ -1163,23 +1163,37 @@ header .contact_heading {
     align-items: center;
     flex-direction: row;
   }
+  @supports (-webkit-touch-callout: none) {
+    .section__contact .wrapper .mainContainer .description__block {
+      height: 100vh;
+    }
+  }
   .section__contact .wrapper .mainContainer .description__block {
-    border: 1px solid black;
+    display: flex;
+    justify-content: normal;
+    align-items: center;
+    background-color: #333;
+    height: calc(var(--vh) - var(--navHeight));
     width: 50%;
     order: 1;
+  }
+  .section__contact .wrapper .mainContainer .description__container {
+    height: 50%;
+    width: 80%;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .section__contact .wrapper .mainContainer .description__container {
-    height: 100%;
-    width: 90%;
-  }
   .section__contact .wrapper .mainContainer .description__text {
-    padding: 1rem;
+    padding: 2.5rem;
+    padding-top: 0;
     width: 100%;
     text-align: center;
-    font-size: 1.7rem;
+    color: #fff;
+    line-height: 1.6;
+    font-size: 2.5rem;
+    font-weight: 400;
   }
   .section__contact .wrapper .mainContainer .imgs__block {
     margin-top: 6rem;
@@ -1206,20 +1220,30 @@ header .contact_heading {
     order: 1;
     background-color: #333;
     width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: calc(100vh - 120px);
+  }
+  .section__contact .wrapper .mainContainer .form__block .input-box {
+    width: 60%;
   }
   .section__contact .wrapper .mainContainer .form__block .input-box input,
   .section__contact .wrapper .mainContainer .form__block .input-box textarea {
+    background: none;
     border: 2px solid #8a8a8a;
-    background-color: #b8b8b8;
-    color: #000;
+    font-size: 1.8rem;
+    color: #fff;
   }
   .section__contact .wrapper .mainContainer .form__block .input-box label {
-    color: #000;
-    font-size: 1.6rem;
+    color: #fff;
+    font-size: 2rem;
+  }
+  .section__contact .wrapper .mainContainer .form__container {
+    width: 100%;
   }
   .section__contact .wrapper .mainContainer .form__container h2 {
-    color: #000;
+    color: rgb(223, 174, 14);
     width: 100%;
     text-align: center;
     font-size: 3.5rem;
@@ -1240,22 +1264,23 @@ header .contact_heading {
   }
   .section__contact .wrapper .mainContainer .form__container .checkbox-box p {
     margin-left: 1rem;
-    color: #000;
-    font-size: 1.4rem;
+    color: #fff;
+    font-size: 2rem;
   }
   .section__contact .wrapper .mainContainer .form__container .checkbox-box a {
-    color: #000;
+    color: rgb(223, 174, 14);
     font-weight: bold;
   }
   .section__contact .wrapper .mainContainer .form__container input[type=submit] {
     height: 50px;
     width: 200px;
     display: block;
-    margin: 0 auto 3rem;
+    margin: 0 auto;
+    margin-top: 2rem;
     border-radius: 15px;
-    border: 2px solid #8a8a8a;
-    background-color: #b8b8b8;
-    color: #000;
+    border: 2px solid rgb(223, 174, 14);
+    background: none;
+    color: #fff;
     box-shadow: 3px 3px 3px #000;
     transition: box-shadow 0.3s;
   }

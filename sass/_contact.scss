@@ -1,4 +1,4 @@
-@use "./colors" as colors;
+@use './colors' as colors;
 
 header {
 	.contact_heading {
@@ -126,7 +126,7 @@ header {
 							color: colors.$form-color;
 						}
 					}
-					input[type="submit"] {
+					input[type='submit'] {
 						height: 50px;
 						width: 200px;
 						display: block;
@@ -235,7 +235,7 @@ header {
 							font-size: 2rem;
 						}
 					}
-					input[type="submit"] {
+					input[type='submit'] {
 						height: 80px;
 						width: 250px;
 						margin: 2rem auto 3rem;
@@ -267,23 +267,37 @@ header {
 				align-items: center;
 				flex-direction: row;
 				.description {
+					@supports (-webkit-touch-callout: none) {
+						&__block {
+							height: 100vh;
+						}
+					}
 					&__block {
-						border: 1px solid black;
+						display: flex;
+						justify-content: normal;
+						align-items: center;
+						background-color: #333;
+						height: calc(var(--vh) - var(--navHeight));
 						width: 50%;
 						order: 1;
+					}
+					&__container {
+						height: 50%;
+						width: 80%;
+						margin: 0 auto;
 						display: flex;
 						justify-content: center;
 						align-items: center;
 					}
-					&__container {
-						height: 100%;
-						width: 90%;
-					}
 					&__text {
-						padding: 1rem;
+						padding: 2.5rem;
+						padding-top: 0;
 						width: 100%;
 						text-align: center;
-						font-size: 1.7rem;
+						color: colors.$pure-white;
+						line-height: 1.6;
+						font-size: 2.5rem;
+						font-weight: 400;
 					}
 				}
 				.imgs {
@@ -314,23 +328,29 @@ header {
 						order: 1;
 						background-color: #333;
 						width: 50%;
+						display: flex;
+						justify-content: center;
+						align-items: center;
 						height: calc(100vh - 120px);
 						.input-box {
+							width: 60%;
 							input,
 							textarea {
-								border: 2px solid #8a8a8a;
-								background-color: #b8b8b8;
-								color: colors.$main-black;
+								background: none;
+								border: 2px solid colors.$input-idle-color;
+								font-size: 1.8rem;
+								color: colors.$pure-white;
 							}
 							label {
-								color: colors.$main-black;
-								font-size: 1.6rem;
+								color: colors.$pure-white;
+								font-size: 2rem;
 							}
 						}
 					}
 					&__container {
+						width: 100%;
 						h2 {
-							color: colors.$main-black;
+							color: colors.$form-color;
 							width: 100%;
 							text-align: center;
 							font-size: 3.5rem;
@@ -350,23 +370,25 @@ header {
 							}
 							p {
 								margin-left: 1rem;
-								color: colors.$main-black;
-								font-size: 1.4rem;
+								color: colors.$pure-white;
+								font-size: 2rem;
 							}
 							a {
-								color: colors.$main-black;
+								color: colors.$form-color;
 								font-weight: bold;
 							}
 						}
-						input[type="submit"] {
+						input[type='submit'] {
 							height: 50px;
 							width: 200px;
 							display: block;
-							margin: 0 auto 3rem;
+							margin: 0 auto;
+							margin-top: 2rem;
+						
 							border-radius: 15px;
-							border: 2px solid #8a8a8a;
-							background-color: #b8b8b8;
-							color: colors.$main-black;
+							border: 2px solid colors.$form-color;
+							background: none;
+							color: colors.$pure-white;
 							// border: 2px solid colors.$main-black;
 							box-shadow: 3px 3px 3px colors.$main-black;
 							transition: box-shadow 0.3s;
