@@ -17,6 +17,12 @@ header {
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
+			.section__title {
+				display: none;
+			}
+			&__shadow {
+				display: none;
+			}
 			.description {
 				&__block {
 					width: 100%;
@@ -249,23 +255,43 @@ header {
 @media (min-width: 1200px) {
 	.contact_header {
 		display: none;
-		// .contact_heading {
-		//     width: 100%;
-		//     text-align: center;
-		//     font-size: 3.5rem;
-		//     margin: 3rem 0;
-		// }
 	}
 	.section__contact {
 		width: 100%;
 		.wrapper {
 			max-width: none;
 			.mainContainer {
-				width: 100%;
 				display: flex;
 				justify-content: space-evenly;
 				align-items: center;
 				flex-direction: row;
+				position: relative;
+				z-index: 1;
+				width: 100%;
+				background-image: url('../img/contact/imgs/dron3.jpg');
+				background-size: cover;
+				background-repeat: no-repeat;
+
+				&__shadow {
+					position: absolute;
+					display: block;
+					z-index: 2;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					background-color: rgba(0, 0, 0, 0.4);
+				}
+				.section__title {
+					position: absolute;
+					display: block;
+					top: 0;
+					left: 50%;
+					z-index: 3;
+					width: 100%;
+					transform: translateX(-50%);
+					color: colors.$pure-white;
+				}
 				.description {
 					@supports (-webkit-touch-callout: none) {
 						&__block {
@@ -276,7 +302,8 @@ header {
 						display: flex;
 						justify-content: normal;
 						align-items: center;
-						background-color: #333;
+						position: relative;
+						z-index: 3;
 						height: calc(var(--vh) - var(--navHeight));
 						width: 50%;
 						order: 1;
@@ -302,8 +329,8 @@ header {
 				}
 				.imgs {
 					&__block {
-						margin-top: 6rem;
 						display: flex;
+						margin-top: 6rem;
 						display: none;
 						align-items: center;
 						justify-content: space-evenly;
@@ -325,24 +352,26 @@ header {
 				}
 				.form {
 					&__block {
-						order: 1;
-						background-color: #333;
-						width: 50%;
 						display: flex;
 						justify-content: center;
 						align-items: center;
+						order: 1;
+						position: relative;
+						z-index: 3;
+						width: 50%;
+						background: none;
 						height: calc(100vh - 120px);
 						.input-box {
 							width: 60%;
 							input,
 							textarea {
-								background: none;
+								background-color: #333;
 								border: 2px solid colors.$input-idle-color;
 								font-size: 1.8rem;
 								color: colors.$pure-white;
 							}
 							label {
-								color: colors.$pure-white;
+								color: colors.$form-color;
 								font-size: 2rem;
 							}
 						}
@@ -351,6 +380,7 @@ header {
 						width: 100%;
 						h2 {
 							color: colors.$form-color;
+
 							width: 100%;
 							text-align: center;
 							font-size: 3.5rem;
@@ -366,7 +396,7 @@ header {
 							input {
 								height: 25px;
 								width: 25px;
-								accent-color: colors.$main-black;
+								accent-color: colors.$form-color;
 							}
 							p {
 								margin-left: 1rem;
@@ -379,21 +409,23 @@ header {
 							}
 						}
 						input[type='submit'] {
-							height: 50px;
-							width: 200px;
 							display: block;
+							height: 50px;
+							width: 300px;
 							margin: 0 auto;
 							margin-top: 2rem;
-						
 							border-radius: 15px;
-							border: 2px solid colors.$form-color;
-							background: none;
+							border: 2px solid transparent;
+							background-color: #333;
 							color: colors.$pure-white;
-							// border: 2px solid colors.$main-black;
-							box-shadow: 3px 3px 3px colors.$main-black;
-							transition: box-shadow 0.3s;
-							&:focus {
-								box-shadow: none;
+							font-size: 1.6rem;
+							box-shadow: none;
+							transition: color 0.3s, border 0.3s;
+							cursor: pointer;
+							&:focus,
+							&:hover {
+								color: colors.$form-color;
+								border: 2px solid colors.$form-color;
 							}
 						}
 					}

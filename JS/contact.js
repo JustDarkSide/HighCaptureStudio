@@ -25,20 +25,24 @@ formInput.forEach((element) => {
 		if (element.value != '') {
 			element.style.border = '2px solid rgb(223, 174, 14)';
 			element.style.outline = 'none';
+
 			// element.nextElementSibling.style.transform = "translateY(0)";
 			// element.nextElementSibling.style.color = "rgb(223, 174, 14)";
 			// element.nextElementSibling.style.backgroundColor = "#333333";
+		} else {
+			element.nextElementSibling.style.transform = 'translateY(0)';
 		}
 	});
 	element.addEventListener('focus', () => {
 		if (window.innerWidth < 768) {
 			element.nextElementSibling.style.transform = 'translateY(-120%)';
-		}
-		else{
+		} else {
 			element.nextElementSibling.style.transform = 'translateY(-125%)';
 		}
 		element.nextElementSibling.style.color = 'rgb(223, 174, 14)';
 		element.nextElementSibling.style.backgroundColor = '#333333';
+		element.nextElementSibling.style.borderRadius = '8px';
+
 		document.body.style.zoom = '1';
 	});
 });

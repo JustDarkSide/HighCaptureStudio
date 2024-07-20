@@ -1,11 +1,11 @@
-@use "./colors" as colors;
-@use "./nav";
-@use "./footer";
-@use "./animations";
-@use "./slider";
-@use "./videos";
-@use "./specificvideo";
-@use "./contact";
+@use './colors' as colors;
+@use './nav';
+@use './footer';
+@use './animations';
+@use './slider';
+@use './videos';
+@use './specificvideo';
+@use './contact';
 
 * {
 	box-sizing: border-box;
@@ -14,7 +14,7 @@
 }
 
 @font-face {
-	font-family: "gothic";
+	font-family: 'gothic';
 	src: url(../css/font.ttf);
 }
 
@@ -36,6 +36,12 @@ a:visited,
 a:active,
 a:hover {
 	-webkit-tap-highlight-color: transparent;
+}
+.hideFirstVideoBox {
+	transform: translateX(-100%);
+}
+.showSecondVideoBox {
+	transform: translateX(0) !important;
 }
 
 .showDescription {
@@ -92,17 +98,17 @@ a:hover {
 	margin: 0 auto;
 }
 .font {
-	font-family: "gothic", sans-serif;
+	font-family: 'gothic', sans-serif;
 	font-weight: 900;
 	font-style: normal;
 }
 .bebas-neue-regular {
-	font-family: "Bebas Neue", sans-serif;
+	font-family: 'Bebas Neue', sans-serif;
 	font-weight: 400;
 	font-style: normal;
 }
 .lato-regular {
-	font-family: "Lato", sans-serif;
+	font-family: 'Lato', sans-serif;
 	font-weight: 700;
 	font-style: normal;
 }
@@ -138,6 +144,15 @@ a:hover {
 		margin-bottom: 6rem;
 		z-index: 1;
 		overflow: hidden;
+		.firstvideo {
+			transition: transform 0.5s;
+			height: 100%;
+			width: 100%;
+		}
+		.secondvideo {
+			transition: transform 0.5s;
+			display: none;
+		}
 		&__background {
 			position: absolute;
 			width: 100%;
@@ -166,18 +181,22 @@ a:hover {
 		position: relative;
 		overflow: hidden;
 		height: 50px;
+		width: 100%;
 		display: flex;
-		justify-content: space-around;
 		align-items: center;
+		justify-content: space-around;
 		z-index: 4;
 		color: colors.$main-bg-color;
 		&-marqueeContainer {
 			width: auto;
 			white-space: nowrap;
 			animation: 20s marquee infinite linear;
+			transform: translate3d(0, 0, 0);
+			will-change: transform;
 		}
 		&-marqueeElement {
 			display: inline-block;
+			backface-visibility: hidden;
 			width: auto;
 			font-size: 4rem;
 			margin: 0 30px;
@@ -230,13 +249,11 @@ a:hover {
 		width: 90%;
 		min-height: 250px;
 		margin: 0 auto;
+		margin-top: 2.5rem;
 		display: flex;
 		justify-content: center;
-		position: absolute;
-		top: 20%;
-		left: 50%;
+		position: relative;
 		z-index: 4;
-		transform: translate(-50%);
 		.youtube_video {
 			width: 100%;
 		}
@@ -250,6 +267,11 @@ a:hover {
 	.header {
 		.header__textContainer {
 			margin-top: 8rem;
+		}
+	}
+	.music-content {
+		&__video {
+			margin-top: 5rem;
 		}
 	}
 }
@@ -289,7 +311,7 @@ a:hover {
 	}
 	.music-content {
 		&__video {
-			top: 30%;
+			margin-top: 5rem;
 		}
 	}
 }
@@ -324,7 +346,7 @@ a:hover {
 		&__slider {
 			height: 60vh;
 		}
-		.watch__it__button {
+		.next_video_button {
 			position: absolute;
 			display: block;
 			z-index: 3;
@@ -481,7 +503,22 @@ a:hover {
 			width: 250px;
 			height: 80px;
 			font-size: 2.2rem;
+			z-index: 4;
 		}
+
+		// .next_video_button {
+		// 	width: 70px;
+		// 	height: 70px;
+		// 	border-radius: 50%;
+		// 	position: absolute;
+		// 	top: 50%;
+		// 	right: 0;
+		// 	transform: translate(-50%, -50%);
+		// 	z-index: 4;
+		// 	-webkit-animation: blink-2 3s infinite both;
+		// 	animation: blink-2 3s infinite both;
+		// 	cursor: pointer;
+		// }
 	}
 	.music-content {
 		height: calc(100vh - 100px);
@@ -560,7 +597,17 @@ a:hover {
 		&__first {
 			height: var(--vh, 100vh);
 			display: block;
-			// padding-top: 10rem;
+			.secondvideo {
+				height: 100%;
+				width: 100%;
+				transform: translateX(100%);
+				display: block;
+			}
+			.firstvideo {
+				height: 100%;
+				width: 100%;
+				position: absolute;
+			}
 		}
 		&__marquee {
 			height: 100px;
