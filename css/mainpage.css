@@ -75,6 +75,8 @@
 }
 @media (min-width: 1200px) {
   .nav {
+    position: relative;
+    z-index: 5;
     min-height: auto;
     height: 120px;
     box-shadow: 1px 3px 20px 0px black;
@@ -137,19 +139,20 @@
   min-height: 200px;
   margin: 0 auto;
 }
-.footer__top {
+.footer__privacypolicy {
   width: 100%;
   min-height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.footer__privacypolicy {
+.footer__privacypolicy a {
   display: block;
   text-decoration: none;
   color: #000;
   text-align: center;
   font-weight: bold;
+  font-size: 1.8rem;
 }
 .footer__socialmedia {
   width: 100%;
@@ -183,24 +186,35 @@
 .footer__phone .phone {
   text-decoration: none;
   color: #000;
+  font-size: 1.8rem;
   text-align: center;
   font-weight: bold;
+}
+.footer__copyright {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (min-width: 768px) {
   .footer {
     min-height: 80px;
-    max-height: 80px;
   }
   .footer__box {
     flex-direction: row;
-    font-size: 2.2rem;
-    min-height: 80px;
-    max-height: 80px;
+    justify-content: space-evenly;
+    min-height: 100px;
   }
-  .footer__top {
+  .footer__privacypolicy {
     width: 25%;
     height: auto;
+  }
+  .footer__privacypolicy a {
+    font-size: 2.3rem;
   }
   .footer__socialmedia {
     width: 50%;
@@ -210,11 +224,17 @@
     width: 25%;
     height: auto;
   }
+  .footer__phone .phone {
+    font-size: 2.3rem;
+  }
 }
 @media (min-width: 992px) {
-  .footer__top {
+  .footer__privacypolicy {
     width: 30%;
     height: auto;
+  }
+  .footer__privacypolicy a {
+    font-size: 2.5rem;
   }
   .footer__socialmedia {
     width: 40%;
@@ -224,11 +244,17 @@
     width: 30%;
     height: auto;
   }
+  .footer__phone .phone {
+    font-size: 2.5rem;
+  }
 }
 @media (min-width: 1200px) {
-  .footer__top {
+  .footer__privacypolicy {
     width: 25%;
     height: auto;
+  }
+  .footer__privacypolicy a {
+    font-size: 2.5rem;
   }
   .footer__socialmedia {
     width: 50%;
@@ -237,6 +263,9 @@
   .footer__phone {
     width: 25%;
     height: auto;
+  }
+  .footer__phone .phone {
+    font-size: 2.5rem;
   }
 }
 @keyframes marquee {
@@ -1208,12 +1237,12 @@ header .contact_heading {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.6);
   }
   .section__contact .wrapper .mainContainer .section__title {
     position: absolute;
     display: block;
-    top: 0;
+    top: 3%;
     left: 50%;
     z-index: 3;
     width: 100%;
@@ -1664,6 +1693,17 @@ a:hover {
     height: 75vh;
     display: block;
   }
+  .section__first .secondvideo {
+    height: 100%;
+    width: 100%;
+    transform: translateX(100%);
+    display: block;
+  }
+  .section__first .firstvideo {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
   .section__slider {
     height: 60vh;
   }
@@ -1890,17 +1930,6 @@ a:hover {
   .section__first {
     height: var(--vh, 100vh);
     display: block;
-  }
-  .section__first .secondvideo {
-    height: 100%;
-    width: 100%;
-    transform: translateX(100%);
-    display: block;
-  }
-  .section__first .firstvideo {
-    height: 100%;
-    width: 100%;
-    position: absolute;
   }
   .section__marquee {
     height: 100px;

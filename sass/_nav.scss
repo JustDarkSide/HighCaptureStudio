@@ -1,4 +1,4 @@
-@use "./colors" as colors;
+@use './colors' as colors;
 
 // .bebas-neue-regular {
 // 	font-family: "Bebas Neue", sans-serif;
@@ -115,6 +115,8 @@
 @media (min-width: 1200px) {
 	.nav {
 		// margin-bottom: 4rem;
+		position: relative;
+		z-index: 5;
 		min-height: auto;
 		height: 120px;
 		box-shadow: 1px 3px 20px 0px black;

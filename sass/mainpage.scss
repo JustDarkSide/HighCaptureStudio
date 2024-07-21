@@ -342,6 +342,17 @@ a:hover {
 		&__first {
 			height: 75vh;
 			display: block;
+			.secondvideo {
+				height: 100%;
+				width: 100%;
+				transform: translateX(100%);
+				display: block;
+			}
+			.firstvideo {
+				height: 100%;
+				width: 100%;
+				position: absolute;
+			}
 		}
 		&__slider {
 			height: 60vh;
@@ -597,17 +608,6 @@ a:hover {
 		&__first {
 			height: var(--vh, 100vh);
 			display: block;
-			.secondvideo {
-				height: 100%;
-				width: 100%;
-				transform: translateX(100%);
-				display: block;
-			}
-			.firstvideo {
-				height: 100%;
-				width: 100%;
-				position: absolute;
-			}
 		}
 		&__marquee {
 			height: 100px;
