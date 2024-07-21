@@ -241,10 +241,10 @@
 }
 @keyframes marquee {
   from {
-    transform: translateX(0%);
+    transform: translate3d(0, 0, 0);
   }
   to {
-    transform: translateX(-100%);
+    transform: translate3d(-100%, 0, 0);
   }
 }
 @keyframes heartbeat {
@@ -988,6 +988,12 @@ header .contact_heading {
   justify-content: center;
   align-items: center;
 }
+.section__contact .wrapper .mainContainer .section__title {
+  display: none;
+}
+.section__contact .wrapper .mainContainer__shadow {
+  display: none;
+}
 .section__contact .wrapper .mainContainer .description__block {
   width: 100%;
   order: 1;
@@ -1183,33 +1189,73 @@ header .contact_heading {
     max-width: none;
   }
   .section__contact .wrapper .mainContainer {
-    width: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: row;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    background-image: url("../img/contact/imgs/dron3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .section__contact .wrapper .mainContainer__shadow {
+    position: absolute;
+    display: block;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  .section__contact .wrapper .mainContainer .section__title {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 50%;
+    z-index: 3;
+    width: 100%;
+    transform: translateX(-50%);
+    color: #fff;
+  }
+  @supports (-webkit-touch-callout: none) {
+    .section__contact .wrapper .mainContainer .description__block {
+      height: 100vh;
+    }
   }
   .section__contact .wrapper .mainContainer .description__block {
-    border: 1px solid black;
+    display: flex;
+    justify-content: normal;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+    height: calc(var(--vh) - var(--navHeight));
     width: 50%;
     order: 1;
+  }
+  .section__contact .wrapper .mainContainer .description__container {
+    height: 50%;
+    width: 80%;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .section__contact .wrapper .mainContainer .description__container {
-    height: 100%;
-    width: 90%;
-  }
   .section__contact .wrapper .mainContainer .description__text {
-    padding: 1rem;
+    padding: 2.5rem;
+    padding-top: 0;
     width: 100%;
     text-align: center;
-    font-size: 1.7rem;
+    color: #fff;
+    line-height: 1.6;
+    font-size: 2.5rem;
+    font-weight: 400;
   }
   .section__contact .wrapper .mainContainer .imgs__block {
-    margin-top: 6rem;
     display: flex;
+    margin-top: 6rem;
     display: none;
     align-items: center;
     justify-content: space-evenly;
@@ -1229,23 +1275,35 @@ header .contact_heading {
     width: 100%;
   }
   .section__contact .wrapper .mainContainer .form__block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     order: 1;
-    background-color: #333;
+    position: relative;
+    z-index: 3;
     width: 50%;
+    background: none;
     height: calc(100vh - 120px);
+  }
+  .section__contact .wrapper .mainContainer .form__block .input-box {
+    width: 60%;
   }
   .section__contact .wrapper .mainContainer .form__block .input-box input,
   .section__contact .wrapper .mainContainer .form__block .input-box textarea {
+    background-color: #333;
     border: 2px solid #8a8a8a;
-    background-color: #b8b8b8;
-    color: #000;
+    font-size: 1.8rem;
+    color: #fff;
   }
   .section__contact .wrapper .mainContainer .form__block .input-box label {
-    color: #000;
-    font-size: 1.6rem;
+    color: rgb(223, 174, 14);
+    font-size: 2rem;
+  }
+  .section__contact .wrapper .mainContainer .form__container {
+    width: 100%;
   }
   .section__contact .wrapper .mainContainer .form__container h2 {
-    color: #000;
+    color: rgb(223, 174, 14);
     width: 100%;
     text-align: center;
     font-size: 3.5rem;
@@ -1262,31 +1320,35 @@ header .contact_heading {
   .section__contact .wrapper .mainContainer .form__container .checkbox-box input {
     height: 25px;
     width: 25px;
-    accent-color: #000;
+    accent-color: rgb(223, 174, 14);
   }
   .section__contact .wrapper .mainContainer .form__container .checkbox-box p {
     margin-left: 1rem;
-    color: #000;
-    font-size: 1.4rem;
+    color: #fff;
+    font-size: 2rem;
   }
   .section__contact .wrapper .mainContainer .form__container .checkbox-box a {
-    color: #000;
+    color: rgb(223, 174, 14);
     font-weight: bold;
   }
   .section__contact .wrapper .mainContainer .form__container input[type=submit] {
-    height: 50px;
-    width: 200px;
     display: block;
-    margin: 0 auto 3rem;
+    height: 50px;
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 2rem;
     border-radius: 15px;
-    border: 2px solid #8a8a8a;
-    background-color: #b8b8b8;
-    color: #000;
-    box-shadow: 3px 3px 3px #000;
-    transition: box-shadow 0.3s;
-  }
-  .section__contact .wrapper .mainContainer .form__container input[type=submit]:focus {
+    border: 2px solid transparent;
+    background-color: #333;
+    color: #fff;
+    font-size: 1.6rem;
     box-shadow: none;
+    transition: color 0.3s, border 0.3s;
+    cursor: pointer;
+  }
+  .section__contact .wrapper .mainContainer .form__container input[type=submit]:focus, .section__contact .wrapper .mainContainer .form__container input[type=submit]:hover {
+    color: rgb(223, 174, 14);
+    border: 2px solid rgb(223, 174, 14);
   }
 }
 * {
@@ -1470,9 +1532,10 @@ a:hover {
   position: relative;
   overflow: hidden;
   height: 50px;
+  width: 100%;
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  justify-content: space-around;
   z-index: 4;
   color: #dbdbdb;
 }
@@ -1480,9 +1543,12 @@ a:hover {
   width: auto;
   white-space: nowrap;
   animation: 20s marquee infinite linear;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
 }
 .section__marquee-marqueeElement {
   display: inline-block;
+  backface-visibility: hidden;
   width: auto;
   font-size: 4rem;
   margin: 0 30px;
@@ -1524,13 +1590,11 @@ a:hover {
   width: 90%;
   min-height: 250px;
   margin: 0 auto;
+  margin-top: 2.5rem;
   display: flex;
   justify-content: center;
-  position: absolute;
-  top: 20%;
-  left: 50%;
+  position: relative;
   z-index: 4;
-  transform: translate(-50%);
 }
 .music-content__video .youtube_video {
   width: 100%;
@@ -1542,6 +1606,9 @@ a:hover {
 @media (min-width: 375px) {
   .header .header__textContainer {
     margin-top: 8rem;
+  }
+  .music-content__video {
+    margin-top: 5rem;
   }
 }
 @media ((min-width: 385px) and (min-height: 800px) and (max-width: 768px)) {
@@ -1569,7 +1636,7 @@ a:hover {
     height: 90px;
   }
   .music-content__video {
-    top: 30%;
+    margin-top: 5rem;
   }
 }
 @media ((min-width: 568px) and (max-width: 992px)) {
