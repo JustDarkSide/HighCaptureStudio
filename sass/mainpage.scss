@@ -1,11 +1,11 @@
-@use "./colors" as colors;
-@use "./nav";
-@use "./footer";
-@use "./animations";
-@use "./slider";
-@use "./videos";
-@use "./specificvideo";
-@use "./contact";
+@use './colors' as colors;
+@use './nav';
+@use './footer';
+@use './animations';
+@use './slider';
+@use './videos';
+@use './specificvideo';
+@use './contact';
 
 * {
 	box-sizing: border-box;
@@ -14,7 +14,7 @@
 }
 
 @font-face {
-	font-family: "gothic";
+	font-family: 'gothic';
 	src: url(../css/font.ttf);
 }
 
@@ -104,17 +104,17 @@ a:hover {
 	margin: 0 auto;
 }
 .font {
-	font-family: "gothic", sans-serif;
+	font-family: 'gothic', sans-serif;
 	font-weight: 900;
 	font-style: normal;
 }
 .bebas-neue-regular {
-	font-family: "Bebas Neue", sans-serif;
+	font-family: 'Bebas Neue', sans-serif;
 	font-weight: 400;
 	font-style: normal;
 }
 .lato-regular {
-	font-family: "Lato", sans-serif;
+	font-family: 'Lato', sans-serif;
 	font-weight: 700;
 	font-style: normal;
 }
@@ -534,6 +534,7 @@ a:hover {
 			.youtube_video {
 				opacity: 0;
 				width: 45%;
+				box-shadow: 0px 0px 20px 3px white;
 			}
 			.miniature_to_hide {
 				position: absolute;
@@ -543,6 +544,7 @@ a:hover {
 				height: 100%;
 				width: 45%;
 				transition: scale 0.3s;
+				box-shadow: 0px 0px 20px 3px white;
 				cursor: pointer;
 				.miniature {
 					object-fit: cover;
@@ -749,11 +751,21 @@ a:hover {
 	}
 	.music-content {
 		&__video {
-			width: 50%;
+			width: 100%;
 			height: 50%;
 			top: 15%;
-			left: 25%;
 			transform: translateX(-50%);
+			.miniature_to_hide {
+				.macbook__bar {
+					height: 60px;
+					.dots__box {
+						.dot {
+							height: 18px;
+							width: 18px;
+						}
+					}
+				}
+			}
 		}
 		&__description {
 			display: none;
