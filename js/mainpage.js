@@ -15,7 +15,8 @@ let videoBackground = document.querySelector(
 let changeVideoButton = document.querySelectorAll(".next_video_button");
 let firstVideo = document.querySelector(".firstvideo");
 let secondVideo = document.querySelector(".secondvideo");
-
+let closeiosbutton = document.querySelectorAll(".dot-red");
+let easterEggCloseWindow = document.querySelector(".close_easterEgg");
 changeVideoButton.forEach((element) => {
 	element.addEventListener("click", () => {
 		firstVideo.classList.toggle("hideFirstVideoBox");
@@ -56,10 +57,12 @@ miniaturesToHide.forEach((element) => {
 	});
 });
 
-// miniaturesToHide.addEventListener("click", () => {
-// 	miniatureToHide.style.display = "none";
-// 	youtubeVideo.style.opacity = 1;
-// });
+closeiosbutton.forEach((element) => {
+	element.addEventListener("click", () => {
+		event.stopPropagation()
+		element.closest(".close_easterEgg").classList.add("closewindow");
+	});
+});
 
 watchItButton.addEventListener("click", () => {
 	if (youtubeVideoDiv.classList.contains("showYTVideo")) {
