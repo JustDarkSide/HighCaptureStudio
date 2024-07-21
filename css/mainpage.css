@@ -77,6 +77,7 @@
   .nav {
     min-height: auto;
     height: 120px;
+    box-shadow: 1px 3px 20px 0px black;
   }
   .nav__mainBox {
     height: 100%;
@@ -87,7 +88,7 @@
     align-items: center;
     align-content: center;
     justify-content: space-between;
-    background-color: #000;
+    background-color: #dbdbdb;
   }
   .nav__mainBox-PC--logo {
     max-width: 600px;
@@ -107,7 +108,7 @@
   .nav__mainBox-PC--list li a {
     padding: 1.2rem;
     font-size: 2.72rem;
-    color: #dbdbdb;
+    color: #000;
   }
   .nav__mainBox-mobile {
     display: none;

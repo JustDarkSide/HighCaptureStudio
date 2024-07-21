@@ -1,4 +1,4 @@
-@use './colors' as colors;
+@use "./colors" as colors;
 
 // .bebas-neue-regular {
 // 	font-family: "Bebas Neue", sans-serif;
@@ -117,6 +117,7 @@
 		// margin-bottom: 4rem;
 		min-height: auto;
 		height: 120px;
+		box-shadow: 1px 3px 20px 0px black;
 		&__mainBox {
 			height: 100%;
 			&-PC {
@@ -126,7 +127,7 @@
 				align-items: center;
 				align-content: center;
 				justify-content: space-between;
-				background-color: colors.$main-black;
+				background-color: colors.$main-bg-color;
 				// padding-top: 20px;
 				&--logo {
 					max-width: 600px;
@@ -146,7 +147,7 @@
 						a {
 							padding: 1.2rem;
 							font-size: 2.72rem;
-							color: #dbdbdb;
+							color: colors.$main-black;
 						}
 					}
 				}
