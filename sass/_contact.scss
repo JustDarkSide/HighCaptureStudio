@@ -154,7 +154,7 @@ header {
 }
 @media (min-width: 768px) {
 	header {
-		h1 {
+		.contact_heading {
 			font-size: 6rem;
 			margin: 4rem auto;
 		}
@@ -177,7 +177,7 @@ header {
 }
 @media (min-width: 992px) {
 	header {
-		h1 {
+		.contact_heading {
 			font-size: 8rem;
 		}
 	}
