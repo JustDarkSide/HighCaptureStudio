@@ -1351,7 +1351,6 @@ header .contact_heading {
     height: 100%;
     width: 100%;
     transition: scale 0.3s;
-    box-shadow: 0px 0px 10px 3px white;
     cursor: pointer;
   }
   .music-content__video .miniature_to_hide .miniature {
@@ -1408,7 +1407,6 @@ header .contact_heading {
   .music-content__video .youtube_video {
     opacity: 0;
     width: 45%;
-    box-shadow: 0px 0px 20px 3px white;
   }
   .music-content__video .miniature_to_hide {
     position: absolute;
@@ -1418,7 +1416,6 @@ header .contact_heading {
     height: 100%;
     width: 45%;
     transition: scale 0.3s;
-    box-shadow: 0px 0px 20px 3px white;
     cursor: pointer;
   }
   .music-content__video .miniature_to_hide .icon {
@@ -1474,12 +1471,12 @@ header .contact_heading {
     height: 100vh; /* Example alternative calculation for Safari */
   }
 }
-.section__video {
+.section__video-mainpage {
   height: 80vh;
   width: 100%;
   position: relative;
 }
-.section__video .arrow {
+.section__video-mainpage .arrow {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -1489,19 +1486,19 @@ header .contact_heading {
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.9);
 }
-.section__video .arrow-left {
+.section__video-mainpage .arrow-left {
   bottom: 10%;
   left: 5%;
 }
-.section__video .arrow-right {
+.section__video-mainpage .arrow-right {
   bottom: 10%;
   right: 5%;
 }
-.section__video .section__title {
+.section__video-mainpage .section__title {
   width: 100%;
   height: 80px;
 }
-.section__video .video__element {
+.section__video-mainpage .video__element {
   position: absolute;
   left: 0;
   width: 100%;

@@ -1,4 +1,15 @@
-@use './colors' as colors;
+@use "./colors" as colors;
+.section__photos-title {
+	text-align: center;
+	font-size: 5rem;
+	margin: 2rem auto;
+}
+.section_photos {
+	margin: 2rem auto;
+	.section__photos-title {
+		margin: 7rem auto;
+	}
+}
 .section__video {
 	width: 95%;
 	margin: 0 auto;
@@ -163,14 +174,28 @@
 	}
 }
 @media (min-width: 992px) {
+	.section__photos-title {
+		font-size: 8rem;
+	}
 	.section__video {
 		width: 80%;
 	}
 }
 @media (min-width: 1200px) {
+	@supports (-webkit-touch-callout: none) {
+		.section__video {
+			// height: 100vh; /* Example alternative calculation for Safari */
+			height: var(--vh);
+		}
+	}
 	.section__video {
-		height: 100vh;
+		height: calc(var(--vh, 100vh) - var(--navHeight));
 		overflow: visible;
+		padding: 4rem;
+		&-title {
+			font-size: 7rem;
+			margin: 0 auto;
+		}
 		.wrapper {
 			height: 100%;
 			.video {
