@@ -43,11 +43,9 @@
   transition: text-decoration-color 0.4s, scale 0.4s;
 }
 .nav__animation:hover {
-  scale: 1.1;
   text-decoration-color: #000;
 }
 .nav__animation:focus {
-  scale: 1.1;
   text-decoration-color: #000;
 }
 
@@ -93,24 +91,79 @@
     background-color: #dbdbdb;
   }
   .nav__mainBox-PC--logo {
-    max-width: 600px;
+    width: 50%;
+    height: 100%;
   }
-  .nav__mainBox-PC--logo img {
+  .nav__mainBox-PC--logo a {
+    display: block;
     width: 100%;
+    height: 100%;
+  }
+  .nav__mainBox-PC--logo a img {
+    display: block;
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 100%;
   }
   .nav__mainBox-PC--listContainer {
-    min-width: 50%;
+    width: 50%;
+    height: 100%;
   }
   .nav__mainBox-PC--list {
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: space-evenly;
     list-style: none;
     align-items: center;
   }
-  .nav__mainBox-PC--list li a {
-    padding: 1.2rem;
-    font-size: 2.72rem;
+  .nav__mainBox-PC--list li {
+    position: relative;
+    width: auto;
+    height: 100%;
+  }
+  .nav__mainBox-PC--list li .nav__animation {
+    display: block;
+    height: 100%;
+    align-content: center;
+    font-size: 2.8rem;
     color: #000;
+  }
+  .nav__mainBox-PC--list li .dropdown__list {
+    position: absolute;
+    pointer-events: none;
+    width: 120%;
+    top: 100%;
+    left: -10%;
+    list-style-type: none;
+    opacity: 0;
+    transition: opacity 0.4s;
+  }
+  .nav__mainBox-PC--list li .dropdown__list .dropdown__element {
+    display: block;
+    width: 100%;
+    height: 90px;
+    background-color: #b7b5b3;
+    border: 1px solid #000;
+    font-size: 2.8rem;
+    transition: scale 0.3s;
+  }
+  .nav__mainBox-PC--list li .dropdown__list .dropdown__element a {
+    display: block;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    text-align: center;
+    color: #000;
+  }
+  .nav__mainBox-PC--list li .dropdown__list .dropdown__element:hover {
+    scale: 1.05;
+  }
+  .nav__mainBox-PC--list li:hover .dropdown__list {
+    pointer-events: auto;
+    display: block;
+    opacity: 1;
   }
   .nav__mainBox-mobile {
     display: none;
@@ -1213,7 +1266,7 @@ header .contact_heading {
 .section__first {
   position: relative;
   height: 100vh;
-  margin-bottom: 6rem;
+  margin-bottom: 3rem;
   z-index: 1;
   overflow: hidden;
 }
@@ -1475,6 +1528,7 @@ header .contact_heading {
   height: 80vh;
   width: 100%;
   position: relative;
+  overflow: hidden;
 }
 .section__video-mainpage .arrow {
   position: absolute;
@@ -1485,24 +1539,31 @@ header .contact_heading {
   height: 40px;
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.9);
+  transform: translateY(-50%);
+  cursor: pointer;
 }
 .section__video-mainpage .arrow-left {
-  bottom: 10%;
-  left: 5%;
+  top: 50%;
+  left: 3%;
 }
 .section__video-mainpage .arrow-right {
-  bottom: 10%;
-  right: 5%;
+  top: 50%;
+  right: 3%;
 }
 .section__video-mainpage .section__title {
   width: 100%;
   height: 80px;
 }
 .section__video-mainpage .video__element {
-  position: absolute;
-  left: 0;
   width: 100%;
-  height: 80%;
+  height: 70%;
+  overflow: hidden;
+}
+.section__video-mainpage .video__element .commercial__video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 * {
