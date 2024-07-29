@@ -1,5 +1,6 @@
 @use './colors' as colors;
-@use './nav';
+// @use './nav';
+@use './newnav';
 @use './footer';
 @use './animations';
 @use './slider';
@@ -27,8 +28,8 @@ body {
 	position: relative;
 	background-color: colors.$main-bg-color;
 	width: 100vw;
-	// min-height: 300vh;
 	overflow-x: hidden;
+	// min-height: 300vh;
 }
 a,
 a:link,
