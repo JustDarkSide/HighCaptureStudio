@@ -124,18 +124,18 @@
             $mail->Subject = "Wiadomość z HIGH CAPTURE STUDIO";
             $mail->Body = $message;
             if($mail->send()){
-                gMessage()
+                gMessage();
             }
             else {
-                    bMessage()
+                    bMessage();
                 }
         } 
         else {
-                bMessage()
+                bMessage();
         }
     } 
     else {
-       bMessage()
+       bMessage();
     }
 ?>
 
