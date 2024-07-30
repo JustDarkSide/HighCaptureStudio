@@ -22,9 +22,6 @@
 		position: relative;
 		width: 40%;
 		height: 100%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
 		.hamburger {
 			position: absolute;
 			top: 50px;
@@ -84,7 +81,7 @@
 			&:hover {
 				transform: scale(1.1);
 			}
-			&:hover::after{
+			&:hover::after {
 				transform: scaleX(1);
 			}
 		}
@@ -100,6 +97,26 @@
 			&__item {
 				font-size: 4rem;
 				padding: 2rem;
+			}
+		}
+	}
+}
+@media (min-width: 1200px) {
+	.nav {
+		height: 150px;
+		&__box {
+			justify-content: space-between;
+		}
+		&__logo {
+
+			width: 30%;
+		}
+		&__burgericon {
+			width: 30%;
+			.hamburger{
+				transform: scale(1.2) translateY(-50%);
+				top: 75px;
+				left: 60%;
 			}
 		}
 	}

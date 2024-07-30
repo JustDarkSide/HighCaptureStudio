@@ -75,9 +75,17 @@ burgerIcon.addEventListener('click', () => {
 		'absolute'
 	) {
 		burgerIcon.style.position = 'fixed';
-		burgerIcon.style.left = '80%';
+		if (window.innerWidth >= 1200) {
+			burgerIcon.style.left = '89%';
+		} else {
+			burgerIcon.style.left = '80%';
+		}
 	} else {
 		burgerIcon.style.position = 'absolute';
-		burgerIcon.style.left = '50%';
+		if (window.innerWidth >= 1200) {
+			burgerIcon.style.left = '60%';
+		} else {
+			burgerIcon.style.left = '50%';
+		}
 	}
 });
