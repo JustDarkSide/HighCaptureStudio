@@ -256,13 +256,6 @@ a:hover {
 		}
 	}
 }
-@media (min-width: 768px) {
-	.section {
-		&__slider {
-			height: 60vh;
-		}
-	}
-}
 @media ((min-width: 992px) and (max-width: 1200px)) {
 	.header {
 		height: calc(var(--vh, 100vh) - var(--navHeight));
@@ -357,11 +350,10 @@ a:hover {
 				}
 			}
 		}
-		&__slider {
-			height: 100vh;
-			margin-top: 0;
-			margin-bottom: 2rem;
-		}
+		// &__slider {
+		// 	margin-top: 0;
+		// 	margin-bottom: 2rem;
+		// }
 		&__trusted {
 			height: 300px;
 			margin-bottom: 0;

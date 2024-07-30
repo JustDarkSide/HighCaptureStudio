@@ -159,29 +159,46 @@
 						animation: marquee 20s infinite linear;
 					}
 				}
+				.next_video_button {
+					left: 0;
+					margin-left: 3rem;
+					clip-path: polygon(70% 50%, 0 0, 0 100%);
+					transform: rotateY(180deg) translateY(-50%);
+					&:hover {
+						transform: scale(0.95) translateY(-50%) rotateY(180deg);
+					}
+				}
 			}
 			.firstvideo {
 				position: absolute;
 				height: 100%;
 				width: 100%;
+				.next_video_button {
+					right: 0;
+					margin-right: 3rem;
+					clip-path: polygon(70% 50%, 0 0, 0 100%);
+					&:hover {
+						transform: scale(0.95) translateY(-50%);
+					}
+				}
 			}
-		}
-		.next_video_button {
-			position: absolute;
-			display: block;
-			z-index: 3;
-			width: 200px;
-			height: 60px;
-			top: 95%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			background-color: colors.$main-bg-color;
-			color: colors.$main-black;
-			font-size: 1.8rem;
-			text-align: center;
-			border: none;
-			border-radius: 8px;
-			cursor: pointer;
+			.next_video_button {
+				top: 50%;
+				width: 80px;
+				height: 180px;
+				position: absolute;
+				display: block;
+				transform: translateY(-50%);
+				z-index: 5;
+				border: none;
+				overflow: hidden;
+				transition: transform 0.3s, opacity 0.3s;
+				cursor: pointer;
+				opacity: 0.6;
+				&:hover{
+					opacity: 1;
+				}
+			}
 		}
 	}
 	.music-content {
