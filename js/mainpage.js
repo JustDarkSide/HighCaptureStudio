@@ -16,9 +16,6 @@ let firstVideo = document.querySelector('.firstvideo');
 let secondVideo = document.querySelector('.secondvideo');
 let closeiosbutton = document.querySelectorAll('.dot-red');
 let easterEggCloseWindow = document.querySelector('.close_easterEgg');
-let burgerIcon = document.querySelector('.hamburger');
-let navExternalPart = document.querySelector('.nav__external__part');
-let burgerIconBars = document.querySelector('.hamburger-inner');
 
 changeVideoButton.forEach((element) => {
 	element.addEventListener('click', () => {
@@ -65,27 +62,4 @@ closeiosbutton.forEach((element) => {
 		e.stopPropagation();
 		element.closest('.close_easterEgg').classList.add('closewindow');
 	});
-});
-
-burgerIcon.addEventListener('click', () => {
-	burgerIcon.classList.toggle('is-active');
-	navExternalPart.classList.toggle('activated');
-	if (
-		window.getComputedStyle(burgerIcon).getPropertyValue('position') ==
-		'absolute'
-	) {
-		burgerIcon.style.position = 'fixed';
-		if (window.innerWidth >= 1200) {
-			burgerIcon.style.left = '89%';
-		} else {
-			burgerIcon.style.left = '80%';
-		}
-	} else {
-		burgerIcon.style.position = 'absolute';
-		if (window.innerWidth >= 1200) {
-			burgerIcon.style.left = '60%';
-		} else {
-			burgerIcon.style.left = '50%';
-		}
-	}
 });

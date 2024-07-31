@@ -1024,6 +1024,9 @@ header .contact_heading {
   .contact_header {
     display: none;
   }
+  .section {
+    margin-bottom: 0;
+  }
   .section__contact {
     width: 100%;
   }
@@ -1731,45 +1734,85 @@ header .contact_heading {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.section__aboutus .wrapper .aboutus__box .aboutus__right__bottom .aboutus__stats {
-  width: 100%;
-}
-.section__aboutus .wrapper .aboutus__box .aboutus__right__bottom .aboutus__stats .stats__box {
-  position: relative;
-  width: 90%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.section__aboutus .wrapper .aboutus__box .aboutus__right__bottom .aboutus__stats .stats__box .stats__element {
-  position: relative;
-  width: 100%;
-  height: 20vh;
-  border-radius: 15px;
-  background-color: #828282;
-  color: #fff;
-  border: 1px solid #000;
-  margin-bottom: 2rem;
-}
-.section__aboutus .wrapper .aboutus__box .aboutus__right__bottom .aboutus__stats .stats__box .stats__element__title {
-  width: 80%;
-  padding-top: 0.8rem;
-  margin: 0 auto;
-  font-size: 2.1rem;
-  text-align: center;
-}
-.section__aboutus .wrapper .aboutus__box .aboutus__right__bottom .aboutus__stats .stats__box .stats__element__value {
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80%;
-  margin: 0 auto;
-  font-size: 4rem;
-  text-align: center;
+.section__aboutus .wrapper .aboutus__box .aboutus__right__bottom {
+  display: none;
 }
 
+@media (min-width: 768px) {
+  .section__aboutus {
+    margin-top: 10rem;
+  }
+  .section__aboutus .wrapper .aboutus__box {
+    display: flex;
+  }
+  .section__aboutus .wrapper .aboutus__box .aboutus__left {
+    width: 50%;
+  }
+  .section__aboutus .wrapper .aboutus__box .aboutus__left__top {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .section__aboutus .wrapper .aboutus__box .aboutus__left__bottom {
+    display: none;
+  }
+  .section__aboutus .wrapper .aboutus__box .aboutus__right {
+    width: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  .section__aboutus {
+    height: 60vh;
+  }
+  .section__aboutus .wrapper {
+    max-width: 100vw;
+  }
+  .section__aboutus .wrapper .aboutus__box .aboutus__left {
+    width: 50%;
+    display: flex;
+  }
+  .section__aboutus .wrapper .aboutus__box .aboutus__left__top {
+    width: 100%;
+    margin: 0;
+  }
+  .section__aboutus .wrapper .aboutus__box .aboutus__left__top .aboutus__title {
+    font-size: 5rem;
+  }
+  .section__aboutus .wrapper .aboutus__box .aboutus__left__top .aboutus__description {
+    font-size: 3.5rem;
+    padding: 0 3rem;
+  }
+  .section__aboutus .wrapper .aboutus__box .aboutus__left__bottom {
+    display: none;
+  }
+  .section__aboutus .wrapper .aboutus__box .aboutus__right {
+    width: 50%;
+    display: flex;
+    align-items: center;
+  }
+  .section__aboutus .wrapper .aboutus__box .aboutus__right .photo img {
+    display: block;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .section__aboutus .wrapper .aboutus__box .aboutus__right__top {
+    width: 33.33%;
+  }
+  .section__aboutus .wrapper .aboutus__box .aboutus__right__top .aboutus__owner__photo {
+    width: 100%;
+    margin: 0;
+  }
+  .section__aboutus .wrapper .aboutus__box .aboutus__right__bottom {
+    display: flex;
+    width: 66.66%;
+  }
+  .section__aboutus .wrapper .aboutus__box .aboutus__right__bottom .aboutus__third__photo {
+    width: 50%;
+  }
+  .section__aboutus .wrapper .aboutus__box .aboutus__right__bottom .aboutus__right__additional__photo {
+    width: 50%;
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;
