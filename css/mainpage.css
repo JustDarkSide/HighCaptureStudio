@@ -89,6 +89,9 @@
 .nav__external__part__item:hover::after {
   transform: scaleX(1);
 }
+.nav__socialmedia {
+  display: none;
+}
 .nav .activated {
   transform: translateY(0);
 }
@@ -116,6 +119,27 @@
     transform: scale(1.2) translateY(-50%);
     top: 75px;
     left: 60%;
+  }
+  .nav__socialmedia {
+    height: 100%;
+    min-height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav__socialmedia .dot {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1rem;
+  }
+  .nav__socialmedia .dot img {
+    display: block;
   }
 }
 .footer {
@@ -1649,6 +1673,7 @@ header .contact_heading {
 }
 .section__aboutus {
   width: 100%;
+  margin-bottom: 10rem;
 }
 .section__aboutus .wrapper {
   height: 100%;
@@ -1656,7 +1681,6 @@ header .contact_heading {
 .section__aboutus .wrapper .aboutus__box {
   width: 100%;
   border-radius: 15px;
-  background-color: #c8c8c8;
 }
 .section__aboutus .wrapper .aboutus__box .aboutus__left {
   width: 100%;
@@ -2061,13 +2085,13 @@ a:hover {
     margin-bottom: 10rem;
   }
   .section__marquee {
-    height: 100px;
+    height: 140px;
   }
   .section__marquee-marqueeContainer {
-    animation: 28s marquee infinite linear;
+    animation: 50s marquee infinite linear;
   }
   .section__marquee-marqueeElement {
-    font-size: 8.5rem;
+    font-size: 13rem;
   }
   .section__marquee-marqueeElement--img {
     max-width: 300px;

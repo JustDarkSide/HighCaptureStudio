@@ -1,4 +1,4 @@
-@use './colors' as colors;
+@use "./colors" as colors;
 
 // .bebas-neue-regular {
 // 	font-family: "Bebas Neue", sans-serif;
@@ -112,7 +112,6 @@
 }
 @media (min-width: 1200px) {
 	.nav {
-		// margin-bottom: 4rem;
 		position: relative;
 		z-index: 5;
 		min-height: auto;
@@ -209,6 +208,28 @@
 					display: none;
 				}
 				display: none;
+			}
+		}
+		&__socialmedia {
+			height: 100%;
+			min-height: 60px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			.dot {
+				width: 40px;
+				height: 40px;
+				border: none;
+				border-radius: 50%;
+				background-color: colors.$main-black;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin: 0 1rem;
+				img {
+					display: block;
+				}
 			}
 		}
 	}

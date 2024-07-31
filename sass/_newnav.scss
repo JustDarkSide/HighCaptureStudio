@@ -1,4 +1,4 @@
-@use './colors' as colors;
+@use "./colors" as colors;
 .nav {
 	width: 100%;
 	height: 100px;
@@ -69,7 +69,7 @@
 			transition: transform 0.3s;
 			&::after {
 				position: absolute;
-				content: '';
+				content: "";
 				width: 100%;
 				height: 3px;
 				background-color: colors.$pure-white;
@@ -85,6 +85,9 @@
 				transform: scaleX(1);
 			}
 		}
+	}
+	&__socialmedia {
+		display: none;
 	}
 	.activated {
 		transform: translateY(0);
@@ -108,15 +111,36 @@
 			justify-content: space-between;
 		}
 		&__logo {
-
 			width: 30%;
 		}
 		&__burgericon {
 			width: 30%;
-			.hamburger{
+			.hamburger {
 				transform: scale(1.2) translateY(-50%);
 				top: 75px;
 				left: 60%;
+			}
+		}
+		&__socialmedia {
+			height: 100%;
+			min-height: 60px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			.dot {
+				width: 40px;
+				height: 40px;
+				border: none;
+				border-radius: 50%;
+				background-color: colors.$main-black;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin: 0 1rem;
+				img {
+					display: block;
+				}
 			}
 		}
 	}

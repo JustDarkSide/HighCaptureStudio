@@ -1,7 +1,7 @@
 @use './colors' as colors;
 .section__aboutus {
 	width: 100%;
-
+	margin-bottom: 10rem;
 	.wrapper {
 		height: 100%;
 		.aboutus__box {
@@ -9,7 +9,7 @@
 			// display: flex;
 			// justify-content: space-between;
 			border-radius: 15px;
-			background-color: colors.$possible-aboutus-color;
+			// background-color: colors.$possible-aboutus-color;
 
 			.aboutus__left {
 				width: 100%;
@@ -102,4 +102,8 @@
 			}
 		}
 	}
+}
+
+@media(min-width: 768px){
+	
 }
