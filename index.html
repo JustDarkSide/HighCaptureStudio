@@ -1,604 +1,694 @@
 <!DOCTYPE html>
 <html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="Mijalski Dominik, Zając Kacper" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+			rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap"
+			rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap"
+			rel="stylesheet" />
+		<!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
+		<meta property="og:image" content="" />
+		<meta
+			property="og:title"
+			content="High Capture Studio | Aleksy Kowalewski" />
+		<meta property="og:description" content="" />
+		<link rel="canonical" href="" />
+		<title>High Capture Studio | Aleksy Kowalewski</title>
+		<link rel="icon" type="image/x-icon" href="" />
+		<link href="./css/hamburgers.css" rel="stylesheet" />
+		<link rel="stylesheet" href="./css/mainpage.css" />
+		<link rel="apple-touch-icon" sizes="114x114" href="" />
+		<link rel="apple-touch-icon" sizes="57x57" href="" />
+		<link rel="apple-touch-icon" sizes="72x72" href="" />
+	</head>
 
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
-	<meta name="author" content="Mijalski Dominik, Zając Kacper" />
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
-	<link
-		href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-		rel="stylesheet" />
-	<link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet" />
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap" rel="stylesheet" />
-	<!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
-	<meta property="og:image" content="" />
-	<meta property="og:title" content="High Capture Studio | Aleksy Kowalewski" />
-	<meta property="og:description" content="" />
-	<link rel="canonical" href="" />
-	<title>High Capture Studio | Aleksy Kowalewski</title>
-	<link rel="icon" type="image/x-icon" href="" />
-	<link href="./css/hamburgers.css" rel="stylesheet" />
-	<link rel="stylesheet" href="./css/mainpage.css" />
-	<link rel="apple-touch-icon" sizes="114x114" href="" />
-	<link rel="apple-touch-icon" sizes="57x57" href="" />
-	<link rel="apple-touch-icon" sizes="72x72" href="" />
-</head>
+	<body>
+		<nav class="nav">
+			<div class="nav__box">
+				<div class="nav__logo">
+					<img src="./img/mutual/nav/logo/logo_mobile.png" alt="" />
+				</div>
+				<div class="nav__burgericon">
+					<button class="hamburger hamburger--spin" type="button">
+						<span class="hamburger-box">
+							<span class="hamburger-inner"></span>
+						</span>
+					</button>
+				</div>
+				<div class="nav__external__part">
+					<div class="nav__external__part__box">
+						<a class="nav__external__part__item font">Nagrania komercyjne</a>
+						<a class="nav__external__part__item font">Teledyski</a>
+						<a class="nav__external__part__item font">Video</a>
+						<a class="nav__external__part__item font">Fotografie</a>
+						<a class="nav__external__part__item font">Projekty/ Inne</a>
+						<a class="nav__external__part__item font">Kontakt / O mnie</a>
+					</div>
+				</div>
+			</div>
+		</nav>
 
-<body>
-	<nav class="nav">
-		<!-- <div class="nav__mainBox-PC">
-				<div class="nav__mainBox-PC--logo">
-					<a href="./">
-						<img
-							src="./img/mutual/nav/logo/TEST_LOGO.png"
-							alt="High Capture Studio logo" />
+		<header class="header">
+			<div class="wrapper">
+				<video
+					src="./img/mainpage/mainapge__video.mp4"
+					class="header__video"
+					autoplay
+					playsinline
+					muted
+					loop></video>
+				<div class="header__textContainer">
+					<h1 class="header__textContainer-text font">
+						HIGHCAPTURE STUDIO OFERUJE KREATYWNE, PROFESJONALNE USŁUGI FOTO I
+						VIDEO
+					</h1>
+				</div>
+
+				<div class="dot_entrance">
+					<a href="#juku">
+						<img src="./img/mainpage/chevrons-down.svg" alt="" />
 					</a>
 				</div>
-				<div class="nav__mainBox-PC--listContainer">
-					<ul class="nav__mainBox-PC--list">
-						<li>
-							<a
-								class="nav__animation bebas-neue-regular"
-								href="./html/photos.html">
-								PROJECTS/MOREWORK
-							</a>
-							<ul class="dropdown__list">
-								<li class="dropdown__element bebas-neue-regular">
-									<a href="#music__video">Teledyski</a>
-								</li>
-								<li class="dropdown__element bebas-neue-regular">
-									<a href="">Nagrania Komercyjne</a>
-								</li>
-								<li class="dropdown__element bebas-neue-regular">
-									<a href="">Fotografie</a>
-								</li>
-							</ul>
-						</li>
-						<li>
-							<a
-								class="bebas-neue-regular nav__animation"
-								href="/html/contact/contact.html">
-								CONTACT/INFO
-							</a>
-						</li>
-					</ul>
-				</div>
 			</div>
+		</header>
 
-			<div class="nav__mainBox-mobile--logo">
-				<a href="">
-					<img
-						src="./img/mutual/nav/logo/TEST_LOGO.png"
-						alt="High Capture Studio logo" />
-				</a>
-			</div>
-
-			<div class="nav__mainBox-mobile">
-				<div class="nav__mainBox-mobile--listBox">
-					<ul>
-						<li>
-							<a class="bebas-neue-regular nav__animation" href="#">
-								PROJEKTY & <br />
-								WIĘCEJ
-							</a>
-						</li>
-						<li>
-							<a
-								class="bebas-neue-regular nav__animation"
-								href="./html/photos.html">
-								ZDJĘCIA & <br />
-								FILMY
-							</a>
-						</li>
-						<li>
-							<a
-								class="bebas-neue-regular nav__animation"
-								href="/html/contact/contact.html">
-								INFO & <br />
-								KONTAKT
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div> -->
-		<div class="nav__box">
-			<div class="nav__logo">
-				<img src="./img/mutual/nav/logo/logo_mobile.png" alt="" />
-			</div>
-			<div class="nav__burgericon">
-				<button class="hamburger hamburger--spin" type="button">
-					<span class="hamburger-box">
-						<span class="hamburger-inner"></span>
-					</span>
-				</button>
-			</div>
-			<div class="nav__external__part">
-				<div class="nav__external__part__box">
-					<a class="nav__external__part__item font">Nagrania komercyjne</a>
-					<a class="nav__external__part__item font">Teledyski</a>
-					<a class="nav__external__part__item font">Video</a>
-					<a class="nav__external__part__item font">Fotografie</a>
-					<a class="nav__external__part__item font">Projekty/ Inne</a>
-					<a class="nav__external__part__item font">Kontakt / O mnie</a>
-				</div>
-			</div>
-		</div>
-
-	</nav>
-
-	<header class="header">
-		<div class="wrapper">
-			<video src="./img/mainpage/mainapge__video.mp4" class="header__video" autoplay playsinline muted
-				loop></video>
-			<div class="header__textContainer">
-				<h1 class="header__textContainer-text font">
-					HIGHCAPTURE STUDIO OFERUJE KREATYWNE, PROFESJONALNE USŁUGI FOTO I
-					VIDEO
-				</h1>
-			</div>
-
-			<div class="dot_entrance">
-				<a href="#juku">
-					<img src="./img/mainpage/chevrons-down.svg" alt="" />
-				</a>
-			</div>
-		</div>
-	</header>
-
-	<main>
-
-
-
-
-
-		<section class="section section__first">
-			<div class="firstvideo">
-				<div class="section__first__background">
-					<video src="./img/mainpage/saintjuku/saintjuku__background.mp4" autoplay playsinline muted
-						loop></video>
-					<div class="shadow"></div>
-				</div>
-				<div class="section__marquee" id="juku">
-					<div class="section__marquee-marqueeContainer">
-						<p class="section__marquee-marqueeElement font">
-							SAINT JUKU - MIASTO
-						</p>
-						<p class="section__marquee-marqueeElement font">
-							SAINT JUKU - MIASTO
-						</p>
-						<p class="section__marquee-marqueeElement font">
-							SAINT JUKU - MIASTO
-						</p>
-					</div>
-					<div class="section__marquee-marqueeContainer">
-						<p class="section__marquee-marqueeElement font">
-							SAINT JUKU - MIASTO
-						</p>
-						<p class="section__marquee-marqueeElement font">
-							SAINT JUKU - MIASTO
-						</p>
-						<p class="section__marquee-marqueeElement font">
-							SAINT JUKU - MIASTO
-						</p>
-					</div>
-					<div class="section__marquee-marqueeContainer">
-						<p class="section__marquee-marqueeElement font">
-							SAINT JUKU - MIASTO
-						</p>
-						<p class="section__marquee-marqueeElement font">
-							SAINT JUKU - MIASTO
-						</p>
-						<p class="section__marquee-marqueeElement font">
-							SAINT JUKU - MIASTO
-						</p>
-					</div>
-				</div>
-				<div class="music-content__video showYTVideo close_easterEgg" id="music__video">
-					<iframe class="youtube_video" src="https://www.youtube.com/embed/ZwssdeebNZM?si=_QWnp1I7KBigZGCh"
-						title="YouTube video player" frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-						referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-					<div class="miniature_to_hide">
-						<div class="macbook__bar">
-							<div class="dots__box">
-								<div class="dot dot-red">
-									<img src="./img/mainpage/x.svg" alt="" />
+		<main>
+			<section class="section section__aboutus">
+				<div class="wrapper">
+					<div class="aboutus__box">
+						<div class="aboutus__left">
+							<div class="aboutus__left__top">
+								<h2 class="aboutus__title font">O nas</h2>
+								<p class="aboutus__description lato-regular">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo,
+									officiis perspiciatis adipisci harum aliquid nihil ratione
+									autem, culpa, consequuntur facere ex similique unde facilis?
+									Facere ad tempora voluptates eius unde reiciendis, maxime sint
+									repellendus eaque labore necessitatibus odio sapiente animi
+									debitis iusto. Obcaecati necessitatibus aspernatur soluta
+									maxime quos labore animi.
+								</p>
+							</div>
+							<div class="aboutus__left__bottom">
+								<div class="aboutus__drone__photo">
+									<img src="./img/contact/imgs/dronone.jpg" alt="" />
 								</div>
-								<div class="dot dot-orange"></div>
-								<div class="dot dot-green"></div>
 							</div>
 						</div>
-						<img src="./img/mainpage/header/juku.jpg" alt="juku" class="miniature" />
-						<img src="./img/mainpage/play.svg" alt="" class="icon" />
+						<div class="aboutus__right">
+							<div class="aboutus__right__top">
+								<div class="aboutus__owner__photo">
+									<img src="./img/contact/imgs/Aleksy 2.jpg" alt="" />
+								</div>
+							</div>
+							<div class="aboutus__right__bottom">
+								<div class="aboutus__stats">
+									<div class="stats__box">
+										<div class="stats__element">
+											<p class="stats__element__title lato-regular">
+												Ilość nagranych filmów
+											</p>
+											<p class="stats__element__value font" data-value="15">
+												0
+											</p>
+										</div>
+										<div class="stats__element">
+											<p class="stats__element__title lato-regular">
+												Minuty w powietrzu
+											</p>
+											<p class="stats__element__value font" data-value="3260">
+												0
+											</p>
+										</div>
+										<div class="stats__element">
+											<p class="stats__element__title lato-regular">
+												Ilość używanych dronów
+											</p>
+											<p class="stats__element__value font" data-value="4">0</p>
+										</div>
+										<div class="stats__element">
+											<p class="stats__element__title lato-regular">
+												Lata doświadczenia
+											</p>
+											<p class="stats__element__value font" data-value="3">0</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
+			</section>
 
-				<button class="next_video_button">
-					<!-- <svg class="triangle" width="100" height="100">
+			<section class="section section__first">
+				<div class="firstvideo">
+					<div class="section__first__background">
+						<video
+							src="./img/mainpage/saintjuku/saintjuku__background.mp4"
+							autoplay
+							playsinline
+							muted
+							loop></video>
+						<div class="shadow"></div>
+					</div>
+					<div class="section__marquee" id="juku">
+						<div class="section__marquee-marqueeContainer">
+							<p class="section__marquee-marqueeElement font">
+								SAINT JUKU - MIASTO
+							</p>
+							<p class="section__marquee-marqueeElement font">
+								SAINT JUKU - MIASTO
+							</p>
+							<p class="section__marquee-marqueeElement font">
+								SAINT JUKU - MIASTO
+							</p>
+						</div>
+						<div class="section__marquee-marqueeContainer">
+							<p class="section__marquee-marqueeElement font">
+								SAINT JUKU - MIASTO
+							</p>
+							<p class="section__marquee-marqueeElement font">
+								SAINT JUKU - MIASTO
+							</p>
+							<p class="section__marquee-marqueeElement font">
+								SAINT JUKU - MIASTO
+							</p>
+						</div>
+						<div class="section__marquee-marqueeContainer">
+							<p class="section__marquee-marqueeElement font">
+								SAINT JUKU - MIASTO
+							</p>
+							<p class="section__marquee-marqueeElement font">
+								SAINT JUKU - MIASTO
+							</p>
+							<p class="section__marquee-marqueeElement font">
+								SAINT JUKU - MIASTO
+							</p>
+						</div>
+					</div>
+					<div
+						class="music-content__video showYTVideo close_easterEgg"
+						id="music__video">
+						<iframe
+							class="youtube_video"
+							src="https://www.youtube.com/embed/ZwssdeebNZM?si=_QWnp1I7KBigZGCh"
+							title="YouTube video player"
+							frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							referrerpolicy="strict-origin-when-cross-origin"
+							allowfullscreen></iframe>
+						<div class="miniature_to_hide">
+							<div class="macbook__bar">
+								<div class="dots__box">
+									<div class="dot dot-red">
+										<img src="./img/mainpage/x.svg" alt="" />
+									</div>
+									<div class="dot dot-orange"></div>
+									<div class="dot dot-green"></div>
+								</div>
+							</div>
+							<img
+								src="./img/mainpage/header/juku.jpg"
+								alt="juku"
+								class="miniature" />
+							<img src="./img/mainpage/play.svg" alt="" class="icon" />
+						</div>
+					</div>
+
+					<button class="next_video_button">
+						<!-- <svg class="triangle" width="100" height="100">
 						<polygon points="40, 100,0 -100,50"	 style="fill:#dbdbdb;" />
 					</svg> -->
-				</button>
-			</div>
+					</button>
+				</div>
 
-			<div class="secondvideo">
-				<div class="section__first__background">
-					<video src="./img/mainpage/saintjuku/saint__juku__background2.mp4" autoplay playsinline muted
-						loop></video>
-					<div class="shadow"></div>
-				</div>
-				<div class="section__marquee" id="juku">
-					<div class="section__marquee-marqueeContainer">
-						<p class="section__marquee-marqueeElement font">
-							SAINT JUKU - FLASH
-						</p>
-						<p class="section__marquee-marqueeElement font">
-							SAINT JUKU - FLASH
-						</p>
-						<p class="section__marquee-marqueeElement font">
-							SAINT JUKU - FLASH
-						</p>
+				<div class="secondvideo">
+					<div class="section__first__background">
+						<video
+							src="./img/mainpage/saintjuku/saint__juku__background2.mp4"
+							autoplay
+							playsinline
+							muted
+							loop></video>
+						<div class="shadow"></div>
 					</div>
-					<div class="section__marquee-marqueeContainer">
-						<p class="section__marquee-marqueeElement font">
-							SAINT JUKU - FLASH
-						</p>
-						<p class="section__marquee-marqueeElement font">
-							SAINT JUKU - FLASH
-						</p>
-						<p class="section__marquee-marqueeElement font">
-							SAINT JUKU - FLASH
-						</p>
+					<div class="section__marquee" id="juku">
+						<div class="section__marquee-marqueeContainer">
+							<p class="section__marquee-marqueeElement font">
+								SAINT JUKU - FLASH
+							</p>
+							<p class="section__marquee-marqueeElement font">
+								SAINT JUKU - FLASH
+							</p>
+							<p class="section__marquee-marqueeElement font">
+								SAINT JUKU - FLASH
+							</p>
+						</div>
+						<div class="section__marquee-marqueeContainer">
+							<p class="section__marquee-marqueeElement font">
+								SAINT JUKU - FLASH
+							</p>
+							<p class="section__marquee-marqueeElement font">
+								SAINT JUKU - FLASH
+							</p>
+							<p class="section__marquee-marqueeElement font">
+								SAINT JUKU - FLASH
+							</p>
+						</div>
+						<div class="section__marquee-marqueeContainer">
+							<p class="section__marquee-marqueeElement font">
+								SAINT JUKU - FLASH
+							</p>
+							<p class="section__marquee-marqueeElement font">
+								SAINT JUKU - FLASH
+							</p>
+							<p class="section__marquee-marqueeElement font">
+								SAINT JUKU - FLASH
+							</p>
+						</div>
 					</div>
-					<div class="section__marquee-marqueeContainer">
-						<p class="section__marquee-marqueeElement font">
-							SAINT JUKU - FLASH
-						</p>
-						<p class="section__marquee-marqueeElement font">
-							SAINT JUKU - FLASH
-						</p>
-						<p class="section__marquee-marqueeElement font">
-							SAINT JUKU - FLASH
-						</p>
-					</div>
-				</div>
-				<div class="music-content__video showYTVideo close_easterEgg">
-					<iframe class="youtube_video" src="https://www.youtube.com/embed/_b3kfIBkGFM?si=6PttcAvDix1I7E5X"
-						title="YouTube video player" frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-						referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-					<div class="miniature_to_hide">
-						<div class="macbook__bar">
-							<div class="dots__box">
-								<div class="dot dot-red">
-									<img src="./img/mainpage/x.svg" alt="" />
+					<div class="music-content__video showYTVideo close_easterEgg">
+						<iframe
+							class="youtube_video"
+							src="https://www.youtube.com/embed/_b3kfIBkGFM?si=6PttcAvDix1I7E5X"
+							title="YouTube video player"
+							frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							referrerpolicy="strict-origin-when-cross-origin"
+							allowfullscreen></iframe>
+						<div class="miniature_to_hide">
+							<div class="macbook__bar">
+								<div class="dots__box">
+									<div class="dot dot-red">
+										<img src="./img/mainpage/x.svg" alt="" />
+									</div>
+									<div class="dot dot-orange"></div>
+									<div class="dot dot-green"></div>
 								</div>
-								<div class="dot dot-orange"></div>
-								<div class="dot dot-green"></div>
 							</div>
+							<img
+								src="./img/mainpage/miniatures/saintjukuflash.jpg"
+								alt="juku"
+								class="miniature" />
+							<img src="./img/mainpage/play.svg" alt="" class="icon" />
 						</div>
-						<img src="./img/mainpage/miniatures/saintjukuflash.jpg" alt="juku" class="miniature" />
-						<img src="./img/mainpage/play.svg" alt="" class="icon" />
+					</div>
+					<button class="next_video_button"></button>
+				</div>
+			</section>
+
+			<section class="section section__video__mainpage">
+				<h2 class="section__title font">VIDEO</h2>
+				<div class="section__video__box">
+					<div class="video__element">
+						<img
+							src="./img/mainpage/miniatures/saintjuku_one.jpg"
+							alt=""
+							class="video__element__thumbnail" />
+						<div class="video__element__background">
+							<p class="video__element__background--title font">
+								Tytuł filmu komercyjnego
+							</p>
+							<button class="video__element__background--button">
+								<a
+									href="https://www.youtube.com/watch?v=ZwssdeebNZM"
+									target="_blank"
+									class="font"
+									>Zobacz video</a
+								>
+							</button>
+						</div>
+					</div>
+					<div class="video__element">
+						<img
+							src="./img/mainpage/miniatures/halfisland.jpg"
+							alt=""
+							class="video__element__thumbnail" />
+						<div class="video__element__background">
+							<p class="video__element__background--title font">
+								Tytuł filmu komercyjnego
+							</p>
+							<button class="video__element__background--button">
+								<a
+									href="https://www.youtube.com/watch?v=ZwssdeebNZM"
+									target="_blank"
+									class="font"
+									>Zobacz video</a
+								>
+							</button>
+						</div>
+					</div>
+					<div class="video__element">
+						<img
+							src="./img/mainpage/miniatures/ship.jpg"
+							alt=""
+							class="video__element__thumbnail" />
+						<div class="video__element__background">
+							<p class="video__element__background--title font">
+								Tytuł filmu komercyjnego
+							</p>
+							<button class="video__element__background--button">
+								<a
+									href="https://www.youtube.com/watch?v=ZwssdeebNZM"
+									target="_blank"
+									class="font"
+									>Zobacz video</a
+								>
+							</button>
+						</div>
+					</div>
+					<div class="video__element">
+						<img
+							src="./img/mainpage/miniatures/boats.jpg"
+							alt=""
+							class="video__element__thumbnail" />
+						<div class="video__element__background">
+							<p class="video__element__background--title font">
+								Tytuł filmu komercyjnego
+							</p>
+							<button class="video__element__background--button">
+								<a
+									href="https://www.youtube.com/watch?v=ZwssdeebNZM"
+									target="_blank"
+									class="font"
+									>Zobacz video</a
+								>
+							</button>
+						</div>
+					</div>
+					<div class="video__element">
+						<img
+							src="./img/mainpage/miniatures/sea.jpg"
+							alt=""
+							class="video__element__thumbnail" />
+						<div class="video__element__background">
+							<p class="video__element__background--title font">
+								Tytuł filmu komercyjnego
+							</p>
+							<button class="video__element__background--button">
+								<a
+									href="https://www.youtube.com/watch?v=ZwssdeebNZM"
+									target="_blank"
+									class="font"
+									>Zobacz video</a
+								>
+							</button>
+						</div>
+					</div>
+					<div class="video__element">
+						<img
+							src="./img/mainpage/miniatures/forklift.jpg"
+							alt=""
+							class="video__element__thumbnail" />
+						<div class="video__element__background">
+							<p class="video__element__background--title font">
+								Tytuł filmu komercyjnego
+							</p>
+							<button class="video__element__background--button">
+								<a
+									href="https://www.youtube.com/watch?v=ZwssdeebNZM"
+									target="_blank"
+									class="font"
+									>Zobacz video</a
+								>
+							</button>
+						</div>
 					</div>
 				</div>
-				<button class="next_video_button">
-				</button>
+			</section>
+
+			<section class="section section__slider">
+				<h2 class="section__title font">PHOTO</h2>
+				<div class="slider">
+					<div class="slider__mainPhoto-box">
+						<div class="arrow arrow-left-m">
+							<img
+								src="./img/slider/arrow-left.svg"
+								alt=""
+								style="outline: none" />
+						</div>
+						<div class="photo">
+							<img src="./img/slider/harbour.jpg" />
+						</div>
+						<div class="arrow arrow-right-m">
+							<img
+								src="./img/slider/arrow-right.svg"
+								alt=""
+								style="outline: none" />
+						</div>
+						<div class="arrows">
+							<div class="arrow arrow-left">
+								<img
+									src="./img/slider/arrow-left.svg"
+									alt=""
+									style="outline: none" />
+							</div>
+							<div class="arrow arrow-right">
+								<img
+									src="./img/slider/arrow-right.svg"
+									alt=""
+									style="outline: none" />
+							</div>
+						</div>
+					</div>
+					<div class="slider__otherPhotos-box">
+						<div class="arrow arrow-leftpc">
+							<img
+								src="./img/slider/arrow-left.svg"
+								alt=""
+								style="outline: none" />
+						</div>
+
+						<div class="thumbnails-box">
+							<div class="img-box">
+								<div class="image">
+									<img src="./img/slider/harbour.jpg" class="active" />
+								</div>
+							</div>
+
+							<div class="img-box">
+								<div class="image">
+									<img src="./img/mainpage/sliderimg/boats.jpg" />
+								</div>
+							</div>
+							<div class="img-box">
+								<div class="image">
+									<img src="./img/mainpage/sliderimg/boy.jpg" />
+								</div>
+							</div>
+							<div class="img-box">
+								<div class="image">
+									<img src="./img/mainpage/sliderimg/citysea.jpg" />
+								</div>
+							</div>
+							<div class="img-box">
+								<div class="image">
+									<img src="./img/mainpage/sliderimg/containership.jpg" />
+								</div>
+							</div>
+							<div class="img-box">
+								<div class="image">
+									<img src="./img/mainpage/sliderimg/forklift.jpg" />
+								</div>
+							</div>
+							<div class="img-box">
+								<div class="image">
+									<img src="./img/mainpage/sliderimg/halfisland.jpg" />
+								</div>
+							</div>
+							<div class="img-box">
+								<div class="image">
+									<img src="./img/mainpage/sliderimg/harbour.jpg" />
+								</div>
+							</div>
+							<div class="img-box">
+								<div class="image">
+									<img src="./img/mainpage/sliderimg/jukuorg.jpg" />
+								</div>
+							</div>
+							<div class="img-box">
+								<div class="image">
+									<img src="./img/mainpage/sliderimg/saintjuku_one.jpg" />
+								</div>
+							</div>
+							<div class="img-box">
+								<div class="image">
+									<img src="./img/mainpage/sliderimg/sea.jpg" />
+								</div>
+							</div>
+							<div class="img-box">
+								<div class="image">
+									<img src="./img/mainpage/sliderimg/ship.jpg" />
+								</div>
+							</div>
+							<div class="img-box">
+								<div class="image">
+									<img src="./img/mainpage/sliderimg/stadium.jpg" />
+								</div>
+							</div>
+						</div>
+						<div class="arrow arrow-rightpc">
+							<img
+								src="./img/slider/arrow-right.svg"
+								alt=""
+								style="outline: none" />
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section section__trusted">
+				<h2 class="section__title font">ZAUFALI NAM</h2>
+				<div class="section__marquee" id="trusted">
+					<div class="section__marquee-marqueeContainer">
+						<a href="https://woodfuels.eu" target="_blank" rel="noreferrer">
+							<img
+								class="section__marquee-marqueeElement section__marquee-marqueeElement--img"
+								src="./img/mainpage/trusted_marquee/nordwit.png" />
+						</a>
+						<a
+							href="https://www.gospodarkamorska.pl"
+							target="_blank"
+							rel="noreferrer">
+							<img
+								class="section__marquee-marqueeElement section__marquee-marqueeElement--img"
+								src="./img/mainpage/trusted_marquee/gm-15-lat-logotyp.svg" />
+						</a>
+						<a href="https://biogaswood.pl/" target="_blank" rel="noreferrer">
+							<img
+								class="section__marquee-marqueeElement section__marquee-marqueeElement--img"
+								src="./img/mainpage/trusted_marquee/biogas_wood_logo.png" />
+						</a>
+						<a
+							href="https://zielonagospodarka.pl/"
+							target="_blank"
+							rel="noreferrer">
+							<img
+								class="section__marquee-marqueeElement section__marquee-marqueeElement--img"
+								src="./img/mainpage/trusted_marquee/zielona_gospodarka_logo.svg" />
+						</a>
+					</div>
+					<div class="section__marquee-marqueeContainer">
+						<a href="https://woodfuels.eu" target="_blank" rel="noreferrer">
+							<img
+								class="section__marquee-marqueeElement section__marquee-marqueeElement--img"
+								src="./img/mainpage/trusted_marquee/nordwit.png" />
+						</a>
+						<a
+							href="https://www.gospodarkamorska.pl"
+							target="_blank"
+							rel="noreferrer">
+							<img
+								class="section__marquee-marqueeElement section__marquee-marqueeElement--img"
+								src="./img/mainpage/trusted_marquee/gm-15-lat-logotyp.svg" />
+						</a>
+						<a href="https://biogaswood.pl/" target="_blank" rel="noreferrer">
+							<img
+								class="section__marquee-marqueeElement section__marquee-marqueeElement--img"
+								src="./img/mainpage/trusted_marquee/biogas_wood_logo.png" />
+						</a>
+						<a
+							href="https://zielonagospodarka.pl/"
+							target="_blank"
+							rel="noreferrer">
+							<img
+								class="section__marquee-marqueeElement section__marquee-marqueeElement--img"
+								src="./img/mainpage/trusted_marquee/zielona_gospodarka_logo.svg" />
+						</a>
+					</div>
+					<div class="section__marquee-marqueeContainer">
+						<a href="https://woodfuels.eu" target="_blank" rel="noreferrer">
+							<img
+								class="section__marquee-marqueeElement section__marquee-marqueeElement--img"
+								src="./img/mainpage/trusted_marquee/nordwit.png" />
+						</a>
+						<a
+							href="https://www.gospodarkamorska.pl"
+							target="_blank"
+							rel="noreferrer">
+							<img
+								class="section__marquee-marqueeElement section__marquee-marqueeElement--img"
+								src="./img/mainpage/trusted_marquee/gm-15-lat-logotyp.svg" />
+						</a>
+						<a href="https://biogaswood.pl/" target="_blank" rel="noreferrer">
+							<img
+								class="section__marquee-marqueeElement section__marquee-marqueeElement--img"
+								src="./img/mainpage/trusted_marquee/biogas_wood_logo.png" />
+						</a>
+						<a
+							href="https://zielonagospodarka.pl/"
+							target="_blank"
+							rel="noreferrer">
+							<img
+								class="section__marquee-marqueeElement section__marquee-marqueeElement--img"
+								src="./img/mainpage/trusted_marquee/zielona_gospodarka_logo.svg" />
+						</a>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="footer__box">
+				<div class="footer__privacypolicy">
+					<a href="">Privacy Policy</a>
+				</div>
+				<div class="footer__socialmedia">
+					<div class="dot">
+						<a href="">
+							<img src="./img/mutual/footer/facebook.svg" alt="" />
+						</a>
+					</div>
+					<div class="dot">
+						<a
+							href="https://www.instagram.com/highcapturestudio?igsh=Y2xlZjAxa3plcXgw&utm_source=qr">
+							<img src="./img/mutual/footer/instagram.svg" alt="" />
+						</a>
+					</div>
+					<div class="dot">
+						<a href="">
+							<img src="./img/mutual/footer/twitter.svg" alt="" />
+						</a>
+					</div>
+					<div class="dot">
+						<a
+							href="https://youtube.com/@highcapturestudio4320?si=_QyPXgPNLEK_Ksgh">
+							<img src="./img/mutual/footer/youtube.svg" alt="" />
+						</a>
+					</div>
+				</div>
+				<div class="footer__phone">
+					<a href="" class="phone">Phone: +48123456789</a>
+				</div>
 			</div>
-		</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		<section class="section section__video__mainpage">
-			<h2 class="section__title font">VIDEO</h2>
-			<div class="section__video__box">
-				<div class="video__element">
-					<img src="./img/mainpage/miniatures/saintjuku_one.jpg" alt="" class="video__element__thumbnail" />
-					<div class="video__element__background">
-						<p class="video__element__background--title font">
-							Tytuł filmu komercyjnego
-						</p>
-						<button class="video__element__background--button">
-							<a href="https://www.youtube.com/watch?v=ZwssdeebNZM" target="_blank" class="font">Zobacz
-								video</a>
-						</button>
-					</div>
-				</div>
-				<div class="video__element">
-					<img src="./img/mainpage/miniatures/halfisland.jpg" alt="" class="video__element__thumbnail" />
-					<div class="video__element__background">
-						<p class="video__element__background--title font">
-							Tytuł filmu komercyjnego
-						</p>
-						<button class="video__element__background--button">
-							<a href="https://www.youtube.com/watch?v=ZwssdeebNZM" target="_blank" class="font">Zobacz
-								video</a>
-						</button>
-					</div>
-				</div>
-				<div class="video__element">
-					<img src="./img/mainpage/miniatures/ship.jpg" alt="" class="video__element__thumbnail" />
-					<div class="video__element__background">
-						<p class="video__element__background--title font">
-							Tytuł filmu komercyjnego
-						</p>
-						<button class="video__element__background--button">
-							<a href="https://www.youtube.com/watch?v=ZwssdeebNZM" target="_blank" class="font">Zobacz
-								video</a>
-						</button>
-					</div>
-				</div>
-				<div class="video__element">
-					<img src="./img/mainpage/miniatures/boats.jpg" alt="" class="video__element__thumbnail" />
-					<div class="video__element__background">
-						<p class="video__element__background--title font">
-							Tytuł filmu komercyjnego
-						</p>
-						<button class="video__element__background--button">
-							<a href="https://www.youtube.com/watch?v=ZwssdeebNZM" target="_blank" class="font">Zobacz
-								video</a>
-						</button>
-					</div>
-				</div>
-				<div class="video__element">
-					<img src="./img/mainpage/miniatures/sea.jpg" alt="" class="video__element__thumbnail" />
-					<div class="video__element__background">
-						<p class="video__element__background--title font">
-							Tytuł filmu komercyjnego
-						</p>
-						<button class="video__element__background--button">
-							<a href="https://www.youtube.com/watch?v=ZwssdeebNZM" target="_blank" class="font">Zobacz
-								video</a>
-						</button>
-					</div>
-				</div>
-				<div class="video__element">
-					<img src="./img/mainpage/miniatures/forklift.jpg" alt="" class="video__element__thumbnail" />
-					<div class="video__element__background">
-						<p class="video__element__background--title font">
-							Tytuł filmu komercyjnego
-						</p>
-						<button class="video__element__background--button">
-							<a href="https://www.youtube.com/watch?v=ZwssdeebNZM" target="_blank" class="font">Zobacz
-								video</a>
-						</button>
-					</div>
-				</div>
+			<div class="footer__copyright">
+				<p class="font">
+					&copy; <span class="footer__year"></span> High Capture Studio
+				</p>
 			</div>
-		</section>
+		</footer>
 
-		<section class="section section__slider">
-			<h2 class="section__title font">PHOTO</h2>
-			<div class="slider">
-				<div class="slider__mainPhoto-box">
-					<div class="arrow arrow-left-m">
-						<img src="./img/slider/arrow-left.svg" alt="" style="outline: none" />
-					</div>
-					<div class="photo">
-						<img src="./img/slider/harbour.jpg" />
-					</div>
-					<div class="arrow arrow-right-m">
-						<img src="./img/slider/arrow-right.svg" alt="" style="outline: none" />
-					</div>
-					<div class="arrows">
-						<div class="arrow arrow-left">
-							<img src="./img/slider/arrow-left.svg" alt="" style="outline: none" />
-						</div>
-						<div class="arrow arrow-right">
-							<img src="./img/slider/arrow-right.svg" alt="" style="outline: none" />
-						</div>
-					</div>
-				</div>
-				<div class="slider__otherPhotos-box">
-					<div class="arrow arrow-leftpc">
-						<img src="./img/slider/arrow-left.svg" alt="" style="outline: none" />
-					</div>
-
-					<div class="thumbnails-box">
-						<div class="img-box">
-							<div class="image">
-								<img src="./img/slider/harbour.jpg" class="active" />
-							</div>
-						</div>
-
-						<div class="img-box">
-							<div class="image">
-								<img src="./img/mainpage/sliderimg/boats.jpg" />
-							</div>
-						</div>
-						<div class="img-box">
-							<div class="image">
-								<img src="./img/mainpage/sliderimg/boy.jpg" />
-							</div>
-						</div>
-						<div class="img-box">
-							<div class="image">
-								<img src="./img/mainpage/sliderimg/citysea.jpg" />
-							</div>
-						</div>
-						<div class="img-box">
-							<div class="image">
-								<img src="./img/mainpage/sliderimg/containership.jpg" />
-							</div>
-						</div>
-						<div class="img-box">
-							<div class="image">
-								<img src="./img/mainpage/sliderimg/forklift.jpg" />
-							</div>
-						</div>
-						<div class="img-box">
-							<div class="image">
-								<img src="./img/mainpage/sliderimg/halfisland.jpg" />
-							</div>
-						</div>
-						<div class="img-box">
-							<div class="image">
-								<img src="./img/mainpage/sliderimg/harbour.jpg" />
-							</div>
-						</div>
-						<div class="img-box">
-							<div class="image">
-								<img src="./img/mainpage/sliderimg/jukuorg.jpg" />
-							</div>
-						</div>
-						<div class="img-box">
-							<div class="image">
-								<img src="./img/mainpage/sliderimg/saintjuku_one.jpg" />
-							</div>
-						</div>
-						<div class="img-box">
-							<div class="image">
-								<img src="./img/mainpage/sliderimg/sea.jpg" />
-							</div>
-						</div>
-						<div class="img-box">
-							<div class="image">
-								<img src="./img/mainpage/sliderimg/ship.jpg" />
-							</div>
-						</div>
-						<div class="img-box">
-							<div class="image">
-								<img src="./img/mainpage/sliderimg/stadium.jpg" />
-							</div>
-						</div>
-					</div>
-					<div class="arrow arrow-rightpc">
-						<img src="./img/slider/arrow-right.svg" alt="" style="outline: none" />
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="section section__trusted">
-			<h2 class="section__title font">ZAUFALI NAM</h2>
-			<div class="section__marquee" id="trusted">
-				<div class="section__marquee-marqueeContainer">
-					<a href="https://woodfuels.eu" target="_blank" rel="noreferrer">
-						<img class="section__marquee-marqueeElement section__marquee-marqueeElement--img"
-							src="./img/mainpage/trusted_marquee/nordwit.png" />
-					</a>
-					<a href="https://www.gospodarkamorska.pl" target="_blank" rel="noreferrer">
-						<img class="section__marquee-marqueeElement section__marquee-marqueeElement--img"
-							src="./img/mainpage/trusted_marquee/gm-15-lat-logotyp.svg" />
-					</a>
-					<a href="https://biogaswood.pl/" target="_blank" rel="noreferrer">
-						<img class="section__marquee-marqueeElement section__marquee-marqueeElement--img"
-							src="./img/mainpage/trusted_marquee/biogas_wood_logo.png" />
-					</a>
-					<a href="https://zielonagospodarka.pl/" target="_blank" rel="noreferrer">
-						<img class="section__marquee-marqueeElement section__marquee-marqueeElement--img"
-							src="./img/mainpage/trusted_marquee/zielona_gospodarka_logo.svg" />
-					</a>
-				</div>
-				<div class="section__marquee-marqueeContainer">
-					<a href="https://woodfuels.eu" target="_blank" rel="noreferrer">
-						<img class="section__marquee-marqueeElement section__marquee-marqueeElement--img"
-							src="./img/mainpage/trusted_marquee/nordwit.png" />
-					</a>
-					<a href="https://www.gospodarkamorska.pl" target="_blank" rel="noreferrer">
-						<img class="section__marquee-marqueeElement section__marquee-marqueeElement--img"
-							src="./img/mainpage/trusted_marquee/gm-15-lat-logotyp.svg" />
-					</a>
-					<a href="https://biogaswood.pl/" target="_blank" rel="noreferrer">
-						<img class="section__marquee-marqueeElement section__marquee-marqueeElement--img"
-							src="./img/mainpage/trusted_marquee/biogas_wood_logo.png" />
-					</a>
-					<a href="https://zielonagospodarka.pl/" target="_blank" rel="noreferrer">
-						<img class="section__marquee-marqueeElement section__marquee-marqueeElement--img"
-							src="./img/mainpage/trusted_marquee/zielona_gospodarka_logo.svg" />
-					</a>
-				</div>
-				<div class="section__marquee-marqueeContainer">
-					<a href="https://woodfuels.eu" target="_blank" rel="noreferrer">
-						<img class="section__marquee-marqueeElement section__marquee-marqueeElement--img"
-							src="./img/mainpage/trusted_marquee/nordwit.png" />
-					</a>
-					<a href="https://www.gospodarkamorska.pl" target="_blank" rel="noreferrer">
-						<img class="section__marquee-marqueeElement section__marquee-marqueeElement--img"
-							src="./img/mainpage/trusted_marquee/gm-15-lat-logotyp.svg" />
-					</a>
-					<a href="https://biogaswood.pl/" target="_blank" rel="noreferrer">
-						<img class="section__marquee-marqueeElement section__marquee-marqueeElement--img"
-							src="./img/mainpage/trusted_marquee/biogas_wood_logo.png" />
-					</a>
-					<a href="https://zielonagospodarka.pl/" target="_blank" rel="noreferrer">
-						<img class="section__marquee-marqueeElement section__marquee-marqueeElement--img"
-							src="./img/mainpage/trusted_marquee/zielona_gospodarka_logo.svg" />
-					</a>
-				</div>
-			</div>
-		</section>
-	</main>
-
-	<footer class="footer">
-		<div class="footer__box">
-			<div class="footer__privacypolicy">
-				<a href="">Privacy Policy</a>
-			</div>
-			<div class="footer__socialmedia">
-				<div class="dot">
-					<a href="">
-						<img src="./img/mutual/footer/facebook.svg" alt="" />
-					</a>
-				</div>
-				<div class="dot">
-					<a href="https://www.instagram.com/highcapturestudio?igsh=Y2xlZjAxa3plcXgw&utm_source=qr">
-						<img src="./img/mutual/footer/instagram.svg" alt="" />
-					</a>
-				</div>
-				<div class="dot">
-					<a href="">
-						<img src="./img/mutual/footer/twitter.svg" alt="" />
-					</a>
-				</div>
-				<div class="dot">
-					<a href="https://youtube.com/@highcapturestudio4320?si=_QyPXgPNLEK_Ksgh">
-						<img src="./img/mutual/footer/youtube.svg" alt="" />
-					</a>
-				</div>
-			</div>
-			<div class="footer__phone">
-				<a href="" class="phone">Phone: +48123456789</a>
-			</div>
-		</div>
-		<div class="footer__copyright">
-			<p class="font">
-				&copy; <span class="footer__year"></span> High Capture Studio
-			</p>
-		</div>
-	</footer>
-
-	<!-- <script>
+		<!-- <script>
 			AOS.init();
 		</script>
 		<script src="https://unpkg.com/aos@next/dist/aos.js"></script> -->
-</body>
+	</body>
 
-<script src="./js/mainpage.js"></script>
-<script src="./js/slider.js"></script>
-<script src="./js/cards.js"></script>
-<script src="./js/footerYear.js"></script>
-
+	<script src="./js/mainpage.js"></script>
+	<script src="./js/slider.js"></script>
+	<script src="./js/cards.js"></script>
+	<script src="./js/footerYear.js"></script>
+	<script src="./js/anime/lib/anime.min.js"></script>
+	<script src="./js/animations.js"></script>
 </html>

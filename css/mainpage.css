@@ -1647,6 +1647,105 @@ header .contact_heading {
     opacity: 1;
   }
 }
+.section__aboutus {
+  width: 100%;
+}
+.section__aboutus .wrapper {
+  height: 100%;
+}
+.section__aboutus .wrapper .aboutus__box {
+  width: 100%;
+  border-radius: 15px;
+  background-color: #c8c8c8;
+}
+.section__aboutus .wrapper .aboutus__box .aboutus__left {
+  width: 100%;
+}
+.section__aboutus .wrapper .aboutus__box .aboutus__left__top {
+  width: 100%;
+}
+.section__aboutus .wrapper .aboutus__box .aboutus__left__top .aboutus__title {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  padding-top: 2rem;
+  margin-bottom: 1rem;
+}
+.section__aboutus .wrapper .aboutus__box .aboutus__left__top .aboutus__description {
+  font-size: 2.2rem;
+  text-align: center;
+  padding: 1rem;
+  padding-bottom: 1.5rem;
+}
+.section__aboutus .wrapper .aboutus__box .aboutus__left__bottom {
+  width: 100%;
+}
+.section__aboutus .wrapper .aboutus__box .aboutus__left__bottom .aboutus__drone__photo {
+  margin: 0 auto;
+  width: 90%;
+  margin-bottom: 2rem;
+}
+.section__aboutus .wrapper .aboutus__box .aboutus__left__bottom .aboutus__drone__photo img {
+  display: block;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.section__aboutus .wrapper .aboutus__box .aboutus__right {
+  width: 100%;
+}
+.section__aboutus .wrapper .aboutus__box .aboutus__right__top .aboutus__owner__photo {
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+.section__aboutus .wrapper .aboutus__box .aboutus__right__top .aboutus__owner__photo img {
+  display: block;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.section__aboutus .wrapper .aboutus__box .aboutus__right__bottom .aboutus__stats {
+  width: 100%;
+}
+.section__aboutus .wrapper .aboutus__box .aboutus__right__bottom .aboutus__stats .stats__box {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.section__aboutus .wrapper .aboutus__box .aboutus__right__bottom .aboutus__stats .stats__box .stats__element {
+  position: relative;
+  width: 100%;
+  height: 20vh;
+  border-radius: 15px;
+  background-color: #828282;
+  color: #fff;
+  border: 1px solid #000;
+  margin-bottom: 2rem;
+}
+.section__aboutus .wrapper .aboutus__box .aboutus__right__bottom .aboutus__stats .stats__box .stats__element__title {
+  width: 80%;
+  padding-top: 0.8rem;
+  margin: 0 auto;
+  font-size: 2.1rem;
+  text-align: center;
+}
+.section__aboutus .wrapper .aboutus__box .aboutus__right__bottom .aboutus__stats .stats__box .stats__element__value {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  margin: 0 auto;
+  font-size: 4rem;
+  text-align: center;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
