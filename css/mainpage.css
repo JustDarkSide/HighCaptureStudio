@@ -631,9 +631,10 @@
   .section__title {
     display: block;
     font-size: 7rem;
-    margin: 20px;
+    margin-top: 1.5rem;
   }
   .section__slider {
+    height: 60vh;
     margin-bottom: 0 !important;
     display: flex;
     justify-content: flex-start;
@@ -642,12 +643,13 @@
     display: flex;
   }
   .section__slider .slider {
-    width: 82%;
-    touch-action: manipulation;
+    position: relative;
     display: flex;
     align-items: center;
     flex-direction: column;
-    position: relative;
+    width: 82%;
+    margin-top: 0;
+    touch-action: manipulation;
   }
   .section__slider .slider__otherPhotos-box {
     height: 40vh;
@@ -830,52 +832,11 @@ header .contact_heading {
   justify-content: center;
   align-items: center;
 }
-.section__contact .wrapper .mainContainer .section__title {
-  display: none;
-}
 .section__contact .wrapper .mainContainer__shadow {
   display: none;
 }
-.section__contact .wrapper .mainContainer .description__block {
-  width: 100%;
-  order: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.section__contact .wrapper .mainContainer .description__container {
-  height: 100%;
-  width: 90%;
-}
-.section__contact .wrapper .mainContainer .description__text {
-  padding: 1rem;
-  width: 100%;
-  text-align: center;
-  font-size: 1.7rem;
-}
-.section__contact .wrapper .mainContainer .imgs__block {
-  margin-top: 6rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  width: 100%;
-  order: 2;
-}
-.section__contact .wrapper .mainContainer .imgs__container {
-  width: 33%;
-}
-.section__contact .wrapper .mainContainer .imgs__container img {
-  width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-.section__contact .wrapper .mainContainer .imgs__container-additional {
-  width: 100%;
-}
 .section__contact .wrapper .mainContainer .form__block {
   padding: 4rem;
-  order: 3;
   background-color: #333;
   width: 100%;
 }
@@ -910,6 +871,7 @@ header .contact_heading {
   border: 2px solid rgb(223, 174, 14);
 }
 .section__contact .wrapper .mainContainer .form__container h2 {
+  display: none;
   color: #dbdbdb;
   width: 100%;
   text-align: center;
@@ -952,39 +914,84 @@ header .contact_heading {
 .section__contact .wrapper .mainContainer .form__container input[type=submit]:focus {
   box-shadow: none;
 }
+.section__contact .wrapper .mainContainer .form__container .call__to__us {
+  width: 80%;
+  margin: 4rem auto;
+  font-size: 2.5rem;
+  text-align: center;
+  color: #fff;
+}
+.section__contact .wrapper .mainContainer .form__container .call__to__us a {
+  margin-left: 1rem;
+  text-decoration: underline;
+  color: #fff;
+  transition: color 0.3s;
+}
+.section__contact .wrapper .mainContainer .form__container .call__to__us a:hover {
+  color: rgb(223, 174, 14);
+}
+.section__contact .wrapper .mainContainer .imgs__block {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.section__contact .wrapper .mainContainer .imgs__container {
+  width: 33%;
+}
+.section__contact .wrapper .mainContainer .imgs__container img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.section__contact .wrapper .mainContainer .imgs__container-additional {
+  width: 100%;
+}
+.section__contact .wrapper .mainContainer .map__block {
+  width: 100%;
+}
+.section__contact .wrapper .mainContainer .map__block .section__title {
+  font-size: 3rem;
+  height: 100px;
+  line-height: 100px;
+}
+.section__contact .wrapper .mainContainer .map__block .image__outer__div {
+  width: 100%;
+}
+.section__contact .wrapper .mainContainer .map__block .image__outer__div img {
+  display: block;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.section__contact .wrapper .mainContainer .map__block .out__of__range {
+  margin: 1.5rem 0;
+  font-size: 2.5rem;
+  text-align: center;
+}
 
 @media (min-width: 768px) {
   header .contact_heading {
     font-size: 6rem;
     margin: 4rem auto;
   }
-  .section__contact .wrapper .mainContainer .description__container {
-    width: 85%;
+  .section__contact .wrapper .mainContainer .map__block .section__title {
+    font-size: 4rem;
+    height: 150px;
+    line-height: 150px;
   }
-  .section__contact .wrapper .mainContainer .description__text {
-    padding: 1.2rem;
-    font-size: 2.6rem;
+  .section__contact .wrapper .mainContainer .map__block .out__of__range {
+    margin: 4rem 0;
+  }
+  .section__contact .wrapper .mainContainer .form__container .call__to__us {
+    margin-top: 6rem;
+    font-size: 3rem;
   }
 }
 @media (min-width: 992px) {
   header .contact_heading {
     font-size: 8rem;
-  }
-  .section__contact .wrapper .mainContainer .description__container {
-    width: 85%;
-  }
-  .section__contact .wrapper .mainContainer .description__text {
-    padding: 1.2rem;
-    font-size: 3rem;
-  }
-  .section__contact .wrapper .mainContainer .imgs__block {
-    margin-top: 6rem;
-    margin-bottom: 6rem;
-    width: 70%;
-  }
-  .section__contact .wrapper .mainContainer .imgs__container-additional {
-    margin: 1rem;
-    width: 100%;
   }
   .section__contact .wrapper .mainContainer .form__block .input-box {
     margin: 2.8rem auto;
@@ -998,26 +1005,38 @@ header .contact_heading {
     top: 22%;
     font-size: 2rem;
   }
-  .section__contact .wrapper .mainContainer__container h2 {
+  .section__contact .wrapper .mainContainer .form__container h2 {
     font-size: 5rem;
     margin: 3rem 0;
   }
-  .section__contact .wrapper .mainContainer__container .checkbox-box {
+  .section__contact .wrapper .mainContainer .form__container .checkbox-box {
     padding: 2rem;
   }
-  .section__contact .wrapper .mainContainer__container .checkbox-box input {
+  .section__contact .wrapper .mainContainer .form__container .checkbox-box input {
     height: 35px;
     width: 35px;
   }
-  .section__contact .wrapper .mainContainer__container .checkbox-box p {
+  .section__contact .wrapper .mainContainer .form__container .checkbox-box p {
     margin-left: 1.2rem;
     font-size: 2rem;
   }
-  .section__contact .wrapper .mainContainer__container input[type=submit] {
+  .section__contact .wrapper .mainContainer .form__container input[type=submit] {
     height: 80px;
     width: 250px;
     margin: 2rem auto 3rem;
     font-size: 2rem;
+  }
+  .section__contact .wrapper .mainContainer .imgs__block {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+    width: 70%;
+  }
+  .section__contact .wrapper .mainContainer .imgs__container-additional {
+    margin: 1rem;
+    width: 100%;
+  }
+  .section__contact .wrapper .mainContainer .map__block .section__title {
+    font-size: 5rem;
   }
 }
 @media (min-width: 1200px) {
@@ -1041,6 +1060,8 @@ header .contact_heading {
     position: relative;
     z-index: 1;
     width: 100%;
+    min-height: 90vh;
+    padding: 4rem 0;
     background-image: url("../img/contact/imgs/dron3.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -1055,53 +1076,41 @@ header .contact_heading {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
   }
-  .section__contact .wrapper .mainContainer .section__title {
-    position: absolute;
-    display: block;
-    top: 3%;
-    left: 50%;
-    z-index: 3;
-    width: 100%;
-    transform: translateX(-50%);
-    color: #fff;
-  }
-  @supports (-webkit-touch-callout: none) {
-    .section__contact .wrapper .mainContainer .description__block {
-      height: 100vh;
-    }
-  }
-  .section__contact .wrapper .mainContainer .description__block {
-    display: flex;
-    justify-content: normal;
-    align-items: center;
+  .section__contact .wrapper .mainContainer .map__block {
     position: relative;
-    z-index: 3;
-    height: calc(var(--vh) - var(--navHeight));
-    width: 50%;
-    order: 1;
-  }
-  .section__contact .wrapper .mainContainer .description__container {
-    height: 50%;
-    width: 80%;
-    margin: 0 auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    width: 45%;
+    height: 100%;
+    z-index: 3;
   }
-  .section__contact .wrapper .mainContainer .description__text {
-    padding: 2.5rem;
-    padding-top: 0;
-    width: 100%;
-    text-align: center;
+  .section__contact .wrapper .mainContainer .map__block .section__title {
+    position: relative;
+    height: auto;
+    line-height: normal;
+    margin: 0;
+    margin-bottom: 2rem;
     color: #fff;
-    line-height: 1.6;
-    font-size: 2.5rem;
-    font-weight: 400;
+  }
+  .section__contact .wrapper .mainContainer .map__block .image__outer__div {
+    width: 100%;
+    opacity: 0.8;
+  }
+  .section__contact .wrapper .mainContainer .map__block .image__outer__div img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .section__contact .wrapper .mainContainer .map__block .out__of__range {
+    margin-top: 4rem;
+    color: #fff;
+    text-align: center;
+    font-size: 3rem;
   }
   .section__contact .wrapper .mainContainer .imgs__block {
-    display: flex;
-    margin-top: 6rem;
     display: none;
+    margin-top: 6rem;
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -1120,15 +1129,17 @@ header .contact_heading {
     width: 100%;
   }
   .section__contact .wrapper .mainContainer .form__block {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     order: 1;
-    position: relative;
     z-index: 3;
-    width: 50%;
+    width: 45%;
+    height: 100%;
+    padding: 0;
     background: none;
-    height: calc(100vh - 120px);
   }
   .section__contact .wrapper .mainContainer .form__block .input-box {
     width: 60%;
@@ -1141,15 +1152,16 @@ header .contact_heading {
     color: #fff;
   }
   .section__contact .wrapper .mainContainer .form__block .input-box label {
-    color: rgb(223, 174, 14);
+    color: #fff;
     font-size: 2rem;
   }
   .section__contact .wrapper .mainContainer .form__container {
     width: 100%;
   }
   .section__contact .wrapper .mainContainer .form__container h2 {
-    color: rgb(223, 174, 14);
     width: 100%;
+    display: block;
+    color: #fff;
     text-align: center;
     font-size: 3.5rem;
     margin: 3rem 0;
@@ -1637,6 +1649,9 @@ header .contact_heading {
   }
 }
 @media (min-width: 1200px) {
+  .section__video__mainpage {
+    margin-top: 10rem;
+  }
   .section__video__mainpage .section__title {
     margin-bottom: 5rem;
   }
@@ -1761,7 +1776,10 @@ header .contact_heading {
 }
 @media (min-width: 1200px) {
   .section__aboutus {
-    height: 60vh;
+    margin-top: 0;
+    margin-bottom: 0 !important;
+    height: 55vh;
+    overflow: hidden;
   }
   .section__aboutus .wrapper {
     max-width: 100vw;
@@ -1789,7 +1807,7 @@ header .contact_heading {
     display: flex;
     align-items: center;
   }
-  .section__aboutus .wrapper .aboutus__box .aboutus__right .photo img {
+  .section__aboutus .wrapper .aboutus__box .aboutus__right .about__us__photo img {
     display: block;
     width: 100%;
     -o-object-fit: cover;
@@ -1811,6 +1829,11 @@ header .contact_heading {
   }
   .section__aboutus .wrapper .aboutus__box .aboutus__right__bottom .aboutus__right__additional__photo {
     width: 50%;
+  }
+}
+@media (min-width: 2000px) {
+  .section__aboutus {
+    height: 60vh;
   }
 }
 * {
@@ -2123,9 +2146,6 @@ a:hover {
        object-fit: cover;
     width: 50%;
     height: 100%;
-  }
-  .section {
-    margin-bottom: 10rem;
   }
   .section__marquee {
     height: 140px;

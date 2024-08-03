@@ -1,4 +1,4 @@
-@use "./colors" as colors;
+@use './colors' as colors;
 
 .section__title {
 	text-align: center;
@@ -161,9 +161,10 @@
 	.section__title {
 		display: block;
 		font-size: 7rem;
-		margin: 20px;
+		margin-top: 1.5rem;
 	}
 	.section__slider {
+		height: 60vh;
 		margin-bottom: 0 !important;
 		display: flex;
 		justify-content: flex-start;
@@ -171,12 +172,13 @@
 		flex-direction: column;
 		display: flex;
 		.slider {
-			width: 82%;
-			touch-action: manipulation;
+			position: relative;
 			display: flex;
 			align-items: center;
 			flex-direction: column;
-			position: relative;
+			width: 82%;
+			margin-top: 0;
+			touch-action: manipulation;
 			&__otherPhotos-box {
 				height: 40vh;
 				display: block;
