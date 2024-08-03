@@ -1,0 +1,360 @@
+@use "./colors" as colors;
+@use "./animations";
+// MACBOOK BAR
+.macbook__bar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 50px;
+	background-color: #dedede;
+	cursor: default;
+	.dots__box {
+		display: flex;
+		align-items: center;
+		padding-left: 1rem;
+		width: 33%;
+		height: 100%;
+		.dot {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 15px;
+			height: 15px;
+			border-radius: 50%;
+			margin: 0 0.7rem;
+		}
+		.dot-red {
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			z-index: 6;
+			background-color: #fe6755;
+			cursor: pointer;
+			img {
+				display: block;
+				height: 100%;
+				width: 100%;
+			}
+			&:hover {
+				background-color: #92362b;
+			}
+		}
+
+		.dot-green {
+			background-color: #00aa50;
+		}
+		.dot-orange {
+			background-color: #fac03b;
+		}
+	}
+}
+// SECTION MOBILE
+.section {
+	&__first {
+		position: relative;
+		height: 100vh;
+		margin-bottom: 3rem;
+		z-index: 1;
+		overflow: hidden;
+		.firstvideo {
+			position: relative;
+			height: 50%;
+			width: 100%;
+			transition: transform 0.5s;
+		}
+		.secondvideo {
+			position: relative;
+			transition: transform 0.5s;
+			display: block;
+			width: 100%;
+			height: 50%;
+			.section__marquee {
+				.section__marquee-marqueeContainer {
+					transform: translate3d(-100%, 0, 0);
+					animation: marqueeOppositeDirection 20s infinite linear;
+				}
+			}
+		}
+		&__background {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			z-index: 2;
+			overflow: hidden;
+			video {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+			.shadow {
+				height: 100%;
+				width: 100%;
+				position: absolute;
+				z-index: 3;
+				background-color: rgba(0, 0, 0, 0.6);
+				top: 0;
+				left: 0;
+			}
+		}
+	}
+	.next_video_button {
+		display: none;
+	}
+}
+.music-content {
+	&__description {
+		display: none;
+	}
+	&__video {
+		width: 90%;
+		min-height: 200px;
+		margin: 0 auto;
+		margin-top: 1rem;
+		display: flex;
+		justify-content: center;
+		position: relative;
+		z-index: 4;
+		.youtube_video {
+			width: 100%;
+		}
+		.miniature_to_hide {
+			display: none;
+		}
+	}
+}
+
+// Breakpoint 375px
+@media (min-width: 375px) {
+	.music-content {
+		&__video {
+			margin-top: 2.5rem;
+		}
+	}
+}
+// Breakpoint 385 - 800 - 768 px kombinacja alpejska
+@media ((min-width: 385px) and (min-height: 800px) and (max-width: 768px)) {
+	.music-content {
+		&__video {
+			margin-top: 2.5rem;
+		}
+	}
+}
+// Breakpoint 768px
+@media (min-width: 768px) {
+	.section {
+		&__first {
+			height: 75vh;
+			// display: block;
+			.secondvideo {
+				height: 100%;
+				width: 100%;
+				transform: translateX(100%);
+				display: block;
+				.section__marquee {
+					.section__marquee-marqueeContainer {
+						animation: marquee 20s infinite linear;
+					}
+				}
+				.next_video_button {
+					left: 0;
+					margin-left: 3rem;
+					clip-path: polygon(70% 50%, 0 0, 0 100%);
+					transform: rotateY(180deg) translateY(-50%);
+					&:hover {
+						transform: scale(0.95) translateY(-50%) rotateY(180deg);
+					}
+				}
+			}
+			.firstvideo {
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				.next_video_button {
+					right: 0;
+					margin-right: 3rem;
+					clip-path: polygon(70% 50%, 0 0, 0 100%);
+					&:hover {
+						transform: scale(0.95) translateY(-50%);
+					}
+				}
+			}
+			.next_video_button {
+				top: 50%;
+				width: 80px;
+				height: 180px;
+				position: absolute;
+				display: block;
+				transform: translateY(-50%);
+				z-index: 5;
+				border: none;
+				overflow: hidden;
+				transition: transform 0.3s, opacity 0.3s;
+				cursor: pointer;
+				opacity: 0.6;
+				&:hover{
+					opacity: 1;
+				}
+			}
+		}
+	}
+	.music-content {
+		height: 60vh;
+		&__video {
+			position: absolute;
+			z-index: 5;
+			top: 20%;
+			left: 15%;
+			width: 70%;
+			min-height: 330px;
+			opacity: 0.5;
+			transform: translateX(-50%);
+			// transform: translateX(var(--reversedWidth));
+			.youtube_video {
+				transition: opacity 0.5s, transform 0.5s;
+			}
+			.miniature_to_hide {
+				display: block;
+				position: absolute;
+				top: 0;
+				left: auto;
+				height: 100%;
+				width: 100%;
+				transition: scale 0.3s;
+				// box-shadow: 0px 0px 10px 3px white;
+				cursor: pointer;
+				.miniature {
+					object-fit: cover;
+					display: block;
+					height: 100%;
+					width: 100%;
+				}
+
+				.icon {
+					height: 60px;
+					width: 60px;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					z-index: 10;
+				}
+				&:hover {
+					scale: 1.01;
+				}
+			}
+		}
+	}
+}
+// Breakpoint 992- 1200 px
+@media ((min-width: 992px) and (max-width: 1200px)) {
+	.music-content {
+		height: 60vh;
+		&__video {
+			min-height: 400px;
+		}
+	}
+}
+// Breakpoint 1200px
+@media (min-width: 1200px) {
+	@supports (-webkit-touch-callout: none) {
+		.section__first {
+			// height: var(--vh, 100vh); /* Example alternative calculation for Safari */
+			height: var(--vh);
+		}
+	}
+	.section {
+		&__first {
+			height: var(--vh, 100vh);
+			display: block;
+		}
+	}
+	.music-content {
+		height: calc(100vh - 100px);
+		max-width: 1200px;
+		margin: 0 auto;
+		&__video {
+			position: relative;
+			width: 100%;
+			height: 45%;
+			top: 15%;
+			left: auto;
+			margin-top: 0;
+			.youtube_video {
+				opacity: 0;
+				width: 45%;
+				// box-shadow: 0px 0px 20px 3px white;
+			}
+			.miniature_to_hide {
+				position: absolute;
+				top: 0;
+				left: auto;
+				display: block;
+				height: 100%;
+				width: 45%;
+				transition: scale 0.3s;
+				// box-shadow: 0px 0px 20px 3px white;
+				cursor: pointer;
+				.icon {
+					height: 60px;
+					width: 60px;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					z-index: 10;
+				}
+				&:hover {
+					scale: 1.01;
+				}
+			}
+		}
+	}
+}
+// Breakpoint 2000px
+@media (min-width: 2000px) {
+	@supports (-webkit-touch-callout: none) {
+		.section {
+			&__first {
+				height: 100vh;
+			}
+		}
+	}
+	.music-content {
+		&__video {
+			width: 100%;
+			height: 50%;
+			top: 15%;
+			transform: translateX(-50%);
+			.miniature_to_hide {
+				.macbook__bar {
+					height: 60px;
+					.dots__box {
+						.dot {
+							height: 18px;
+							width: 18px;
+						}
+					}
+				}
+			}
+		}
+		&__description {
+			display: none;
+			width: 30%;
+			min-height: 410px;
+			top: 45%;
+			right: 23%;
+			padding: 0;
+			text-align: center;
+			h2 {
+				font-size: 7rem;
+			}
+			p {
+				font-size: 4rem;
+			}
+		}
+	}
+}

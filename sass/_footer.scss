@@ -1,0 +1,156 @@
+@use './colors' as colors;
+
+.footer {
+	width: 100%;
+	min-height: 200px;
+	border-top: 1px solid black;
+	font-size: 1.6rem;
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	&__box {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+		max-width: 1200px;
+		width: 100%;
+		padding: 1rem 0;
+		min-height: 200px;
+		margin: 0 auto;
+	}
+	&__privacypolicy {
+		width: 100%;
+		min-height: 60px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		a {
+			display: block;
+			text-decoration: none;
+			color: colors.$main-black;
+			text-align: center;
+			font-weight: bold;
+			font-size: 1.8rem;
+		}
+	}
+
+	&__socialmedia {
+		width: 100%;
+		min-height: 60px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.dot {
+			width: 40px;
+			height: 40px;
+			border: none;
+			border-radius: 50%;
+			background-color: colors.$main-black;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 0 1rem;
+			img {
+				display: block;
+			}
+		}
+	}
+	&__phone {
+		width: 100%;
+		min-height: 60px;
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		.phone {
+			text-decoration: none;
+			color: colors.$main-black;
+			font-size: 1.8rem;
+			text-align: center;
+			font-weight: bold;
+		}
+	}
+	&__copyright {
+		width: 100%;
+		height: 40px;
+		text-align: center;
+		font-size: 1.6rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+@media (min-width: 768px) {
+	.footer {
+		min-height: 80px;
+		&__box {
+			flex-direction: row;
+			justify-content: space-evenly;
+			min-height: 100px;
+		}
+		&__privacypolicy {
+			width: 25%;
+			height: auto;
+			a{
+				font-size: 2.3rem;
+			}
+		}
+		&__socialmedia {
+			width: 50%;
+			height: auto;
+		}
+		&__phone {
+			width: 25%;
+			height: auto;
+			.phone{
+				font-size: 2.3rem;
+			}
+		}
+	}
+}
+@media (min-width: 992px) {
+	.footer {
+		&__privacypolicy {
+			width: 30%;
+			height: auto;
+			a{
+				font-size: 2.5rem;
+			}
+		}
+		&__socialmedia {
+			width: 40%;
+			height: auto;
+		}
+		&__phone {
+			width: 30%;
+			height: auto;
+			.phone{
+				font-size: 2.5rem;
+			}
+		}
+	}
+}
+@media (min-width: 1200px) {
+	.footer {
+		&__privacypolicy {
+			width: 25%;
+			height: auto;
+			a{
+				font-size: 2.5rem;
+			}
+		}
+		&__socialmedia {
+			width: 50%;
+			height: auto;
+		}
+		&__phone {
+			width: 25%;
+			height: auto;
+			.phone {
+				font-size: 2.5rem;
+			}
+		}
+	}
+}

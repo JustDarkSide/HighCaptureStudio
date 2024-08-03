@@ -1,0 +1,261 @@
+@use './colors' as colors;
+@use './animations';
+.cards {
+	width: 100%;
+	&__box {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		padding-top: 2.6em;
+	}
+	&__item {
+		width: 80%;
+		height: 250px;
+		position: relative;
+		margin-bottom: 4em;
+		border: 3px solid colors.$main-color;
+		overflow: hidden;
+		cursor: pointer;
+		transition: scale 0.5s;
+		border-radius: 10px;
+		a {
+			outline: none;
+		}
+
+		&-photo {
+			width: 100%;
+			height: 60%;
+			text-align: center;
+			background-color: colors.$pure-white;
+			img {
+				height: 100%;
+				width: 100%;
+				object-fit: contain;
+				object-position: center;
+			}
+		}
+
+		&-text {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 40%;
+			background-color: colors.$pure-white;
+			border-top: 2px solid colors.$main-color;
+			transition: top 0.7s;
+		}
+
+		&-title {
+			margin-top: 0.5rem;
+			width: 100%;
+			position: absolute;
+			top: 3%;
+			left: 0%;
+			font-size: 2.3rem;
+			color: colors.$main-color;
+			text-align: center;
+		}
+
+		&-description {
+			position: absolute;
+			top: 42%;
+			left: 50%;
+			transform: translate(-50%);
+			color: colors.$main-color;
+
+			&--desktop {
+				text-align: center;
+				display: none;
+				width: 100%;
+				.card_info {
+					display: block;
+				}
+			}
+
+			&--mobile {
+				width: 90%;
+				height: 50px;
+				border: 2px solid colors.$main-color;
+				border-radius: 20px;
+			}
+
+			&-btn {
+				display: block;
+				width: 100%;
+				height: 100%;
+				color: colors.$main-color;
+
+				p {
+					font-size: 1.6rem;
+					position: absolute;
+					top: 50%;
+					transform: translate(0, -50%);
+					padding-left: 1em;
+				}
+
+				.read-more {
+					width: 35px;
+					height: 35px;
+					position: absolute;
+					top: 50%;
+					left: 79%;
+					transform: translate(0, -50%);
+				}
+
+				.icon_holder {
+					position: absolute;
+					background-color: colors.$main-color;
+					border-radius: 50%;
+
+					&-desktop {
+						top: 50%;
+						left: 80%;
+						transform: translate(0, -50%);
+					}
+				}
+			}
+
+			&-btnImg {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
+	}
+}
+@media (min-width: 390px) and (max-width: 600px) {
+	.cards {
+		&__item {
+			width: 90%;
+			height: 350px;
+
+			&-title {
+				font-size: 3.5rem;
+			}
+
+			&-description {
+				&--mobile {
+					height: 58px;
+					p {
+						font-size: 2.4rem;
+					}
+				}
+				&-btn {
+					.read-more {
+						width: 42px;
+						height: 42px;
+						left: 82%;
+					}
+				}
+			}
+		}
+	}
+}
+@media (max-width: 568px) {
+	.cards {
+		margin-top: 1rem;
+	}
+}
+@media (min-width: 768px) {
+	.cards {
+		&__item {
+			width: 45%;
+			height: 400px;
+
+			&-title {
+				font-size: 3.5rem;
+			}
+
+			&-description {
+				font-size: 1.7rem;
+				&--mobile {
+					p {
+						font-size: 2.3rem;
+					}
+					top: 40%;
+					padding: 1.8em 0;
+				}
+				&-btn {
+					.read-more {
+						width: 50px;
+						height: 50px;
+					}
+				}
+			}
+		}
+	}
+}
+@media (min-width: 1000px) {
+	.cards {
+		&__item {
+			height: 480px;
+			width: 45%;
+			&-title {
+				margin-top: 2rem;
+				font-size: 4.2rem;
+			}
+			&-description {
+				&--mobile {
+					top: 55%;
+				}
+				&-btn {
+					p {
+						font-size: 18px;
+					}
+					height: 70px;
+					.read-more {
+						left: 84%;
+					}
+				}
+			}
+		}
+	}
+}
+@media (min-width: 1200px) {
+	.cards {
+		&__box {
+			padding-top: 3em;
+		}
+		&__item {
+			width: 28%;
+			height: 400px;
+			margin-bottom: 2em;
+			border: 3px solid #264f0b;
+			border-radius: 10px;
+			&-text {
+				height: 35%;
+				border-top: 3px solid colors.$main-color;
+			}
+
+			&-title {
+				font-size: 4.3rem;
+				top: 15%;
+			}
+			&-photo {
+				height: 65%;
+			}
+			&-description {
+				font-size: 2rem;
+				&--desktop {
+					top: 65%;
+					display: block;
+					.card_info {
+						display: none;
+					}
+				}
+
+				&--mobile {
+					display: none;
+				}
+			}
+
+			&:hover {
+				scale: 1.05;
+			}
+		}
+	}
+}

@@ -1,0 +1,236 @@
+@use "./colors" as colors;
+
+// .bebas-neue-regular {
+// 	font-family: "Bebas Neue", sans-serif;
+// 	font-weight: 400;
+// 	font-style: normal;
+
+// }
+
+.nav {
+	width: 100%;
+	min-height: 150px;
+	&__mainBox {
+		&-PC {
+			display: none;
+		}
+		&-mobile {
+			width: 100%;
+			&--logo {
+				img {
+					max-width: 100%;
+					object-fit: contain;
+				}
+				a {
+					display: block;
+					width: 100%;
+				}
+			}
+			&--listBox {
+				ul {
+					display: flex;
+					flex-direction: row;
+					justify-content: space-around;
+					text-decoration: none;
+					list-style: none;
+					li {
+						text-align: center;
+						a {
+							color: colors.$main-black;
+							text-decoration: none;
+							font-size: 2.24rem;
+							padding: 1rem;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&__animation {
+		touch-action: manipulation;
+		display: block;
+		text-decoration-style: underline;
+		text-decoration-color: colors.$main-bg-color;
+		color: colors.$main-black;
+		text-underline-offset: 5px;
+		transition: text-decoration-color 0.4s, scale 0.4s;
+
+		&:hover {
+			text-decoration-color: colors.$main-black;
+		}
+
+		&:focus {
+			text-decoration-color: colors.$main-black;
+		}
+	}
+}
+@media ((min-width: 568px) and (max-width: 992px)) {
+	.nav {
+		min-height: 240px;
+
+		&__mainBox {
+			&-mobile {
+				&--listBox {
+					ul {
+						li {
+							a {
+								font-size: 3.2rem;
+								padding: 1rem 2rem;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media ((min-width: 992px) and (max-width: 1200px)) {
+	.nav {
+		width: 100%;
+		min-height: 320px;
+		&__mainBox {
+			&-mobile {
+				&--logo {
+					img {
+						width: 100%;
+					}
+				}
+				&--listBox {
+					ul {
+						li {
+							a {
+								font-size: 3.84rem;
+								padding: 1rem 2rem;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media (min-width: 1200px) {
+	.nav {
+		position: relative;
+		z-index: 5;
+		min-height: auto;
+		height: 120px;
+		box-shadow: 1px 3px 20px 0px black;
+		&__mainBox {
+			height: 100%;
+			&-PC {
+				height: 100%;
+
+				display: flex;
+				align-items: center;
+				align-content: center;
+				justify-content: space-between;
+				background-color: colors.$main-bg-color;
+				// padding-top: 20px;
+				&--logo {
+					width: 50%;
+					height: 100%;
+					a {
+						display: block;
+						width: 100%;
+						height: 100%;
+						img {
+							display: block;
+							object-fit: cover;
+							height: 100%;
+						}
+					}
+				}
+				&--listContainer {
+					width: 50%;
+					height: 100%;
+				}
+				&--list {
+					width: 100%;
+					height: 100%;
+					display: flex;
+					justify-content: space-evenly;
+					list-style: none;
+					align-items: center;
+					li {
+						position: relative;
+						width: auto;
+						height: 100%;
+						.nav__animation {
+							display: block;
+							height: 100%;
+							align-content: center;
+							font-size: 2.8rem;
+							color: colors.$main-black;
+						}
+						.dropdown__list {
+							position: absolute;
+							pointer-events: none;
+							width: 120%;
+							top: 100%;
+							left: -10%;
+							list-style-type: none;
+							opacity: 0;
+							transition: opacity 0.4s;
+							.dropdown__element {
+								display: block;
+								width: 100%;
+								height: 90px;
+								background-color: #b7b5b3;
+								border: 1px solid colors.$main-black;
+								font-size: 2.8rem;
+								transition: scale 0.3s;
+								a {
+									display: block;
+									align-content: center;
+									width: 100%;
+									height: 100%;
+									text-decoration: none;
+									text-align: center;
+									color: colors.$main-black;
+								}
+								&:hover {
+									scale: 1.05;
+								}
+							}
+						}
+						&:hover .dropdown__list {
+							pointer-events: auto;
+							display: block;
+							opacity: 1;
+						}
+					}
+				}
+			}
+			&-mobile {
+				&--logo {
+					display: none;
+				}
+				display: none;
+			}
+		}
+		&__socialmedia {
+			height: 100%;
+			min-height: 60px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			.dot {
+				width: 40px;
+				height: 40px;
+				border: none;
+				border-radius: 50%;
+				background-color: colors.$main-black;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin: 0 1rem;
+				img {
+					display: block;
+				}
+			}
+		}
+	}
+}
