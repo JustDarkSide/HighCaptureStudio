@@ -104,7 +104,7 @@
 }
 @media (min-width: 1200px) {
   .nav {
-    height: 150px;
+    height: 120px;
   }
   .nav__box {
     justify-content: space-between;
@@ -117,7 +117,7 @@
   }
   .nav__burgericon .hamburger {
     transform: scale(1.2) translateY(-50%);
-    top: 75px;
+    top: 65px;
     left: 60%;
   }
   .nav__socialmedia {
@@ -140,6 +140,17 @@
   }
   .nav__socialmedia .dot img {
     display: block;
+  }
+  .nav__external__part__box {
+    top: 0;
+  }
+}
+@media (min-width: 2000px) {
+  .nav {
+    height: 150px;
+  }
+  .nav__burgericon .hamburger {
+    top: 75px;
   }
 }
 .footer {
@@ -1065,6 +1076,7 @@ header .contact_heading {
     background-image: url("../img/contact/imgs/dron3.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
   }
   .section__contact .wrapper .mainContainer__shadow {
     position: absolute;
@@ -1095,7 +1107,7 @@ header .contact_heading {
   }
   .section__contact .wrapper .mainContainer .map__block .image__outer__div {
     width: 100%;
-    opacity: 0.8;
+    opacity: 1;
   }
   .section__contact .wrapper .mainContainer .map__block .image__outer__div img {
     width: 100%;
@@ -1279,7 +1291,7 @@ header .contact_heading {
 }
 .section__first .secondvideo .section__marquee .section__marquee-marqueeContainer {
   transform: translate3d(-100%, 0, 0);
-  animation: marqueeOppositeDirection 20s infinite linear;
+  animation: marqueeOppositeDirection 25s infinite linear;
 }
 .section__first__background {
   position: absolute;
@@ -1350,10 +1362,10 @@ header .contact_heading {
     display: block;
   }
   .section__first .secondvideo .section__marquee .section__marquee-marqueeContainer {
-    animation: marquee 20s infinite linear;
+    animation: marquee 50s infinite linear;
   }
   .section__first .secondvideo .next_video_button {
-    left: 0;
+    left: -4%;
     margin-left: 3rem;
     -webkit-clip-path: polygon(70% 50%, 0 0, 0 100%);
             clip-path: polygon(70% 50%, 0 0, 0 100%);
@@ -1368,7 +1380,7 @@ header .contact_heading {
     width: 100%;
   }
   .section__first .firstvideo .next_video_button {
-    right: 0;
+    right: -4%;
     margin-right: 3rem;
     -webkit-clip-path: polygon(70% 50%, 0 0, 0 100%);
             clip-path: polygon(70% 50%, 0 0, 0 100%);
@@ -1378,8 +1390,8 @@ header .contact_heading {
   }
   .section__first .next_video_button {
     top: 50%;
-    width: 80px;
-    height: 180px;
+    width: 60px;
+    height: 140px;
     position: absolute;
     display: block;
     transform: translateY(-50%);
@@ -1399,7 +1411,7 @@ header .contact_heading {
   .music-content__video {
     position: absolute;
     z-index: 5;
-    top: 20%;
+    top: 25%;
     left: 15%;
     width: 70%;
     min-height: 330px;
@@ -1456,6 +1468,29 @@ header .contact_heading {
   .section__first {
     height: var(--vh, 100vh);
     display: block;
+  }
+  .section__first .secondvideo .next_video_button {
+    left: 0;
+  }
+  .section__first .firstvideo .next_video_button {
+    right: 0;
+  }
+  .section .next_video_button {
+    top: 50%;
+    width: 80px;
+    height: 180px;
+    position: absolute;
+    display: block;
+    transform: translateY(-50%);
+    z-index: 5;
+    border: none;
+    overflow: hidden;
+    transition: transform 0.3s, opacity 0.3s;
+    cursor: pointer;
+    opacity: 0.6;
+  }
+  .section .next_video_button:hover {
+    opacity: 1;
   }
   .music-content {
     height: calc(100vh - 100px);
@@ -1534,7 +1569,6 @@ header .contact_heading {
 }
 .section__video__mainpage {
   width: 100%;
-  margin-bottom: 4rem;
 }
 .section__video__mainpage .section__title {
   width: 80%;
@@ -1651,6 +1685,7 @@ header .contact_heading {
 @media (min-width: 1200px) {
   .section__video__mainpage {
     margin-top: 10rem;
+    margin-bottom: 0;
   }
   .section__video__mainpage .section__title {
     margin-bottom: 5rem;
@@ -1778,21 +1813,29 @@ header .contact_heading {
   .section__aboutus {
     margin-top: 0;
     margin-bottom: 0 !important;
-    height: 55vh;
+    height: 65vh;
     overflow: hidden;
   }
   .section__aboutus .wrapper {
     max-width: 100vw;
+  }
+  .section__aboutus .wrapper .aboutus__box {
+    height: 100%;
   }
   .section__aboutus .wrapper .aboutus__box .aboutus__left {
     width: 50%;
     display: flex;
   }
   .section__aboutus .wrapper .aboutus__box .aboutus__left__top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10rem;
     width: 100%;
     margin: 0;
   }
   .section__aboutus .wrapper .aboutus__box .aboutus__left__top .aboutus__title {
+    padding-bottom: 5rem;
     font-size: 5rem;
   }
   .section__aboutus .wrapper .aboutus__box .aboutus__left__top .aboutus__description {
@@ -1814,7 +1857,7 @@ header .contact_heading {
        object-fit: cover;
   }
   .section__aboutus .wrapper .aboutus__box .aboutus__right__top {
-    width: 33.33%;
+    width: 30%;
   }
   .section__aboutus .wrapper .aboutus__box .aboutus__right__top .aboutus__owner__photo {
     width: 100%;
@@ -1822,18 +1865,13 @@ header .contact_heading {
   }
   .section__aboutus .wrapper .aboutus__box .aboutus__right__bottom {
     display: flex;
-    width: 66.66%;
+    width: 60%;
   }
   .section__aboutus .wrapper .aboutus__box .aboutus__right__bottom .aboutus__third__photo {
     width: 50%;
   }
   .section__aboutus .wrapper .aboutus__box .aboutus__right__bottom .aboutus__right__additional__photo {
     width: 50%;
-  }
-}
-@media (min-width: 2000px) {
-  .section__aboutus {
-    height: 60vh;
   }
 }
 * {
@@ -2064,13 +2102,13 @@ a:hover {
     font-size: 6rem;
   }
   .section__marquee {
-    height: 100px;
+    height: 120px;
   }
   .section__marquee-marqueeContainer {
-    animation: 15s marquee infinite linear;
+    animation: 50s marquee infinite linear;
   }
   .section__marquee-marqueeElement {
-    font-size: 6rem;
+    font-size: 10em;
   }
 }
 @media ((min-width: 992px) and (max-width: 1200px)) {
@@ -2091,7 +2129,7 @@ a:hover {
     height: 100px;
   }
   .section__marquee-marqueeContainer {
-    animation: 15s marquee infinite linear;
+    animation: 30s marquee infinite linear;
   }
   .section__marquee-marqueeElement {
     font-size: 8rem;
@@ -2161,7 +2199,10 @@ a:hover {
     height: 100px;
   }
   .section__trusted {
-    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 35vh;
     margin-bottom: 0;
   }
   .section__trusted .section__marquee {
@@ -2179,7 +2220,7 @@ a:hover {
     display: block;
   }
   .section__trusted .section__marquee-marqueeContainer a .section__marquee-marqueeElement--img {
-    max-width: 400px;
+    max-width: 300px;
     display: block;
     height: 130px;
     width: auto;

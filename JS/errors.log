@@ -1,0 +1,4 @@
+[22-Mar-2024 19:16:01 Europe/Warsaw] PHP Warning:  Trying to access array offset on null in /html/products/options.php on line 133
+[22-Mar-2024 19:16:01 Europe/Warsaw] PHP Deprecated:  str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in /html/products/options.php on line 133
+[22-Mar-2024 19:16:01 Europe/Warsaw] PHP Warning:  Trying to access array offset on null in /html/products/options.php on line 134
+[22-Mar-2024 19:23:00 Europe/Warsaw] PHP Warning:  Undefined array key "classname" in /html/products/options.php on line 13
