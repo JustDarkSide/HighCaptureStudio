@@ -16,6 +16,7 @@ let firstVideo = document.querySelector('.firstvideo');
 let secondVideo = document.querySelector('.secondvideo');
 let closeiosbutton = document.querySelectorAll('.dot-red');
 let easterEggCloseWindow = document.querySelector('.close_easterEgg');
+let dotEntrance = document.querySelector('.dot_entrance img');
 
 changeVideoButton.forEach((element) => {
 	element.addEventListener('click', () => {
@@ -62,4 +63,12 @@ closeiosbutton.forEach((element) => {
 		e.stopPropagation();
 		element.closest('.close_easterEgg').classList.add('closewindow');
 	});
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+	if (window.innerWidth < 1200) {
+		dotEntrance.setAttribute('src', '../img/mainpage/chevrons-down-black.svg');
+	} else {
+		dotEntrance.setAttribute('src', '../img/mainpage/chevrons-down.svg');
+	}
 });

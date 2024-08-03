@@ -134,7 +134,7 @@
 	.section__aboutus {
 		margin-top: 0;
 		margin-bottom: 0 !important;
-		height: 55vh;
+		height: 65vh;
 		overflow: hidden;
 		.wrapper {
 			max-width: 100vw;
@@ -142,6 +142,8 @@
 				.aboutus__left {
 					width: 50%;
 					display: flex;
+					flex-direction: column;
+					justify-content: center;
 					&__top {
 						width: 100%;
 						margin: 0;

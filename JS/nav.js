@@ -11,6 +11,7 @@ const manageNav = () => {
 		'absolute'
 	) {
 		burgerIcon.style.position = 'fixed';
+		document.body.style.overflow = 'hidden';
 		if (window.innerWidth >= 1200) {
 			burgerIcon.style.left = '89%';
 		} else {
@@ -18,6 +19,9 @@ const manageNav = () => {
 		}
 	} else {
 		burgerIcon.style.position = 'absolute';
+		document.body.style.overflow = 'auto';
+		document.body.style.overflowX = 'hidden';
+
 		if (window.innerWidth >= 1200) {
 			burgerIcon.style.left = '60%';
 		} else {

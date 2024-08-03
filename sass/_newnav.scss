@@ -1,4 +1,4 @@
-@use "./colors" as colors;
+@use './colors' as colors;
 .nav {
 	width: 100%;
 	height: 100px;
@@ -69,7 +69,7 @@
 			transition: transform 0.3s;
 			&::after {
 				position: absolute;
-				content: "";
+				content: '';
 				width: 100%;
 				height: 3px;
 				background-color: colors.$pure-white;
@@ -121,33 +121,32 @@
 				left: 60%;
 			}
 		}
-	}
-	&__socialmedia {
-		height: 100%;
-		min-height: 60px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-
-		.dot {
-			width: 40px;
-			height: 40px;
-			border: none;
-			border-radius: 50%;
-			background-color: colors.$main-black;
+		&__socialmedia {
+			height: 100%;
+			min-height: 60px;
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			margin: 0 1rem;
-			img {
-				display: block;
+
+			.dot {
+				width: 40px;
+				height: 40px;
+				border: none;
+				border-radius: 50%;
+				background-color: colors.$main-black;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin: 0 1rem;
+				img {
+					display: block;
+				}
 			}
 		}
-	}
-
-	&__external__part {
-		&__box {
-			top: 0;
+		&__external__part {
+			&__box {
+				top: 0;
+			}
 		}
 	}
 }

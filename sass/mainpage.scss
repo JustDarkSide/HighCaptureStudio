@@ -78,11 +78,12 @@ a:hover {
 .dot_entrance {
 	// display: none;
 	position: absolute;
+	z-index: 4;
 	width: 50px;
 	height: 50px;
 	border: none;
 	border-radius: 50%;
-	background-color: colors.$main-black;
+	background-color: colors.$pure-white;
 
 	left: calc(50% - 25px);
 	top: calc(100% - 60px);
@@ -133,11 +134,43 @@ a:hover {
 		display: none;
 	}
 	.header__textContainer {
-		width: 90%;
+		position: relative;
+		z-index: 3;
+		width: 100%;
+		align-content: center;
 		&-text {
+			padding: 0 2rem;
+			align-content: center;
 			word-wrap: break-word;
 			text-align: center;
-			font-size: 4rem;
+			font-size: 3.5rem;
+			color: colors.$pure-white;
+		}
+		.header__mobile__background {
+			position: absolute;
+			z-index: -1;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			.header__mobile__shadow {
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 2;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0, 0, 0, 0.5);
+			}
+			.header__mobile__video {
+				position: absolute;
+				z-index: 1;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				object-fit: cover;
+			}
 		}
 	}
 	.header__video {
@@ -196,15 +229,16 @@ a:hover {
 @media (min-width: 375px) {
 	.header {
 		.header__textContainer {
-			margin-top: 8rem;
+			&-text {
+				font-size: 4rem;
+			}
 		}
 	}
 }
 @media ((min-width: 385px) and (min-height: 800px) and (max-width: 768px)) {
 	.header {
 		.header__textContainer {
-			margin-top: 13rem;
-			width: 90%;
+			width: 100%;
 			&-text {
 				font-size: 4rem;
 			}
@@ -239,9 +273,9 @@ a:hover {
 	.header {
 		height: calc(var(--vh, 100vh) - var(--navHeight));
 		.header__textContainer {
-			width: 70%;
 			&-text {
 				font-size: 6rem;
+				padding: 0 6rem;
 			}
 		}
 	}
@@ -261,8 +295,6 @@ a:hover {
 	.header {
 		height: calc(var(--vh, 100vh) - var(--navHeight));
 		.header__textContainer {
-			width: 70%;
-			margin-top: 10rem;
 			&-text {
 				font-size: 8rem;
 			}
@@ -311,6 +343,7 @@ a:hover {
 			border-radius: 50%;
 			left: calc(50% - 30px);
 			top: calc(100% - 70px);
+			background-color: colors.$main-black;
 			a {
 				padding: 20px;
 			}
@@ -327,6 +360,10 @@ a:hover {
 			&-text {
 				margin-top: 0;
 				font-size: 8rem;
+				color: colors.$main-black;
+			}
+			.header__mobile__background {
+				display: none;
 			}
 		}
 		.header__video {
@@ -355,7 +392,10 @@ a:hover {
 		// 	margin-bottom: 2rem;
 		// }
 		&__trusted {
-			height: 300px;
+			height: 35vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
 			margin-bottom: 0;
 			.section__marquee {
 				height: 200px;
@@ -369,7 +409,7 @@ a:hover {
 						margin: 0 5rem;
 						display: block;
 						.section__marquee-marqueeElement--img {
-							max-width: 400px;
+							max-width: 300px;
 							display: block;
 							height: 130px;
 							width: auto;
