@@ -1,14 +1,14 @@
-@use "./colors" as colors;
+@use './colors' as colors;
 // @use './nav';
-@use "./newnav";
-@use "./footer";
-@use "./animations";
-@use "./slider";
-@use "./specificvideo";
-@use "./contact";
-@use "./musicContent";
-@use "./videoSectionMainpage";
-@use "./aboutusInMainpage";
+@use './newnav';
+@use './footer';
+@use './animations';
+@use './slider';
+@use './specificvideo';
+@use './contact';
+@use './musicContent';
+@use './videoSectionMainpage';
+@use './aboutusInMainpage';
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -16,7 +16,7 @@
 }
 
 @font-face {
-	font-family: "gothic";
+	font-family: 'gothic';
 	src: url(../css/font.ttf);
 }
 
@@ -108,17 +108,17 @@ a:hover {
 	margin: 0 auto;
 }
 .font {
-	font-family: "gothic", sans-serif;
+	font-family: 'gothic', sans-serif;
 	font-weight: 900;
 	font-style: normal;
 }
 .bebas-neue-regular {
-	font-family: "Bebas Neue", sans-serif;
+	font-family: 'Bebas Neue', sans-serif;
 	font-weight: 400;
 	font-style: normal;
 }
 .lato-regular {
-	font-family: "Lato", sans-serif;
+	font-family: 'Lato', sans-serif;
 	font-weight: 700;
 	font-style: normal;
 }
@@ -451,13 +451,12 @@ a:hover {
 	}
 }
 @media (min-width: 2000px) {
-	.header {
-		@supports (-webkit-touch-callout: none) {
-			.header {
-				height: 100vh; /* Example alternative calculation for Safari */
-			}
+	@supports (-webkit-touch-callout: none) {
+		.header {
+			height: 100vh; /* Example alternative calculation for Safari */
 		}
-
+	}
+	.header {
 		.dot_entrance {
 			width: 80px;
 			height: 80px;
@@ -474,35 +473,12 @@ a:hover {
 				font-size: 9rem;
 			}
 		}
-
-		&__imgs {
-			position: relative;
-
-			&-img {
-				height: 360px;
-				width: 360px;
-				position: absolute;
-				&--first {
-					top: 0;
-					left: 0;
-					z-index: 3;
-				}
-				&--second {
-					top: 25%;
-					left: 25%;
-					z-index: 2;
-				}
-				&--third {
-					top: 50%;
-					left: 50%;
-					z-index: 1;
-				}
-			}
-
-			img {
-				object-fit: cover;
-				height: 100%;
-				width: 100%;
+	}
+	.section {
+		&__marquee {
+			height: 165px;
+			&-marqueeElement {
+				font-size: 16rem;
 			}
 		}
 	}

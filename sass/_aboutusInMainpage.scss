@@ -114,7 +114,7 @@
 					&__top {
 						width: 90%;
 						margin: 0 auto;
-						.aboutus__description{
+						.aboutus__description {
 							font-size: 2.5rem;
 						}
 					}
@@ -129,13 +129,13 @@
 		}
 	}
 }
-@media (min-width: 992px){
-	.section__aboutus{
-		.wrapper{
-			.aboutus__box{
-				.aboutus__left{
-					&__top{
-						.aboutus__description{
+@media (min-width: 992px) {
+	.section__aboutus {
+		.wrapper {
+			.aboutus__box {
+				.aboutus__left {
+					&__top {
+						.aboutus__description {
 							font-size: 3.2rem;
 						}
 					}
@@ -186,16 +186,19 @@
 						.aboutus__owner__photo {
 							width: 100%;
 							margin: 0;
+							scale: 0.95;
 						}
 					}
 					&__bottom {
 						display: flex;
 						width: 60%;
 						.aboutus__third__photo {
+							scale: 1.1;
 							width: 50%;
 						}
 						.aboutus__right__additional__photo {
 							width: 50%;
+							scale: 0.95;
 						}
 					}
 				}

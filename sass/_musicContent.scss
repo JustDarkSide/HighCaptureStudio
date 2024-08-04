@@ -1,5 +1,5 @@
-@use "./colors" as colors;
-@use "./animations";
+@use './colors' as colors;
+@use './animations';
 // MACBOOK BAR
 .macbook__bar {
 	position: absolute;
@@ -187,7 +187,6 @@
 				.next_video_button {
 					left: 0;
 					margin-left: 1.5rem;
-					clip-path: polygon(70% 50%, 0 0, 0 100%);
 					transform: rotateY(180deg) translateY(-50%);
 					&:hover {
 						transform: scale(0.95) translateY(-50%) rotateY(180deg);
@@ -201,7 +200,7 @@
 				.next_video_button {
 					right: 0;
 					margin-right: 2.2rem;
-					clip-path: polygon(70% 50%, 0 0, 0 100%);
+
 					&:hover {
 						transform: scale(0.95) translateY(-50%);
 					}
@@ -215,6 +214,7 @@
 				display: block;
 				transform: translateY(-50%);
 				z-index: 5;
+				clip-path: polygon(70% 50%, 0 0, 0 100%);
 				border: none;
 				overflow: hidden;
 				transition: transform 0.3s, opacity 0.3s;
@@ -353,12 +353,19 @@
 			}
 		}
 	}
+	.section {
+		&__first {
+			.next_video_button {
+				clip-path: polygon(80% 50%, 0 0, 0 100%);
+			}
+		}
+	}
 	.music-content {
 		&__video {
 			width: 100%;
 			height: 50%;
-			top: 15%;
-			transform: translateX(-50%);
+			top: 50%;
+			transform: translate(-50%, -50%);
 			.miniature_to_hide {
 				.macbook__bar {
 					height: 60px;
