@@ -1,14 +1,14 @@
-@use './colors' as colors;
+@use "./colors" as colors;
 // @use './nav';
-@use './newnav';
-@use './footer';
-@use './animations';
-@use './slider';
-@use './specificvideo';
-@use './contact';
-@use './musicContent';
-@use './videoSectionMainpage';
-@use './aboutusInMainpage';
+@use "./newnav";
+@use "./footer";
+@use "./animations";
+@use "./slider";
+@use "./specificvideo";
+@use "./contact";
+@use "./musicContent";
+@use "./videoSectionMainpage";
+@use "./aboutusInMainpage";
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -16,7 +16,7 @@
 }
 
 @font-face {
-	font-family: 'gothic';
+	font-family: "gothic";
 	src: url(../css/font.ttf);
 }
 
@@ -45,6 +45,7 @@ a:hover {
 		both !important;
 	animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both !important;
 }
+
 .hideFirstVideoBox {
 	transform: translateX(-100%);
 }
@@ -58,20 +59,20 @@ a:hover {
 .hideDescription {
 	animation: hideDescription 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
 }
-.showYTVideo {
-	animation: showYTVideo 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-}
-.showYTVideoDescription {
-	animation: showYTVideoDescription 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
-		forwards;
-}
-.hideYTVideo {
-	animation: hideYTVideo 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-}
-.hideYTVideoDescription {
-	animation: hideYTVideoDescription 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
-		forwards;
-}
+// .showYTVideo {
+// 	animation: showYTVideo 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+// }
+// .showYTVideoDescription {
+// 	animation: showYTVideoDescription 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+// 		forwards;
+// }
+// .hideYTVideo {
+// 	animation: hideYTVideo 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+// }
+// .hideYTVideoDescription {
+// 	animation: hideYTVideoDescription 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+// 		forwards;
+// }
 .rotate {
 	rotate: 0deg !important;
 }
@@ -107,17 +108,17 @@ a:hover {
 	margin: 0 auto;
 }
 .font {
-	font-family: 'gothic', sans-serif;
+	font-family: "gothic", sans-serif;
 	font-weight: 900;
 	font-style: normal;
 }
 .bebas-neue-regular {
-	font-family: 'Bebas Neue', sans-serif;
+	font-family: "Bebas Neue", sans-serif;
 	font-weight: 400;
 	font-style: normal;
 }
 .lato-regular {
-	font-family: 'Lato', sans-serif;
+	font-family: "Lato", sans-serif;
 	font-weight: 700;
 	font-style: normal;
 }
@@ -279,6 +280,12 @@ a:hover {
 				padding: 0 6rem;
 			}
 		}
+		.dot_entrance {
+			width: 60px;
+			height: 60px;
+			left: calc(50% - 20px);
+			top: calc(100% - 80px);
+		}
 	}
 	.section {
 		&__title {
@@ -287,10 +294,10 @@ a:hover {
 		&__marquee {
 			height: 100px;
 			&-marqueeContainer {
-				animation: 15s marquee infinite linear;
+				animation: 35s marquee infinite linear;
 			}
 			&-marqueeElement {
-				font-size: 6rem;
+				font-size: 9rem;
 			}
 		}
 	}
@@ -302,6 +309,12 @@ a:hover {
 			&-text {
 				font-size: 8rem;
 			}
+		}
+		.dot_entrance {
+			width: 80px;
+			height: 80px;
+			left: calc(50% - 40px);
+			top: calc(100% - 120px);
 		}
 	}
 
