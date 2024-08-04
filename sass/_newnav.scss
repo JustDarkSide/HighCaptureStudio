@@ -9,13 +9,22 @@
 		align-items: center;
 	}
 	&__logo {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
 		width: 60%;
 		height: 100%;
-		img {
+		margin-left: 1.5rem;
+		a {
 			display: block;
-			width: 100%;
-			height: 100%;
-			object-fit: contain;
+			width: 70%;
+			height: 80%;
+			img {
+				display: block;
+				width: 100%;
+				height: 100%;
+				object-fit: contain;
+			}
 		}
 	}
 	&__burgericon {
@@ -96,10 +105,58 @@
 }
 @media (min-width: 768px) {
 	.nav {
+		height: 120px;
 		&__external__part {
 			&__item {
 				font-size: 4rem;
 				padding: 2rem;
+			}
+		}
+		&__logo {
+			a {
+				width: 50%;
+				height: 70%;
+			}
+		}
+		&__burgericon {
+			.hamburger {
+				top: 60px;
+			}
+		}
+	}
+}
+@media (min-width: 992px) {
+	.nav {
+		height: 150px;
+		&__burgericon {
+			.hamburger {
+				top: 75px;
+				.hamburger-box {
+					width: 55px;
+					height: 50px;
+					.hamburger-inner {
+						width: 55px;
+						height: 6px;
+					}
+					.hamburger-inner::after {
+						width: 55px;
+						height: 6px;
+						bottom: -16px;
+					}
+					.hamburger-inner::before {
+						width: 55px;
+						height: 6px;
+						top: -16px;
+					}
+				}
+			}
+			.hamburger--spin.is-active {
+				.hamburger-inner::after {
+					bottom: 0;
+				}
+				.hamburger-inner::before {
+					top: 0;
+				}
 			}
 		}
 	}

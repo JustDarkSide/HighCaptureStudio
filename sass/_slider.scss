@@ -128,6 +128,8 @@
 }
 @media (min-width: 768px) {
 	.section__slider {
+		height: 75vh;
+		justify-content: flex-end;
 		.slider {
 			height: 60vh;
 			&__mainPhoto-box {

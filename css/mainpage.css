@@ -10,10 +10,19 @@
   align-items: center;
 }
 .nav__logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   width: 60%;
   height: 100%;
+  margin-left: 1.5rem;
 }
-.nav__logo img {
+.nav__logo a {
+  display: block;
+  width: 70%;
+  height: 80%;
+}
+.nav__logo a img {
   display: block;
   width: 100%;
   height: 100%;
@@ -97,9 +106,51 @@
 }
 
 @media (min-width: 768px) {
+  .nav {
+    height: 120px;
+  }
   .nav__external__part__item {
     font-size: 4rem;
     padding: 2rem;
+  }
+  .nav__logo a {
+    width: 50%;
+    height: 70%;
+  }
+  .nav__burgericon .hamburger {
+    top: 60px;
+  }
+}
+@media (min-width: 992px) {
+  .nav {
+    height: 150px;
+  }
+  .nav__burgericon .hamburger {
+    top: 75px;
+  }
+  .nav__burgericon .hamburger .hamburger-box {
+    width: 55px;
+    height: 50px;
+  }
+  .nav__burgericon .hamburger .hamburger-box .hamburger-inner {
+    width: 55px;
+    height: 6px;
+  }
+  .nav__burgericon .hamburger .hamburger-box .hamburger-inner::after {
+    width: 55px;
+    height: 6px;
+    bottom: -16px;
+  }
+  .nav__burgericon .hamburger .hamburger-box .hamburger-inner::before {
+    width: 55px;
+    height: 6px;
+    top: -16px;
+  }
+  .nav__burgericon .hamburger--spin.is-active .hamburger-inner::after {
+    bottom: 0;
+  }
+  .nav__burgericon .hamburger--spin.is-active .hamburger-inner::before {
+    top: 0;
   }
 }
 @media (min-width: 1200px) {
@@ -615,6 +666,10 @@
 }
 
 @media (min-width: 768px) {
+  .section__slider {
+    height: 75vh;
+    justify-content: flex-end;
+  }
   .section__slider .slider {
     height: 60vh;
   }
@@ -1106,7 +1161,6 @@ header .contact_heading {
   }
   .section__contact .wrapper .mainContainer .map__block .image__outer__div {
     width: 100%;
-    opacity: 0.8;
   }
   .section__contact .wrapper .mainContainer .map__block .image__outer__div img {
     width: 100%;
@@ -1324,20 +1378,45 @@ header .contact_heading {
   display: none;
 }
 .music-content__video {
+  position: relative;
+  display: flex;
+  justify-content: center;
   width: 90%;
   min-height: 200px;
   margin: 0 auto;
   margin-top: 1rem;
-  display: flex;
-  justify-content: center;
-  position: relative;
   z-index: 4;
+  opacity: 0.5;
 }
 .music-content__video .youtube_video {
   width: 100%;
+  transition: opacity 0.5s, transform 0.5s;
 }
 .music-content__video .miniature_to_hide {
+  position: absolute;
+  display: block;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.music-content__video .miniature_to_hide .macbook__bar {
   display: none;
+}
+.music-content__video .miniature_to_hide .miniature {
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.music-content__video .miniature_to_hide .icon {
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
 }
 
 @media (min-width: 375px) {
@@ -1545,7 +1624,6 @@ header .contact_heading {
 }
 .section__video__mainpage {
   width: 100%;
-  margin-bottom: 4rem;
 }
 .section__video__mainpage .section__title {
   width: 80%;
@@ -1562,6 +1640,7 @@ header .contact_heading {
   position: relative;
   width: 100%;
   height: 40vh;
+  margin-bottom: 1.5rem;
 }
 .section__video__mainpage .section__video__box .video__element__thumbnail {
   width: 100%;
@@ -1608,6 +1687,9 @@ header .contact_heading {
   font-size: 2rem;
   text-align: center;
 }
+.section__video__mainpage .section__video__box .video__element:last-child {
+  margin-bottom: 0;
+}
 
 @media (min-width: 375px) {
   .section__video__mainpage .section__video__box .video__element__background--title {
@@ -1627,7 +1709,7 @@ header .contact_heading {
 }
 @media (min-width: 768px) {
   .section__video__mainpage .section__video__box .video__element {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     margin-bottom: 1.5rem;
   }
@@ -1717,14 +1799,8 @@ header .contact_heading {
 .section__aboutus .wrapper .aboutus__box .aboutus__left__top {
   width: 100%;
 }
-.section__aboutus .wrapper .aboutus__box .aboutus__left__top .aboutus__title {
-  width: 80%;
-  margin: 0 auto;
-  text-align: center;
-  font-size: 3.5rem;
-  text-transform: uppercase;
-  padding-top: 2rem;
-  margin-bottom: 1rem;
+.section__aboutus .wrapper .aboutus__box .aboutus__left__top .section__title {
+  margin: 2rem 0 1.5rem 0;
 }
 .section__aboutus .wrapper .aboutus__box .aboutus__left__top .aboutus__description {
   font-size: 2.2rem;
@@ -1770,6 +1846,7 @@ header .contact_heading {
   }
   .section__aboutus .wrapper .aboutus__box {
     display: flex;
+    height: 100%;
   }
   .section__aboutus .wrapper .aboutus__box .aboutus__left {
     width: 50%;
@@ -1778,6 +1855,9 @@ header .contact_heading {
     width: 90%;
     margin: 0 auto;
   }
+  .section__aboutus .wrapper .aboutus__box .aboutus__left__top .aboutus__description {
+    font-size: 2.5rem;
+  }
   .section__aboutus .wrapper .aboutus__box .aboutus__left__bottom {
     display: none;
   }
@@ -1785,10 +1865,15 @@ header .contact_heading {
     width: 50%;
   }
 }
+@media (min-width: 992px) {
+  .section__aboutus .wrapper .aboutus__box .aboutus__left__top .aboutus__description {
+    font-size: 3.2rem;
+  }
+}
 @media (min-width: 1200px) {
   .section__aboutus {
     margin-top: 0;
-    margin-bottom: 0 !important;
+    margin-bottom: 0;
     height: 65vh;
     overflow: hidden;
   }
@@ -1804,9 +1889,6 @@ header .contact_heading {
   .section__aboutus .wrapper .aboutus__box .aboutus__left__top {
     width: 100%;
     margin: 0;
-  }
-  .section__aboutus .wrapper .aboutus__box .aboutus__left__top .aboutus__title {
-    font-size: 5rem;
   }
   .section__aboutus .wrapper .aboutus__box .aboutus__left__top .aboutus__description {
     font-size: 3.5rem;
@@ -1827,7 +1909,7 @@ header .contact_heading {
        object-fit: cover;
   }
   .section__aboutus .wrapper .aboutus__box .aboutus__right__top {
-    width: 33.33%;
+    width: 30%;
   }
   .section__aboutus .wrapper .aboutus__box .aboutus__right__top .aboutus__owner__photo {
     width: 100%;
@@ -1835,7 +1917,7 @@ header .contact_heading {
   }
   .section__aboutus .wrapper .aboutus__box .aboutus__right__bottom {
     display: flex;
-    width: 66.66%;
+    width: 60%;
   }
   .section__aboutus .wrapper .aboutus__box .aboutus__right__bottom .aboutus__third__photo {
     width: 50%;
@@ -2107,6 +2189,9 @@ a:hover {
     font-size: 6rem;
     padding: 0 6rem;
   }
+  .section__title {
+    font-size: 6rem;
+  }
   .section__marquee {
     height: 100px;
   }
@@ -2135,6 +2220,11 @@ a:hover {
   }
   .section__marquee-marqueeElement {
     font-size: 8rem;
+  }
+  .section__trusted .section__marquee-marqueeContainer a .section__marquee-marqueeElement--img {
+    max-width: none;
+    width: 220px;
+    height: 120px;
   }
 }
 @media (min-width: 1200px) {

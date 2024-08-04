@@ -13,7 +13,7 @@ const manageNav = () => {
 		burgerIcon.style.position = 'fixed';
 		document.body.style.overflow = 'hidden';
 		if (window.innerWidth >= 1200) {
-			burgerIcon.style.left = '89%';
+			burgerIcon.style.left = '88%';
 		} else {
 			burgerIcon.style.left = '80%';
 		}

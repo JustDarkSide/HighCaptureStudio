@@ -1,5 +1,5 @@
-@use "./colors" as colors;
-@use "./animations";
+@use './colors' as colors;
+@use './animations';
 // MACBOOK BAR
 .macbook__bar {
 	position: absolute;
@@ -110,19 +110,44 @@
 		display: none;
 	}
 	&__video {
+		position: relative;
+		display: flex;
+		justify-content: center;
 		width: 90%;
 		min-height: 200px;
 		margin: 0 auto;
 		margin-top: 1rem;
-		display: flex;
-		justify-content: center;
-		position: relative;
 		z-index: 4;
+		opacity: 0.5;
 		.youtube_video {
 			width: 100%;
+			transition: opacity 0.5s, transform 0.5s;
 		}
 		.miniature_to_hide {
-			display: none;
+			position: absolute;
+			display: block;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			.macbook__bar {
+				display: none;
+			}
+			.miniature {
+				object-fit: cover;
+				display: block;
+				height: 100%;
+				width: 100%;
+			}
+
+			.icon {
+				height: 60px;
+				width: 60px;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				z-index: 10;
+			}
 		}
 	}
 }
@@ -195,7 +220,7 @@
 				transition: transform 0.3s, opacity 0.3s;
 				cursor: pointer;
 				opacity: 0.6;
-				&:hover{
+				&:hover {
 					opacity: 1;
 				}
 			}

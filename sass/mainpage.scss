@@ -254,6 +254,7 @@ a:hover {
 				font-size: 6rem;
 			}
 		}
+
 		&__trusted {
 			.section__marquee {
 				&-marqueeContainer {
@@ -280,6 +281,9 @@ a:hover {
 		}
 	}
 	.section {
+		&__title {
+			font-size: 6rem;
+		}
 		&__marquee {
 			height: 100px;
 			&-marqueeContainer {
@@ -312,6 +316,19 @@ a:hover {
 			}
 			&-marqueeElement {
 				font-size: 8rem;
+			}
+		}
+		&__trusted {
+			.section__marquee {
+				&-marqueeContainer {
+					a {
+						.section__marquee-marqueeElement--img {
+							max-width: none;
+							width: 220px;
+							height: 120px;
+						}
+					}
+				}
 			}
 		}
 	}
