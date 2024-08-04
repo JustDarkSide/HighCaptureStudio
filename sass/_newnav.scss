@@ -176,6 +176,33 @@
 				transform: scale(1.2) translateY(-50%);
 				top: 65px;
 				left: 60%;
+
+				.hamburger-box {
+					width: 40px;
+					height: 24px;
+					.hamburger-inner {
+						width: 40px;
+						height: 4px;
+					}
+					.hamburger-inner::after {
+						width: 40px;
+						height: 4px;
+						bottom: -10px;
+					}
+					.hamburger-inner::before {
+						width: 40px;
+						height: 4px;
+						top: -10px;
+					}
+				}
+			}
+			.hamburger--spin.is-active {
+				.hamburger-inner::after {
+					bottom: 0;
+				}
+				.hamburger-inner::before {
+					top: 0;
+				}
 			}
 		}
 		&__socialmedia {

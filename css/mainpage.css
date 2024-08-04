@@ -171,6 +171,30 @@
     top: 65px;
     left: 60%;
   }
+  .nav__burgericon .hamburger .hamburger-box {
+    width: 40px;
+    height: 24px;
+  }
+  .nav__burgericon .hamburger .hamburger-box .hamburger-inner {
+    width: 40px;
+    height: 4px;
+  }
+  .nav__burgericon .hamburger .hamburger-box .hamburger-inner::after {
+    width: 40px;
+    height: 4px;
+    bottom: -10px;
+  }
+  .nav__burgericon .hamburger .hamburger-box .hamburger-inner::before {
+    width: 40px;
+    height: 4px;
+    top: -10px;
+  }
+  .nav__burgericon .hamburger--spin.is-active .hamburger-inner::after {
+    bottom: 0;
+  }
+  .nav__burgericon .hamburger--spin.is-active .hamburger-inner::before {
+    top: 0;
+  }
   .nav__socialmedia {
     height: 100%;
     min-height: 60px;
